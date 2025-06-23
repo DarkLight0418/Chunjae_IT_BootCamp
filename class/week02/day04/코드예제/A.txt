@@ -1,0 +1,23 @@
+class A {
+    final int i = 1; //멤1
+    static int j; //멤2
+
+void m1(String str1){ //지1: 파라미터
+    System.out.println("str1: " + str1);
+}
+void m2(){
+    String str2 = "깍뚜기"; //지2: 선언초기화
+    System.out.println("str2: " + str2);
+}
+}
+class AUser
+{
+    public static void main(String[] args) {
+        A a = new A();
+        System.out.println("a.i: "+ a.i); //객체소유 
+        //a.i = 2; //불가!
+        System.out.println("A.j: "+ A.j); //클래스소유
+        a.m1("현영");
+        a.m2();
+    }
+}
