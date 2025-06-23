@@ -1,0 +1,41 @@
+class B {
+    byte b = 127;
+    void m1(){
+        System.out.println("b: "+ (byte)(b+1));
+    }
+    void m2(){
+        long lo = 10;
+        int result = (int)(b + lo);
+        System.out.println("result: "+ result);
+    }
+    void m3(){
+        float f = 123.12345678f;
+        System.out.println("f: "+ f);
+        double d = 123.123456789012345;
+        System.out.println("d: "+ d);
+
+    double r = f + d;
+    System.out.println("r: "+ r);
+}
+void m4(){
+    long lo = 123456789012345L; 
+    //float f = 123.12345678f; 
+    double d = 123.123456789012345; 
+    double r = lo + d;
+    System.out.println("r: "+ r);
+}
+void m5(){
+    long lo = 1234567890123456789L; 
+    double d = lo;
+    System.out.println("d: " + d);
+}
+public static void main(String[] args) {
+    B b = new B();
+    //b.m1();
+    //b.m2();
+    //b.m3();
+    //b.m4();
+    b.m5();
+}
+}
+
