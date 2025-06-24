@@ -47,6 +47,7 @@ class D {
         }
         pln("바깥쪽 switch밖");
     }
+
     void pln(String str){
         System.out.println(str);
     }
