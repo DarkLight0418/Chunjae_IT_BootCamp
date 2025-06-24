@@ -26,7 +26,7 @@ class C {
 					default: System.out.println("1-2");    
 				}
 				break;
-			default: System.out.println("2");
+				default: System.out.println("2");
 			}
 		}
 
