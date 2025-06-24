@@ -1,0 +1,36 @@
+class B {
+    int score = 82;
+
+void m1(){
+    if(score >= 90){
+        pln("A");
+    }else if(score >= 80){
+        pln("B");
+    }else if(score >= 70){
+        pln("C");
+    }else if(score >= 60){
+        pln("D");
+    }else {
+        pln("F");
+    }
+}
+void m2(){
+    switch(score){ //byte, short, char, int, String
+        case 90: pln("A"); break;
+        case 80: pln("B"); break;
+        case 70: pln("C"); break; 
+        case 60: pln("D"); break; 
+        default: pln("F");  
+    }
+
+    pln("switch 나옴");
+}
+void pln(String str){
+    System.out.println(str);
+}
+public static void main(String[] args) {
+    B b = new B();
+    //b.m1();
+    b.m2();
+}
+}
