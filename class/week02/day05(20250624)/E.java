@@ -1,0 +1,33 @@
+class E {
+	void cal(String[] args) {
+		String jumsu0 = args[0];
+		String jumsu1 = args[1];
+		String jumsu2 = args[2];
+		String jumsu3 = args[3];
+		String jumsu4 = args[4];
+
+		int j0 = Integer.parseInt(jumsu0);
+		int j1 = Integer.parseInt(jumsu1);
+		int j2 = Integer.parseInt(jumsu2);
+		int j3 = Integer.parseInt(jumsu3);
+		int j4 = Integer.parseInt(jumsu4);
+
+
+		int total = j0 + j1 + j2 + j3 + j4;
+		double average = (double) total / args.length;
+
+		System.out.println("총점: " + total + ", 평균: " + average);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		if(args.length != 5) {
+			System.out.println("5과목의 점수를 입력하세요");
+			System.out.println("예) java E 50 60 70 80 90");
+			return;
+		}
+		E e = new E();
+		e.cal(args);
+	}
+}
