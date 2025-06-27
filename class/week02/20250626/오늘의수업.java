@@ -235,9 +235,9 @@ class H {
         double d = 1/2.0; //0.5
         System.out.println("d: " + d);
 
-    int i = 5;
-    int r = i%2;
-    System.out.println("r: " + r);
+        int i = 5;
+        int r = i%2;
+        System.out.println("r: " + r);
 	}
 	void m2(){ //2) 증감 ex) ++,  -- 
 		int i=0; 
