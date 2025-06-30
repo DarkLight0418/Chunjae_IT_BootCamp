@@ -14,8 +14,8 @@
         <version>1.0</version>
         <scope>system</scope>
         <systemPath>${project.basedir}/libs/p.jar</systemPath>
-      </dependency>
-    </dependencies>
+    </dependency>
+  </dependencies>
     <properties> 
       <maven.compiler.source>17</maven.compiler.source>
       <maven.compiler.target>17</maven.compiler.target>
