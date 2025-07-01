@@ -1,0 +1,333 @@
+// 벡터(Vector) 예제 (중복 허용)
+
+package day08;
+
+import java.util.*;
+import soo.P;
+
+public class A {
+	Vector v = new Vector();	
+	void in() {
+		v.add("봄");v.add("여름");v.add("가을");v.add("겨울"); v.add("가을");
+	}
+	void out() {
+		int size = v.size();
+		P.pln("size: " + size);
+		
+		for(int i=0; i<size; i++) {
+			Object obj = v.get(i);
+			String item = (String)obj;
+			P.pln("item: " + item);
+		}
+	}
+	public static void main(String[] args) {
+		A a = new A();
+		a.in();
+		a.out();
+	}
+}
+
+
+// A.java 제네릭 적용 예제
+package day08;
+
+import java.util.*;
+import soo.P;
+
+public class A1 {
+	Vector<String> v = new Vector<String>();	  // 제네릭 적용된 부분
+	void in() {
+		v.add("봄");v.add("여름");v.add("가을");v.add("겨울"); v.add("가을");
+	}
+	void out() {
+		int size = v.size();
+		P.pln("size: " + size);
+		
+		for(int i=0; i<size; i++) {
+			String item = v.get(i);
+			P.pln("item: " + item);
+		}
+	}
+	public static void main(String[] args) {
+		A1 a = new A1();
+		a.in();
+		a.out();
+	}
+}
+
+
+// A.java Enhanced Loop
+
+package day08;
+
+import java.util.*;
+import soo.P;
+
+public class A2 { //Generic, Enhanced Loop
+	Vector<String> v = new Vector<String>();	
+	void in() {
+		v.add("봄");v.add("여름");v.add("가을");v.add("겨울"); v.add("가을");
+	}
+	void out() {
+		int size = v.size();
+		P.pln("size: " + size);
+		
+		for(String item: v) {
+			P.pln("item: " + item);
+		}
+	}
+	public static void main(String[] args) {
+		A2 a = new A2();
+		a.in();
+		a.out();
+	}
+}
+
+
+
+// B2
+
+
+package day08;
+
+import java.util.*;
+import soo.P;
+
+public class B2 { //Generic, Enhanced Loop
+	TreeSet<String> ts = new TreeSet<String>();
+	void in() {
+		ts.add("봄"); ts.add("여름"); ts.add("가을"); ts.add("겨울"); ts.add("가을");
+	}
+	void out() {
+		int size = ts.size();
+		P.pln("size: " + size);
+		
+		for(String item: ts) {
+			P.pln("item: " + item);
+		}
+	}
+	public static void main(String[] args) {
+		B2 b = new B2();
+		b.in();
+		b.out();
+	}
+}
+
+
+
+// C2
+
+package day08;
+
+import java.util.*;
+import soo.P;
+
+public class C2 { //Generic, AutoBoxing, Enhanced Loop
+	Hashtable<Integer, String> h = new Hashtable<Integer, String>();
+	void in() {
+		h.put(1, "봄");
+		h.put(2, "여름");
+		h.put(3, "가을");
+		h.put(4, "겨울");
+		h.put(5, "가을");
+	}
+	void out() {
+		Set<Integer> keys = h.keySet();
+		for(int key: keys) {
+			P.pln("key: " + key + ", value: " + h.get(key));
+		}
+	}
+	public static void main(String[] args) {
+		C2 c = new C2();
+		c.in(); c.out();
+	}
+}
+
+
+
+
+// D
+
+package day08;
+
+import soo.P;
+
+public class D { //배열에 Enhanced Loop 적용
+	String[] items = {"봄", "여름", "가을", "겨울"}; //선언+생성+초기화
+	
+	void out() {
+//		for(int i=0; i<items.length; i++) {
+//			P.pln("items["+i+"]: " + items[i]);
+//		}
+		
+		for(String item: items) {
+			P.pln("item: " + item);
+		}
+	}
+	public static void main(String[] args) {
+		new D().out();
+	}
+}
+
+// E
+
+package day08;
+
+import java.util.Vector;
+
+import soo.P;
+
+public class E { //Tip
+	Vector<String> v1 = new Vector<String>(); //1차원 
+	Vector<String> v2 = new Vector<String>();
+	Vector<Vector<String>> v = new Vector<Vector<String>>(); //2차원 	
+
+	void in() {
+		v1.add("봄");v1.add("여름");v1.add("가을");v1.add("겨울"); 
+		v2.add("아침");v2.add("점심");v2.add("저녁");
+		v.add(v1); v.add(v2);
+	}
+	void out() {
+		for(Vector<String> item: v) {
+			for(String str: item) {
+				P.pln(str);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		E e = new E();
+		e.in(); e.out();
+	}
+}
+
+
+// Tip 1
+package day08.m;
+
+import java.io.*;
+import soo.P;
+import java.util.*;
+
+public class Tip1 {
+	String fname = "우리반.txt";
+	InputStream is;
+	FileReader fr;
+	BufferedReader br;
+	ArrayList<String> list = new ArrayList<String>();
+	Tip1(){
+		try {
+			fr = new FileReader("src/main/resources/우리반.txt");
+			br = new BufferedReader(fr);
+			
+			read();
+		}catch(FileNotFoundException fe) {
+			P.pln(fname + "이란 파일을 못찾음");
+		}
+	}
+	void read() {
+		String line = "";
+		try {
+			int i = 0; 
+			while((line = br.readLine()) != null) {
+				line = line.trim();
+				if(line.length() != 0) {
+					list.add(line);
+				}
+			}
+			
+			//showAll();
+			showOne();
+		}catch(IOException ie) {}
+	}
+	void showAll() { //모든 멤버들 출력
+		P.pln("<모든 멤버들>");
+		for(String name : list) {
+			P.pln(name);
+		}
+	}
+	void showOne() { //T2의 쏘스를 참고해서 랜덤한 i를 구한다
+		//P.pln("당첨자: " + list.get(i));
+	}
+	public static void main(String[] args) {
+		Tip1 t = new Tip1();
+	}
+}
+
+
+
+// T2
+
+package day08.m;
+
+import java.util.*;
+
+import soo.P;
+
+public class T2 {
+	Random r = new Random();
+	int total = 13;
+	
+	void showRan() {
+		int i = r.nextInt(total); //i: 0 ~ (total-1)
+		P.pln("i: " + i);
+	}
+	public static void main(String args[]) {
+		new T2().showRan();
+	}
+}
+
+// Lotto
+
+package day08.m;
+
+import java.io.*;
+import soo.P;
+import java.util.*;
+
+public class Lotto {
+	String fname = "우리반.txt";
+	InputStream is;
+	FileReader fr;
+	BufferedReader br;
+	ArrayList<String> list = new ArrayList<String>();
+	
+	Lotto(){
+		try {
+			fr = new FileReader("src/main/resources/우리반.txt");
+			br = new BufferedReader(fr);
+			
+			read();
+		}catch(FileNotFoundException fe) {
+			P.pln(fname + "이란 파일을 못찾음");
+		}
+	}
+	void read() {
+		String line = "";
+		try {
+			int i = 0; 
+			while((line = br.readLine()) != null) {
+				line = line.trim();
+				if(line.length() != 0) {
+					list.add(line);
+				}
+			}
+			
+			//showAll();
+			showOne();
+		}catch(IOException ie) {}
+	}
+	void showAll() { //모든 멤버들 출력
+		P.pln("<모든 멤버들>");
+		for(String name : list) {
+			P.pln(name);
+		}
+	}
+	Random r = new Random();
+	void showOne() { //T2의 쏘스를 참고해서 랜덤한 i를 구한다
+		int i = r.nextInt(list.size()); 
+		P.pln("#당첨자: " + list.get(i));
+	}
+	public static void main(String[] args) {
+		new Lotto();
+	}
+}
