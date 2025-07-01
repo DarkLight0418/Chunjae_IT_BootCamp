@@ -1,0 +1,20 @@
+< 환경설정 >
+os
+jdk -> jvm 설치
+path / classpath
+
+java - class >> 컴파일 과정
+
+java Hello (Java (실행 클래스 이름)
+클래스 -> 대소문자 구분
+
+new -> 새로운 거 만들어주세요 
+		   
+new Hello() -> 새로운 Hello 객체 만들어주세요  
+		   
+( )-> 동작, 행위
+{ } -> 몸체
+
+println -> ln 라인(줄넘기기)
+
+프로그램의 시작점 -> main 메소드(public static void main(String[] args))
