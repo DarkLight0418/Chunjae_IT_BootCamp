@@ -1,0 +1,16 @@
+package day10;
+
+class AUser extends A1 {
+    AUser() {
+        super();  // new A();
+    }
+
+    void use() {
+        System.out.println("i: " + i);
+        m();
+    }
+
+    public static void main(String[] args) {
+        new AUser().use();
+    }
+}
