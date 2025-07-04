@@ -17,3 +17,7 @@ class A1 {
         System.out.println("m()");
     }
 }
+
+class A2 {
+    
+}
