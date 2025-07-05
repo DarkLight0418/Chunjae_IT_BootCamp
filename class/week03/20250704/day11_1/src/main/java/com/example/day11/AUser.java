@@ -20,7 +20,7 @@ class AUser {
 	public static void main(String args[]) {
 		AChild child =  new AChild();
 		
-		A a = child; //자동형변환
+		AChild a = child; //자동형변환
 		System.out.println("a.I: " + a.I);
 		a.m1();
 		a.mm();
