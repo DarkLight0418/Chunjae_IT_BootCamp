@@ -6,3 +6,10 @@ public interface A {
         System.out.println("m22()");
     }
 }
+
+public interface InnerA1 {
+    void mmm();
+    public default void m2() {
+        System.out.println("m22()");
+    }
+}
