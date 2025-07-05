@@ -1,0 +1,99 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+            
+        {
+            "type": "java",
+            "name": "Launch BInner2",
+            "request": "launch",
+            "mainClass": "com.example.day11.B$BInner2"
+        },
+
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.example.App",
+            "projectName": "com.example-day10"
+        },
+        {
+            "type": "java",
+            "name": "AUser",
+            "request": "launch",
+            "mainClass": "day10.AUser",
+            "projectName": "com.example-day10"
+        },
+        {
+            "type": "java",
+            "name": "EUser",
+            "request": "launch",
+            "mainClass": "day10.EUser",
+            "projectName": "com.example-day10"
+        },
+        {
+            "type": "java",
+            "name": "F",
+            "request": "launch",
+            "mainClass": "day10.F",
+            "projectName": "com.example-day10"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "com.example.App",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
+            "name": "AUser(1)",
+            "request": "launch",
+            "mainClass": "com.example.day11.AUser",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
+            "name": "AUser(2)",
+            "request": "launch",
+            "mainClass": "com.example.t.AUser",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
+            "name": "E1Child",
+            "request": "launch",
+            "mainClass": "com.example.t.E1Child",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.t.Main",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
+            "name": "Num2525",
+            "request": "launch",
+            "mainClass": "com.example.t.Num2525",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
+            "name": "App(2)",
+            "request": "launch",
+            "mainClass": "com.example.App",
+            "projectName": "com.example-v-pj"
+        }
+    ]
+}

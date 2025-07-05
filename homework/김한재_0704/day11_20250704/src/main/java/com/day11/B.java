@@ -1,8 +1,7 @@
-package day11;
-
+package com.day11;
 public class B {
     int i = 0;
-    void m_1() {`
+    void m_1() {
         System.out.println("m()");
     }
 

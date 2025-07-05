@@ -4,6 +4,6 @@ public interface A2 {
     void mm();
 }
 
-public interface A2_1 {
+interface A2_1 {
     void mm();
 }
