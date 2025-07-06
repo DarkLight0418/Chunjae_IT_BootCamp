@@ -8,13 +8,13 @@
   <name>v-pj</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
+    <!-- <dependency>
         <groupId>com.example</groupId>
         <artifactId>my-local-library</artifactId>
         <version>1.0</version>
         <scope>system</scope>
         <systemPath>${project.basedir}/libs/p.jar</systemPath>
-    </dependency>
+    </dependency> -->
   </dependencies>
     <properties> 
       <maven.compiler.source>17</maven.compiler.source>
