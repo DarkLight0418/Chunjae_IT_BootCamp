@@ -1,4 +1,4 @@
-package day12;
+package homework;
 
 import soo.P;
 

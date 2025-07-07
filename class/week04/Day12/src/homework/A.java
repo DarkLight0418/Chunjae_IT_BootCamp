@@ -59,7 +59,8 @@ class AA2 extends Thread {
         for(int i=0; i<10; i++) {
             try {
                 Thread.sleep(1000);
-            } catch ()
+            } catch (InterruptedException ie) {}
+            System.out.println("일2");
         }
     }
 }
