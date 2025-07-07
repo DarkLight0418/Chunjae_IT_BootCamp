@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80d206a3-81c3-4f32-81a4-748680811e2e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../week04/Day12/lib/soo/p.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week04/Day12/src/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../20250704/day11/t/AUser2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20250704/day11/t/AUser2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/A2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/A2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2zWftZICrc0yeLiFKWAYhSc27ca" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/JAE/Java/class/week03/day08_20250630"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80d206a3-81c3-4f32-81a4-748680811e2e" name="Changes" comment="" />
+      <created>1751851964738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751851964738</updated>
+    </task>
+    <servers />
+  </component>
+</project>
