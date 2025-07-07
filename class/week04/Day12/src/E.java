@@ -87,8 +87,6 @@
 //    }
 //}
 
-package day12;
-
 import soo.P;
 
 interface EI1{
