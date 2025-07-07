@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f90b573-79ef-47ef-b055-898bfc4b0698" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/lib/soo/p.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/E.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/E_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/F.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/G.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/soo/P.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../class/week04/Day12/src/soo/p.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../class/week03/20250704/day11/t/AUser2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../class/week03/20250704/day11/t/AUser2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../김한재_0704/day11_20250704/src/main/java/com/day11/A2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../김한재_0704/day11_20250704/src/main/java/com/day11/A2.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2zXR2Pw588AmwwiBzobr9KYhBZp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/JAE/Java/homework/~20250703/김한재_0707"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f90b573-79ef-47ef-b055-898bfc4b0698" name="Changes" comment="" />
+      <created>1751875223356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751875223356</updated>
+    </task>
+    <servers />
+  </component>
+</project>
