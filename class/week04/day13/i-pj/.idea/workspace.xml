@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Day12/src/homework/G.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/p.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/E.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/F.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/G.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/H.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/I.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/J.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/K.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/L.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/M.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/N.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/O.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/advanced/User2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/basic/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/basic/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/basic/C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/day13/basic/D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/soo/P.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/B.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zZQ3exyBnXAbrFUFYN0gGHtcbz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.A.executor": "Run",
+    "Application.App.executor": "Run",
+    "Application.G.executor": "Run",
+    "Application.H.executor": "Run",
+    "Application.I.executor": "Run",
+    "Application.K.executor": "Run",
+    "Application.L.executor": "Run",
+    "Application.M.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.N.executor": "Run",
+    "Application.O.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/JAE/Java/class/week04/day13/i-pj/libs",
+    "onboarding.tips.debug.path": "D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\libs" />
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\src\main\java\org\soo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\src\main\java\org\soo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="day13" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.O">
+    <configuration name="K" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.advanced.K" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="L" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.advanced.L" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="M" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.advanced.M" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="N" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.advanced.N" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.advanced.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="O" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.advanced.O" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.advanced.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.O" />
+        <item itemvalue="Application.N" />
+        <item itemvalue="Application.M" />
+        <item itemvalue="Application.L" />
+        <item itemvalue="Application.K" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="" />
+      <created>1751935917875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751935917875</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lib/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
