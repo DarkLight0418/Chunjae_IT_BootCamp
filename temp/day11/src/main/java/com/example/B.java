@@ -1,4 +1,5 @@
-package com.day11;
+package com.example;
+
 public class B {
     int i = 0;
     void m1() {

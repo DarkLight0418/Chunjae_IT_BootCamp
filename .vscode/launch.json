@@ -6,18 +6,37 @@
     "configurations": [
         {
             "type": "java",
+            "name": "B$BInner2",
+            "request": "launch",
+            "mainClass": "main.java.com.example.B$BInner2",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "B$BInner2",
+            "request": "launch",
+            "mainClass": "com.day11.B$BInner2",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
+            "name": "BInner2",
+            "request": "launch",
+            "mainClass": "com.day11.BInner2",
+            "projectName": "com.example-day11"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
-            
         {
             "type": "java",
             "name": "Launch BInner2",
             "request": "launch",
             "mainClass": "com.example.day11.B$BInner2"
         },
-
         {
             "type": "java",
             "name": "App",
