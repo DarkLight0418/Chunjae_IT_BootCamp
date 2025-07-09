@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/D1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/D1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/Input1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/Input1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/Input2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/Input2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/Input3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/Input3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day07_20250630/soo/P.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day07_P_and_Array/soo/P.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day08/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day08_Collection/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day08/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day08_Collection/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day08/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day08_Collection/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day09_20250702/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day09_OOP_Exception/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day09_20250702/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day09_OOP_Exception/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day09_20250702/F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day09_OOP_Exception/F.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day09_20250702/God.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day09_OOP_Exception/God.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day10/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day10_extends_implements/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day10/AUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day10_extends_implements/AUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day10/E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day10_extends_implements/E.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day10/F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day10_extends_implements/F.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day10/J.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day10_extends_implements/J.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day11/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day11/A1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day11/A2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day11/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day11/B_1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/E.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/E.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/F.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/F.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/G.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/H.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/H.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/I.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/I.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/J.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/J.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/K.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/K.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/L.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/L.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/M.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/M.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/N.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/N.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/O.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/O.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/advanced/User2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/advanced/User2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/basic/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/basic/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/basic/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/basic/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/basic/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/basic/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/basic/D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/basic/D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/homework/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/homework/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day13/homework/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day13_stream/homework/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/A.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/C.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/IO.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/info.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/t/T1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/day14/t/T2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/E.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/G.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/homework/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/homework/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/homework/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/homework/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/homework/E_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/homework/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/homework/G.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/soo/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/day12/src/soo/p.jar" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zZQ3exyBnXAbrFUFYN0gGHtcbz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.A.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C.executor&quot;: &quot;Run&quot;,
+    &quot;Application.G.executor&quot;: &quot;Run&quot;,
+    &quot;Application.H.executor&quot;: &quot;Run&quot;,
+    &quot;Application.I.executor&quot;: &quot;Run&quot;,
+    &quot;Application.K.executor&quot;: &quot;Run&quot;,
+    &quot;Application.L.executor&quot;: &quot;Run&quot;,
+    &quot;Application.M.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.N.executor&quot;: &quot;Run&quot;,
+    &quot;Application.O.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.A (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.A.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.B.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day14.B.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAE/Java/class/IntelliJ_project/i-pj&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\libs" />
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\src\main\java\org\soo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\src\main\java\org\soo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="day13" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.A">
+    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13_stream.basic.A" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13_stream.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13_stream.basic.A" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13_stream.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13_stream.basic.B" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13_stream.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day13.basic.A (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.basic.A" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.A" />
+      <item itemvalue="Application.B" />
+      <item itemvalue="Application.day13.basic.A (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.day13.basic.A (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="" />
+      <created>1751935917875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751935917875</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../../.." />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lib/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
