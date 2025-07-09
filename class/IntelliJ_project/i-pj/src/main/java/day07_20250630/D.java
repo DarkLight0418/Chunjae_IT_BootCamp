@@ -1,3 +1,7 @@
+package day07_20250630;
+
+import soo.P;
+
 public class D {
     int is1[] = {1, 2};
     int is2[] = {3, 4, 5};

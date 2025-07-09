@@ -1,3 +1,5 @@
+package day07_20250630;
+
 import java.util.*;
 
 class Input3 {

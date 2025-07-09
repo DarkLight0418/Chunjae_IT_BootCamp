@@ -1,4 +1,4 @@
-//package JAE;
+package day07_20250630.soo;
 /** 
     자바 출력을 위한 클래스
     @author JAE

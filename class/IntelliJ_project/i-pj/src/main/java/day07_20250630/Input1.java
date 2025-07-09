@@ -1,3 +1,4 @@
+package day07_20250630;
 
 class Input1 {
 
