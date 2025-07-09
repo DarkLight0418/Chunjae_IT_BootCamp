@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/day14/t/T1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/A1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/A2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/B(1).java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../homework/김한재_0704/day11_20250704/src/main/java/com/day11/BInner2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/붕어빵.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/오늘.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/오늘_학교.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/중요-객체지향.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/코딩예제/1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/코딩예제/2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/Day03/코딩예제/3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/2일차.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/E.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/EE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/Hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/Oh.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/path.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/코딩예제/예제1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/fromDay02/환경설정.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week01/week01.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/20250626/5번 코딩하는 법.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/20250626/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/20250626/A1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/20250626/오늘의수업.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day04/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day04/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day04/Tip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day04/코드예제/A.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day04/코드예제/B.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day04/코드예제/C.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day04/코드예제/Tip.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/E.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/example/A.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/example/B.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/example/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/example/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day05(20250624)/example/E(A~D까지만).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/example/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/example/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/example/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/day06/창우형printf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week02/week02.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09/E.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/day09/G.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/teacher/우리반리스트.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250702/예제 코드들.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/20250704.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/A1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/A2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/day11.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/t/AUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/20250704/day11/t/AUser2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07/PUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07/배포.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07/배포/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07/배포/doc.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07/배포/p.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/D1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/Input1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/Input2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/Input3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day07_20250630/soo/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/PUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/JAE/P.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/JAE/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/JAE/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/legal/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/script-dir/jquery-3.6.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/Pdoc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/p.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/p.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/pom.xml.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/v-pj/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/v-pj/src/main/java/com/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08(20250630)/v-pj/src/test/java/com/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/PUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/JAE/P.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/JAE/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/JAE/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/legal/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/script-dir/jquery-3.6.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/Pdoc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/p.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/pom.xml.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/v-pj/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/v-pj/src/main/java/com/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day08_20250630/v-pj/src/test/java/com/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day09_20250701/T2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day09_20250701/Tip1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day09_20250701/day08.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day09_20250701/선배기수예.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day09_20250701/예제코드들.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day09_20250701/우리반.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/src/main/java/com/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/src/main/java/day10/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/src/main/java/day10/AUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/src/main/java/day10/E.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/src/main/java/day10/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/src/main/java/day10/J.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/src/test/java/com/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week03/day10/day10/t/AUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/day12.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/lib/soo/p.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/E.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/G.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/homework/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/homework/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/homework/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/homework/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/homework/E_1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/homework/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/homework/G.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/soo/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/Day12/src/soo/p.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/libs/p.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/E.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/G.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/H.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/I.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/J.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/K.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/L.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/M.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/N.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/O.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/advanced/User2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/basic/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/basic/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/basic/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/day13/basic/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/index-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/legal/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/script-dir/jquery-3.6.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/soo/P.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/soo/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/soo/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/doc/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week04/day13/i-pj/src/main/java/soo/p.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07/PUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07/배포.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07/배포/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07/배포/doc.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07/배포/p.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/C.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/D1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/Input1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/Input2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/Input3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day07_20250630/soo/P.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/2차원 배열 그림.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/cd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/cpu 연산단계.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/launch.json파일.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/내부 클래스 메인 메소드 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/내부 클래스 메인 메소드 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/쉽지 않네.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/실행 및 디버그.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/실행 완료.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/엥.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/예외 계층도.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/이클립스 클래스 설정.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/자격 증명 관리자 깃.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/저 벌레 모양.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/추가 점검 사항.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../캡처 이미지/톱니바퀴.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zZQ3exyBnXAbrFUFYN0gGHtcbz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.A.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C.executor&quot;: &quot;Run&quot;,
+    &quot;Application.G.executor&quot;: &quot;Run&quot;,
+    &quot;Application.H.executor&quot;: &quot;Run&quot;,
+    &quot;Application.I.executor&quot;: &quot;Run&quot;,
+    &quot;Application.K.executor&quot;: &quot;Run&quot;,
+    &quot;Application.L.executor&quot;: &quot;Run&quot;,
+    &quot;Application.M.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.N.executor&quot;: &quot;Run&quot;,
+    &quot;Application.O.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.A (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.A.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.B.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day14.B.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAE/Java/class/IntelliJ_project/i-pj&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\libs" />
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\src\main\java\org\soo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAE\Java\class\week04\day13\i-pj\src\main\java\org\soo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="day13" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.day13.basic.A">
+    <configuration name="day13.basic.A (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.basic.A" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day13.basic.A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.basic.A" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day13.basic.B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day13.basic.B" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day13.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.day13.basic.A" />
+      <item itemvalue="Application.day13.basic.A (1)" />
+      <item itemvalue="Application.day13.basic.B" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.day13.basic.A" />
+        <item itemvalue="Application.day13.basic.A (1)" />
+        <item itemvalue="Application.day13.basic.B" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="" />
+      <created>1751935917875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751935917875</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../../.." />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lib/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
