@@ -1,3 +1,6 @@
+package day07_20250630;
+
+import soo.P;
 
 public class B {
     //String strs[] = new String[4];   // (1)선언 + (2)생성

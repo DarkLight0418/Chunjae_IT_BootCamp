@@ -1,4 +1,6 @@
-//package Java.day07_20250630;
+package day07_20250630;
+
+import soo.P;
 
 public class A {
     void m1() {

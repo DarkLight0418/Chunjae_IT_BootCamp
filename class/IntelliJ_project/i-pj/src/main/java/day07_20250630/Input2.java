@@ -1,3 +1,4 @@
+package day07_20250630;
 
 import java.io.BufferedReader;
 import java.io.IOException;

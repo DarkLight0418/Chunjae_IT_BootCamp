@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.Hashtable;
 import java.util.*;
 
+// original.txt -> filtered.txt -> original.bak
 public class T1 {
     final String PATH = "src/main/java/day14/t/";
     String fname = "" +
@@ -61,7 +62,10 @@ public class T1 {
             br = new BufferedReader(fr);
             String line = "";
             while((line = br.readLine()) != null){
-                set.add(line);
+                if(line != null) {
+                    line.trim();
+                    if(line.length() != 0) set.add(line);
+                }
             }
             //showSet();
 

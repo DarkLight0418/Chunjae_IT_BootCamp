@@ -1,4 +1,4 @@
-package com.day11;
+package day11;
 
 public abstract interface A1 {
     public static final int I=2;

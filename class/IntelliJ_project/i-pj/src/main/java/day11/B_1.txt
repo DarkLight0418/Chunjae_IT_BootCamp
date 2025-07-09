@@ -1,6 +1,6 @@
-package com.day11;
+package day11;
 
-class B {
+public class B_1 {
     int i = 0;
     void m_1() {
         System.out.println("m()");
