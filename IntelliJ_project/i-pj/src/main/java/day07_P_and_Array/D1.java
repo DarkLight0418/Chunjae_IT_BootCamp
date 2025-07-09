@@ -1,6 +1,6 @@
-package day07;
+package day07_P_and_Array;
 import soo.P;
-public class D {
+public class D1 {
     
     int iss[][] = { { 1, 2 }, { 3, 4, 5 } }; // 2차원
 	int isss[][][] = { iss, { { 60}, { 700,800 } },{ { 1000 } } }; // 3차원
