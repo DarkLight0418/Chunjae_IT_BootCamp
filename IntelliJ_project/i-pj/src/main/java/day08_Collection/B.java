@@ -3,8 +3,7 @@
 
 package day08_Collection;
 
-import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.*;
 
 import soo.P;
 
@@ -16,7 +15,7 @@ public class B {
 	void out() {
 		int size = ts.size();
 		P.pln("size: " + size);
-		
+
 		Iterator iter = ts.iterator();
 		//Iterator iter = ts.descendingIterator();
 		while(iter.hasNext()) {
