@@ -1,4 +1,4 @@
-//package day12;
+package day12_Thread_Lambda;//package day12;
 //
 //import soo.P;
 //

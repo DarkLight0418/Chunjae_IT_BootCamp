@@ -1,4 +1,4 @@
-package day11;
+package day11_Interface;
 
 public interface A2 {
     void mm();
