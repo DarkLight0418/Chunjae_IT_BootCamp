@@ -9,6 +9,10 @@ public class F {
         F f = new F();
         System.out.println("");
     }
+
+    void m() {
+        System.out.println("m()");
+    }
 }
 
 class Helper {
