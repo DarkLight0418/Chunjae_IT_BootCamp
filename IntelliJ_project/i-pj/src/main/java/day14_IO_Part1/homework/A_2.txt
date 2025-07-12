@@ -16,7 +16,7 @@ public class A_homework {
     }
 
     void m2() {
-        byte[] bs = new byte[8];
+        byte bs[] = new byte[8];
         try {
             int count = 0;
             while((count = is1.read(bs)) != -1) {
