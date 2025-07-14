@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="20250709 homework part1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/HYs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/HYs2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/Thread/SingleThreadEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/Thread/SingleThreadEx2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/Thread/SynchronizedEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/Thread/ThreadEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/arraylist/ArrayList_Ex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/arraylist/ArrayList_Ex02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/day16_learning/arraylist/ArrayList_Ex3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lotto/MultiLotto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../캐스팅과 박싱.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,10 +172,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.HYs" />
-      <item itemvalue="Application.SynchronizedEx" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.SingleThreadEx" />
       <item itemvalue="Application.SingleThreadEx2" />
+      <item itemvalue="Application.SingleThreadEx" />
+      <item itemvalue="Application.SynchronizedEx" />
     </list>
     <recent_temporary>
       <list>
