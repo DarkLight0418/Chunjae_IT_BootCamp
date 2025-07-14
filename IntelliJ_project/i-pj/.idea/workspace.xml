@@ -23,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "DarkLight0418"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/DarkLight0418/Chunjae_IT_BootCamp.git",
+    "accountId": "818223f7-8478-4034-9fae-d197ff3b7502"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -32,63 +44,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.A1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.A2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ArrayList_Ex.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ArrayList_Ex02.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ArrayList_Ex3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B1_homework.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B1_homework3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B1_homework5.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B2_homework.executor&quot;: &quot;Run&quot;,
-    &quot;Application.B2_homework2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.C.executor&quot;: &quot;Run&quot;,
-    &quot;Application.C_homework2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.D_homework.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EUser3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.G.executor&quot;: &quot;Run&quot;,
-    &quot;Application.H.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HYs.executor&quot;: &quot;Run&quot;,
-    &quot;Application.I.executor&quot;: &quot;Run&quot;,
-    &quot;Application.K.executor&quot;: &quot;Run&quot;,
-    &quot;Application.L.executor&quot;: &quot;Run&quot;,
-    &quot;Application.M.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MultiLotto.executor&quot;: &quot;Run&quot;,
-    &quot;Application.N.executor&quot;: &quot;Run&quot;,
-    &quot;Application.O.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SingleThreadEx.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SingleThreadEx2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SynchronizedEx.executor&quot;: &quot;Run&quot;,
-    &quot;Application.T.executor&quot;: &quot;Run&quot;,
-    &quot;Application.day13.basic.A (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.day13.basic.A.executor&quot;: &quot;Run&quot;,
-    &quot;Application.day13.basic.B.executor&quot;: &quot;Run&quot;,
-    &quot;Application.day14.B.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JAE/Java/IntelliJ_project/i-pj&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.A.executor": "Run",
+    "Application.A1.executor": "Run",
+    "Application.A2.executor": "Run",
+    "Application.A_homework.executor": "Run",
+    "Application.App.executor": "Run",
+    "Application.ArrayList_Ex.executor": "Run",
+    "Application.ArrayList_Ex02.executor": "Run",
+    "Application.ArrayList_Ex3.executor": "Run",
+    "Application.B.executor": "Run",
+    "Application.B1_homework.executor": "Run",
+    "Application.B1_homework3.executor": "Run",
+    "Application.B1_homework5.executor": "Run",
+    "Application.B2_homework.executor": "Run",
+    "Application.B2_homework2.executor": "Run",
+    "Application.C.executor": "Run",
+    "Application.C_homework2.executor": "Run",
+    "Application.D_homework.executor": "Run",
+    "Application.EUser3.executor": "Run",
+    "Application.G.executor": "Run",
+    "Application.H.executor": "Run",
+    "Application.HYs.executor": "Run",
+    "Application.I.executor": "Run",
+    "Application.K.executor": "Run",
+    "Application.L.executor": "Run",
+    "Application.M.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MultiLotto.executor": "Run",
+    "Application.N.executor": "Run",
+    "Application.O.executor": "Run",
+    "Application.SingleThreadEx.executor": "Run",
+    "Application.SingleThreadEx2.executor": "Run",
+    "Application.SynchronizedEx.executor": "Run",
+    "Application.T.executor": "Run",
+    "Application.day13.basic.A (1).executor": "Run",
+    "Application.day13.basic.A.executor": "Run",
+    "Application.day13.basic.B.executor": "Run",
+    "Application.day14.B.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/KIMHANJAE2/Desktop/bootCamp/Chunjae_IT_BootCamp/IntelliJ_project/i-pj",
+    "onboarding.tips.debug.path": "D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAE\Java\class\week04\day13\i-pj\libs" />
@@ -104,7 +118,20 @@
       <recent name="day13" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HYs">
+  <component name="RunManager" selected="Application.A_homework">
+    <configuration name="A_homework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day14_IO_Part1.homework.A_homework" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day14_IO_Part1.homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HYs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day16_learning.HYs" />
       <module name="i-pj" />
@@ -120,19 +147,6 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day16_learning.Thread.Main" />
-      <module name="i-pj" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day16_learning.Thread.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingleThreadEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day16_learning.Thread.SingleThreadEx" />
       <module name="i-pj" />
       <extension name="coverage">
         <pattern>
@@ -171,6 +185,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.A_homework" />
       <item itemvalue="Application.HYs" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.SingleThreadEx2" />
@@ -179,11 +194,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.A_homework" />
         <item itemvalue="Application.HYs" />
         <item itemvalue="Application.SynchronizedEx" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.SingleThreadEx2" />
-        <item itemvalue="Application.SingleThreadEx" />
       </list>
     </recent_temporary>
   </component>
