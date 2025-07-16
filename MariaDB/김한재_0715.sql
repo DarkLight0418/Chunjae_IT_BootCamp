@@ -1,4 +1,4 @@
-EMPNO : 사원번호, MGR : 입사번호, COMM : 커미션, HIREDATE : 입사일
+EMPNO : 사원번호(입사번호), MGR : 매니저(입사번호 아님!!!!!!!), COMM : 커미션, HIREDATE : 입사일
 
 김한재_0715
 
