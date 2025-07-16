@@ -18,7 +18,7 @@ select ENAME, DEPTNO, SAL, SAL*(12+1.5) SALYEAR from EMP where DEPTNO=30;
 단, 1달의 근무일수는 12일이고, 1일 근무시간은 5시간이다.
 출력양식은 이름, 급여, 시간당 임금(소수이하 1번째 자리에서 반올림)
 을 출력하라. (*)
-select ENAME, SAL, round(SAL/60, 1) DAYSAL from EMP where DEPTNO=20 order by ENAME;
+select ENAME, SAL, round(SAL/12/5, 1) DAYSAL from EMP where DEPTNO=20 order by ENAME;
 
 (5) 급여가 $1,500 부터 $3,000 사이의 사람은 급여의 15%를 회비로 지불하기로 하였다.
 이를 이름, 급여, 회비(-2자리에서 반올림)를 출력하라. (*)
