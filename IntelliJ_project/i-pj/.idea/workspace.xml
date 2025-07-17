@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="20250709 homework part1">
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +52,7 @@
     "Application.A2.executor": "Run",
     "Application.A_homework.executor": "Run",
     "Application.App.executor": "Run",
+    "Application.ArrayCreated2.executor": "Run",
     "Application.ArrayList_Ex.executor": "Run",
     "Application.ArrayList_Ex02.executor": "Run",
     "Application.ArrayList_Ex3.executor": "Run",
@@ -64,6 +64,7 @@
     "Application.B2_homework2.executor": "Run",
     "Application.C.executor": "Run",
     "Application.C_homework2.executor": "Run",
+    "Application.DMBCellPhoneExample.executor": "Run",
     "Application.D_homework.executor": "Run",
     "Application.EUser3.executor": "Run",
     "Application.G.executor": "Run",
@@ -119,7 +120,7 @@
       <recent name="day13" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A_homework">
+  <component name="RunManager" selected="Application.ArrayCreated2">
     <configuration name="A_homework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day14_IO_Part1.homework.A_homework" />
       <module name="i-pj" />
@@ -133,38 +134,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ArrayCreated2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="self_review.array.ArrayCreated2" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="self_review.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DMBCellPhoneExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="self_review.inheritance1.DMBCellPhoneExample" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="self_review.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HYs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day16_learning.HYs" />
       <module name="i-pj" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="day16_learning.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day16_learning.Thread.Main" />
-      <module name="i-pj" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day16_learning.Thread.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SingleThreadEx2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day16_learning.Thread.SingleThreadEx2" />
-      <module name="i-pj" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day16_learning.Thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,19 +187,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ArrayCreated2" />
       <item itemvalue="Application.A_homework" />
+      <item itemvalue="Application.DMBCellPhoneExample" />
       <item itemvalue="Application.HYs" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.SingleThreadEx2" />
       <item itemvalue="Application.SynchronizedEx" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayCreated2" />
+        <item itemvalue="Application.DMBCellPhoneExample" />
         <item itemvalue="Application.A_homework" />
         <item itemvalue="Application.HYs" />
         <item itemvalue="Application.SynchronizedEx" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.SingleThreadEx2" />
       </list>
     </recent_temporary>
   </component>
