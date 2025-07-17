@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="20250709 homework part1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="afc6f6b2-cf67-4cc4-8156-0747353a6745" name="Changes" comment="20250718 review java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,67 +42,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.A.executor": "Run",
-    "Application.A1.executor": "Run",
-    "Application.A2.executor": "Run",
-    "Application.A_homework.executor": "Run",
-    "Application.App.executor": "Run",
-    "Application.ArrayCreated2.executor": "Run",
-    "Application.ArrayList_Ex.executor": "Run",
-    "Application.ArrayList_Ex02.executor": "Run",
-    "Application.ArrayList_Ex3.executor": "Run",
-    "Application.B.executor": "Run",
-    "Application.B1_homework.executor": "Run",
-    "Application.B1_homework3.executor": "Run",
-    "Application.B1_homework5.executor": "Run",
-    "Application.B2_homework.executor": "Run",
-    "Application.B2_homework2.executor": "Run",
-    "Application.C.executor": "Run",
-    "Application.C_homework2.executor": "Run",
-    "Application.DMBCellPhoneExample.executor": "Run",
-    "Application.D_homework.executor": "Run",
-    "Application.EUser3.executor": "Run",
-    "Application.G.executor": "Run",
-    "Application.H.executor": "Run",
-    "Application.HYs.executor": "Run",
-    "Application.I.executor": "Run",
-    "Application.K.executor": "Run",
-    "Application.L.executor": "Run",
-    "Application.M.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MultiLotto.executor": "Run",
-    "Application.N.executor": "Run",
-    "Application.O.executor": "Run",
-    "Application.SingleThreadEx.executor": "Run",
-    "Application.SingleThreadEx2.executor": "Run",
-    "Application.SynchronizedEx.executor": "Run",
-    "Application.T.executor": "Run",
-    "Application.day13.basic.A (1).executor": "Run",
-    "Application.day13.basic.A.executor": "Run",
-    "Application.day13.basic.B.executor": "Run",
-    "Application.day14.B.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/JAE/Class/IntelliJ_project/i-pj",
-    "onboarding.tips.debug.path": "D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.A.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.A_homework.executor&quot;: &quot;Run&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayCreated2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayList_Ex.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayList_Ex02.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayList_Ex3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B1_homework.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B1_homework3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B1_homework5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B2_homework.executor&quot;: &quot;Run&quot;,
+    &quot;Application.B2_homework2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C.executor&quot;: &quot;Run&quot;,
+    &quot;Application.C_homework2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DMBCellPhoneExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.D_homework.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EUser3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.G.executor&quot;: &quot;Run&quot;,
+    &quot;Application.H.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HYs.executor&quot;: &quot;Run&quot;,
+    &quot;Application.I.executor&quot;: &quot;Run&quot;,
+    &quot;Application.K.executor&quot;: &quot;Run&quot;,
+    &quot;Application.L.executor&quot;: &quot;Run&quot;,
+    &quot;Application.M.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MultiLotto.executor&quot;: &quot;Run&quot;,
+    &quot;Application.N.executor&quot;: &quot;Run&quot;,
+    &quot;Application.O.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SingleThreadEx.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SingleThreadEx2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SynchronizedEx.executor&quot;: &quot;Run&quot;,
+    &quot;Application.T.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.A (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.A.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day13.basic.B.executor&quot;: &quot;Run&quot;,
+    &quot;Application.day14.B.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAE/Class/IntelliJ_project/i-pj&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAE\Java\class\week04\day13\i-pj\libs" />
@@ -227,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752054832658</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="20250718 review java">
+      <option name="closed" value="true" />
+      <created>1752795656671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752795656671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +254,8 @@
     </ignored-roots>
     <MESSAGE value="20250709 change day08" />
     <MESSAGE value="20250709 homework part1" />
-    <option name="LAST_COMMIT_MESSAGE" value="20250709 homework part1" />
+    <MESSAGE value="20250718 review java" />
+    <option name="LAST_COMMIT_MESSAGE" value="20250718 review java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
