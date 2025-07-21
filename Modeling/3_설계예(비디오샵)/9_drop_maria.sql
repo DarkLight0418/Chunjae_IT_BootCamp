@@ -1,0 +1,10 @@
+drop table if exists RENTAMOUNT;
+drop table if exists AMOUNT;
+drop table if exists LATEFEE;
+drop table if exists RENT;
+drop table if exists VIDEO;
+drop table if exists MEMBER;
+drop table if exists CHAINSTORE;
+drop table if exists MOVIE;
+drop table if exists GRADE;
+drop table if exists JANGR;
