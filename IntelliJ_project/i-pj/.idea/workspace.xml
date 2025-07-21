@@ -33,7 +33,15 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/DarkLight0418/Chunjae_IT_BootCamp.git&quot;,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     &quot;accountId&quot;: &quot;0f60fe36-fab9-400c-a744-f91b38c5889f&quot;
+=======
+    &quot;accountId&quot;: &quot;818223f7-8478-4034-9fae-d197ff3b7502&quot;
+>>>>>>> Stashed changes
+=======
+    &quot;accountId&quot;: &quot;818223f7-8478-4034-9fae-d197ff3b7502&quot;
+>>>>>>> Stashed changes
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -45,6 +53,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.A.executor": "Run",
+    "Application.A1.executor": "Run",
+    "Application.A2.executor": "Run",
+    "Application.A_homework.executor": "Run",
+    "Application.App.executor": "Run",
+    "Application.ArrayCreated2.executor": "Run",
+    "Application.ArrayList_Ex.executor": "Run",
+    "Application.ArrayList_Ex02.executor": "Run",
+    "Application.ArrayList_Ex3.executor": "Run",
+    "Application.B.executor": "Run",
+    "Application.B1_homework.executor": "Run",
+    "Application.B1_homework3.executor": "Run",
+    "Application.B1_homework5.executor": "Run",
+    "Application.B2_homework.executor": "Run",
+    "Application.B2_homework2.executor": "Run",
+    "Application.C.executor": "Run",
+    "Application.C_homework2.executor": "Run",
+    "Application.DMBCellPhoneExample.executor": "Run",
+    "Application.D_homework.executor": "Run",
+    "Application.EUser3.executor": "Run",
+    "Application.G.executor": "Run",
+    "Application.H.executor": "Run",
+    "Application.HYs.executor": "Run",
+    "Application.I.executor": "Run",
+    "Application.K.executor": "Run",
+    "Application.L.executor": "Run",
+    "Application.M.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MultiLotto.executor": "Run",
+    "Application.N.executor": "Run",
+    "Application.O.executor": "Run",
+    "Application.RandomTest.executor": "Run",
+    "Application.SingleThreadEx.executor": "Run",
+    "Application.SingleThreadEx2.executor": "Run",
+    "Application.SynchronizedEx.executor": "Run",
+    "Application.T.executor": "Run",
+    "Application.day13.basic.A (1).executor": "Run",
+    "Application.day13.basic.A.executor": "Run",
+    "Application.day13.basic.B.executor": "Run",
+    "Application.day14.B.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/JAE/Class/IntelliJ_project/i-pj",
+    "onboarding.tips.debug.path": "D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+=======
+=======
+>>>>>>> Stashed changes
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -53,7 +129,10 @@
     &quot;Application.A2.executor&quot;: &quot;Run&quot;,
     &quot;Application.A_homework.executor&quot;: &quot;Run&quot;,
     &quot;Application.App.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
     &quot;Application.ArrayCreated2.executor&quot;: &quot;Run&quot;,
+=======
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
     &quot;Application.ArrayList_Ex.executor&quot;: &quot;Run&quot;,
     &quot;Application.ArrayList_Ex02.executor&quot;: &quot;Run&quot;,
     &quot;Application.ArrayList_Ex3.executor&quot;: &quot;Run&quot;,
@@ -65,12 +144,19 @@
     &quot;Application.B2_homework2.executor&quot;: &quot;Run&quot;,
     &quot;Application.C.executor&quot;: &quot;Run&quot;,
     &quot;Application.C_homework2.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
     &quot;Application.DMBCellPhoneExample.executor&quot;: &quot;Run&quot;,
+=======
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
     &quot;Application.D_homework.executor&quot;: &quot;Run&quot;,
     &quot;Application.EUser3.executor&quot;: &quot;Run&quot;,
     &quot;Application.G.executor&quot;: &quot;Run&quot;,
     &quot;Application.H.executor&quot;: &quot;Run&quot;,
     &quot;Application.HYs.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
+=======
+    &quot;Application.HYs3.executor&quot;: &quot;Run&quot;,
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
     &quot;Application.I.executor&quot;: &quot;Run&quot;,
     &quot;Application.K.executor&quot;: &quot;Run&quot;,
     &quot;Application.L.executor&quot;: &quot;Run&quot;,
@@ -79,7 +165,10 @@
     &quot;Application.MultiLotto.executor&quot;: &quot;Run&quot;,
     &quot;Application.N.executor&quot;: &quot;Run&quot;,
     &quot;Application.O.executor&quot;: &quot;Run&quot;,
+<<<<<<< HEAD
     &quot;Application.RandomTest.executor&quot;: &quot;Run&quot;,
+=======
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
     &quot;Application.SingleThreadEx.executor&quot;: &quot;Run&quot;,
     &quot;Application.SingleThreadEx2.executor&quot;: &quot;Run&quot;,
     &quot;Application.SynchronizedEx.executor&quot;: &quot;Run&quot;,
@@ -99,12 +188,31 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+<<<<<<< HEAD
     &quot;last_opened_file_path&quot;: &quot;D:/JAE/Class/IntelliJ_project/i-pj&quot;,
+=======
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KIMHANJAE2/Desktop/bootCamp/Chunjae_IT_BootCamp/IntelliJ_project/i-pj&quot;,
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
     &quot;onboarding.tips.debug.path&quot;: &quot;D:/JAE/Java/class/week04/day13/i-pj/lib/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+<<<<<<< HEAD
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
   }
 }</component>
   <component name="RecentsManager">
@@ -122,7 +230,15 @@
       <recent name="day13" />
     </key>
   </component>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Application.RandomTest">
+=======
+  <component name="RunManager" selected="Application.G">
+>>>>>>> Stashed changes
+=======
+  <component name="RunManager" selected="Application.G">
+>>>>>>> Stashed changes
     <configuration name="A_homework" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day14_IO_Part1.homework.A_homework" />
       <module name="i-pj" />
@@ -136,6 +252,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <configuration name="ArrayCreated2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="self_review.array.ArrayCreated2" />
       <module name="i-pj" />
@@ -155,6 +273,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="self_review.array.*" />
+=======
+=======
+>>>>>>> Stashed changes
+    <configuration name="G" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day09_OOP_Exception.G" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day09_OOP_Exception.*" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,12 +306,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <configuration name="RandomTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="self_review.nn.RandomTest" />
       <module name="i-pj" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="self_review.nn.*" />
+=======
+    <configuration name="HYs3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day16_learning.HYs3" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+=======
+    <configuration name="HYs3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day16_learning.HYs3" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+>>>>>>> Stashed changes
+          <option name="PATTERN" value="day16_learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SynchronizedEx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day16_learning.Thread.SynchronizedEx" />
+      <module name="i-pj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day16_learning.Thread.*" />
+>>>>>>> Stashed changes
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -190,7 +351,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.A_homework" />
+<<<<<<< HEAD
       <item itemvalue="Application.ArrayCreated2" />
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> c357f4623b3c0095ee639b4e54cfa0cb8d74b4a9
       <item itemvalue="Application.DMBCellPhoneExample" />
       <item itemvalue="Application.HYs" />
       <item itemvalue="Application.RandomTest" />
@@ -202,6 +368,32 @@
         <item itemvalue="Application.DMBCellPhoneExample" />
         <item itemvalue="Application.A_homework" />
         <item itemvalue="Application.HYs" />
+=======
+      <item itemvalue="Application.G" />
+      <item itemvalue="Application.HYs3" />
+      <item itemvalue="Application.HYs" />
+      <item itemvalue="Application.SynchronizedEx" />
+    </list>
+    <recent_temporary>
+      <list>
+=======
+      <item itemvalue="Application.G" />
+      <item itemvalue="Application.HYs3" />
+      <item itemvalue="Application.HYs" />
+      <item itemvalue="Application.SynchronizedEx" />
+    </list>
+    <recent_temporary>
+      <list>
+>>>>>>> Stashed changes
+        <item itemvalue="Application.G" />
+        <item itemvalue="Application.HYs3" />
+        <item itemvalue="Application.A_homework" />
+        <item itemvalue="Application.HYs" />
+        <item itemvalue="Application.SynchronizedEx" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
@@ -229,6 +421,8 @@
       <option name="project" value="LOCAL" />
       <updated>1752054832658</updated>
     </task>
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <task id="LOCAL-00003" summary="20250718 review java">
       <option name="closed" value="true" />
       <created>1752795656671</created>
@@ -238,6 +432,38 @@
       <updated>1752795656671</updated>
     </task>
     <option name="localTasksCounter" value="4" />
+=======
+=======
+>>>>>>> Stashed changes
+    <task id="LOCAL-00003" summary="20250712 FileStream review">
+      <option name="closed" value="true" />
+      <created>1752293164224</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752293164224</updated>
+    </task>
+    <task id="LOCAL-00004" summary="20250712 java ++ --">
+      <option name="closed" value="true" />
+      <created>1752327141818</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752327141818</updated>
+    </task>
+    <task id="LOCAL-00005" summary="20250713 flag try-catch">
+      <option name="closed" value="true" />
+      <created>1752398237884</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752398237884</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,8 +484,21 @@
     </ignored-roots>
     <MESSAGE value="20250709 change day08" />
     <MESSAGE value="20250709 homework part1" />
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <MESSAGE value="20250718 review java" />
     <option name="LAST_COMMIT_MESSAGE" value="20250718 review java" />
+=======
+=======
+>>>>>>> Stashed changes
+    <MESSAGE value="20250712 FileStream review" />
+    <MESSAGE value="20250712 java ++ --" />
+    <MESSAGE value="20250713 flag try-catch" />
+    <option name="LAST_COMMIT_MESSAGE" value="20250713 flag try-catch" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
