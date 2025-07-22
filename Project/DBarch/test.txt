@@ -1,0 +1,70 @@
+CREATE TABLE ȸ  ī   (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+   ̿ _ Ⱓ ENUM('3    ', '6    ', '12    '),
+         DATE,
+         DATE,
+    Ŀ  _     BOOLEAN,
+  PT_     BOOLEAN,
+   ̸  VARCHAR(15),
+    ȭ  ȣ VARCHAR(100),
+       ȣ CHAR(6),
+       CHAR(2),
+       INT,
+  email VARCHAR(50)
+);
+
+CREATE TABLE ȸ           (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  ȸ  ID INT,
+      _     TEXT,
+      _    ENUM('ī  ', '    ', '      ü'),
+      _     DATE,
+  ȸ     BOOLEAN,
+      BOOLEAN,
+  PT BOOLEAN,
+    Ŀ   BOOLEAN,
+  FOREIGN KEY (ȸ  ID) REFERENCES ȸ  ī  (id) ON DELETE CASCADE
+);
+
+CREATE TABLE    ԰    (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  ȸ  ID INT,
+   湮 Ͻ  DATETIME,
+     Ա   TEXT,
+  FOREIGN KEY (ȸ  ID) REFERENCES ȸ  ī  (id) ON DELETE CASCADE
+);
+
+CREATE TABLE Ʈ   ̳  (
+  Ʈ   ̳ _ID INT PRIMARY KEY AUTO_INCREMENT,
+   ̸  VARCHAR(20),
+       CHAR(1),
+     _ȸ  _    Ʈ TEXT,
+  PT_    _     TEXT,
+   ٹ _ ð ǥ TEXT,
+   ڰ   _  _    TEXT,
+       DECIMAL(10,2)
+);
+
+CREATE TABLE  Ҹ ǰ (
+    Ǫ VARCHAR(10),
+       VARCHAR(10),
+      VARCHAR(10),
+       VARCHAR(10),
+         VARCHAR(10)
+);
+
+CREATE TABLE   ⱸ (
+   ⱸ   VARCHAR(30) PRIMARY KEY,
+     _ Ⱓ VARCHAR(30),
+       ENUM('    ', '    ', '      '),
+      Ŀ VARCHAR(30),
+       INT
+);
+
+CREATE TABLE        (
+     ⼼ DECIMAL(10,2),
+         DECIMAL(10,2),
+  PT_Ʈ   ̳ _     DECIMAL(10,2),
+       DECIMAL(10,2),
+   Ҹ ǰ   DECIMAL(10,2)
+);
