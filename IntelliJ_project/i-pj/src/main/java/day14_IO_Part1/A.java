@@ -32,27 +32,27 @@ public class A {
 //        }catch(IOException ie){
 //        }
 //    }
-//    void m2(){ //꼭 기억!
-//        byte bs[] = new byte[8];
-//        try {
-//            int count = 0;
-//            while((count = is1.read(bs)) != -1) {
-//                os1.write(bs, 0, count);
-//                os1.flush();
-//                os2.write(bs, 0, count);
-//                os2.flush();
-//            }
-//        } catch (IOException e) {
-//        }finally{
-//            try{
-//                is1.close();
-//                is2.close();
-//                os1.close();
-//                os2.close();
-//                os3.close();
-//            }catch(IOException ie){}
-//        }
-//    }
+    void m2(){ //꼭 기억!
+        byte bs[] = new byte[8];
+        try {
+            int count = 0;
+            while((count = is1.read(bs)) != -1) {
+                os1.write(bs, 0, count);
+                os1.flush();
+                os2.write(bs, 0, count);
+                os2.flush();
+            }
+        } catch (IOException e) {
+        }finally{
+            try{
+                is1.close();
+                is2.close();
+                os1.close();
+                os2.close();
+                os3.close();
+            }catch(IOException ie){}
+        }
+    }
     void m3() {  // 이미지 생성을 위해서
         byte[] buffer = new byte[1024];
         int count;
@@ -69,7 +69,7 @@ public class A {
     public static void main(String args[]) {
         A a = new A();
         //a.m1();
-        //a.m2();
+        a.m2();
         a.m3();
     }
 }
