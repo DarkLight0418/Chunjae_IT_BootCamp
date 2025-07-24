@@ -1,4 +1,4 @@
-﻿package day09_OOP_Exception;
+package day09_OOP_Exception;
 
 import soo.P;
 
