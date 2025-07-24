@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93eb5f6a-7e78-4b69-b707-25e01b38cd1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/self_review/IO_API/exam01/GetLineStringFromKeyboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/self_review/IO_API/exam02/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/self_review/IO_API/exam02/ProductStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/self_review/IO_API/exam02/ProductStorageExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JDBC_GUI/JDBC_GUI_Project/src/main/java/gui/day01_self/C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JDBC_GUI/JDBC_GUI_Project/src/main/java/gui/day01_self/JTableEx2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JDBC_GUI/JDBC_GUI_Project/src/main/java/gui/day01_self/YoonS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/day09_OOP_Exception/G.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day09_OOP_Exception/G.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.G.executor": "Run",
-    "Application.GetLineStringFromKeyboard.executor": "Run",
-    "Application.ProductStorageExample.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.G.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GetLineStringFromKeyboard.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductStorageExample.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.ProductStorageExample">
     <configuration name="G" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day09_OOP_Exception.G" />
