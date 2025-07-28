@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\JAE\Class\exe\dist\runner.jar</jar>
+  <outfile>D:\JAE\Class\exe\product\runner.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>true</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>DD:\JAE\Class\exe\dist\runner.ico</icon>
+  <classPath>
+    <mainClass>day04.E</mainClass>
+  </classPath>
+  <jre>
+    <path>%JAVA_HOME%;%PATH%</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>Ver 1.0</txtFileVersion>
+    <fileDescription>It&amp;apos;s the runner App</fileDescription>
+    <copyright>khs</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>Ver 1.0</txtProductVersion>
+    <productName>runner</productName>
+    <companyName></companyName>
+    <internalName>runner</internalName>
+    <originalFilename>runner.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>KOREAN</language>
+  </versionInfo>
+  <messages>
+    <startupErr>An error occurred while starting the application.</startupErr>
+    <jreNotFoundErr>JRE 5 이상을 설치해주세요</jreNotFoundErr>
+    <jreVersionErr>JRE 5 이상을 설치해주세요</jreVersionErr>
+    <launcherErr>The registry refers to a nonexistent Java Runtime Environment installation or the runtime is corrupted.</launcherErr>
+    <instanceAlreadyExistsMsg>이미 실행중입니다</instanceAlreadyExistsMsg>
+  </messages>
+</launch4jConfig>
