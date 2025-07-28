@@ -1,0 +1,86 @@
+
+
+Version:	3.50
+CmdLine:	D:\JAE\Class\exe\product\runner.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\JAE\Class\exe\product\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = D:\JAE\class\jdk-17.0.12
+Substitute:	PATH = D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+JRE paths:	D:\JAE\class\jdk-17.0.12;D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+Check launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (OK)
+Main class:	day04.E
+Info:		Classpath not defined.
+Launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe
+Launcher args:	-classpath "D:\JAE\Class\exe\product\runner.exe" day04.E
+Args length:	56/32768 chars
+Exit code:	1
+
+
+Version:	3.50
+CmdLine:	D:\JAE\Class\exe\product\runner.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\JAE\Class\exe\product\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = D:\JAE\class\jdk-17.0.12
+Substitute:	PATH = D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+JRE paths:	D:\JAE\class\jdk-17.0.12;D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+Check launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (OK)
+Main class:	day04.E
+Info:		Classpath not defined.
+Launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe
+Launcher args:	-classpath "D:\JAE\Class\exe\product\runner.exe" day04.E
+Args length:	56/32768 chars
+Exit code:	1
+
+
+Version:	3.50
+CmdLine:	D:\JAE\Class\exe\product\runner.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\JAE\Class\exe\product\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = D:\JAE\class\jdk-17.0.12
+Substitute:	PATH = D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+JRE paths:	D:\JAE\class\jdk-17.0.12;D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+Check launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (OK)
+Launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe
+Launcher args:	-jar "D:\JAE\Class\exe\product\runner.exe"
+Args length:	42/32768 chars
+Exit code:	1
+
+
+Version:	3.50
+CmdLine:	D:\JAE\Class\exe\product\runner.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\JAE\Class\exe\product\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	
+Java max ver:	
+Substitute:	JAVA_HOME = D:\JAE\class\jdk-17.0.12
+Substitute:	PATH = D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+JRE paths:	D:\JAE\class\jdk-17.0.12;D:\JAE\class\jdk-17.0.12\bin;D:\JAE\class\jdk-17.0.12\bin;C:\app\product\12.2.0\dbhome_1\bin;C:\Program Files\MariaDB 10.11\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\JAE\Chunjae12\Java\jdk-17.0.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Users\chunjae4\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.3\bin;;D:\JAE\class\jdk-17.0.12\bin
+Check launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe (OK)
+Version string: 1.017.000_012 / 64-Bit (OK)
+Main class:	gui.day01.E
+Add classpath:	gui.day01.E
+Launcher:	D:\JAE\class\jdk-17.0.12\bin\javaw.exe
+Launcher args:	-classpath "D:\JAE\Class\exe\product\runner.exe;gui.day01.E" gui.day01.E
+Args length:	72/32768 chars
+Exit code:	0
