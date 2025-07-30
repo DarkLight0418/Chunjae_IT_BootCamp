@@ -1,0 +1,29 @@
+운동 목표 달성률(goal_achievement_rate) -> 초기 화면에서 목표치 설정 -> 목표 설정 시 사용자가 직접 입력해서 넣은 목표값 대비 실제 운동 수행 결과 계산 방식
+달성률 = (오늘 운동 수행치 / 설정 목표치) × 100
+-> 여기서는 횟수로 일단 퉁쳐야 할 듯
+
+체중(weight) -> 초기값은 사용자가 직접 입력하게 하는 수밖에 없고... 이걸 계속 입력을 받을 수 없을텐데 이거 더 고민해볼게
+
+소모 칼로리(calories_burned) : 칼로리 = 시간(h) × MET × 체중(kg) × 1.05 -> 운동 종류에 따라 MET 상수 설정 필요
+
+근력지표(muscle_strength) : 각 운동 수행 후 kg 합산 -> 변화율 계산시 초기 기존 값 필요
+
+
+운동 목표 달성률 : (실제 소모량 / 목표 소모량 ) X 100 
+
+하루 500kcal 소모 목표시 -> 이 부분 키 하나 추가해야 할 듯(user 테이블 -> daily_calorie_goal(int))
+
+실제 소모 칼로리가 420kcal다 하면 (420 / 500) × 100 = 84%
+
+기존 신규 값 구분 -> 가장 최근 값과 오늘 값 불러와서 비교(쿼리 LIMIT 1, ORDER BY)
+(body_fat_before
+body_fat_after
+skeletal_muscle_before
+skeletal_muscle_after)
+
+
+created_at -> date, timestamp -> 현재 시간 자동 입력
+
+목표 설정 추가
+- 하루 칼로리 소모 목표 - daily_calorie_goal(int)) 
+- 하루 목표 운동 횟수 - daily_activities_goal(int))
