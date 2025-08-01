@@ -1,0 +1,531 @@
+-- --------------------------------------------------------
+-- 호스트:                          10.41.0.83
+-- 서버 버전:                        10.11.8-MariaDB - mariadb.org binary distribution
+-- 서버 OS:                        Win64
+-- HeidiSQL 버전:                  12.6.0.6765
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- newbiehealth 데이터베이스 구조 내보내기
+CREATE DATABASE IF NOT EXISTS `newbiehealth` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `newbiehealth`;
+
+-- 테이블 newbiehealth.diet_template 구조 내보내기
+CREATE TABLE IF NOT EXISTS `diet_template` (
+  `template_id` int(11) NOT NULL,
+  `template_name` varchar(20) DEFAULT NULL,
+  `meal_type` enum('아침','점심','저녁','간식') DEFAULT NULL,
+  `user_key` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`template_id`),
+  KEY `user_key` (`user_key`),
+  CONSTRAINT `diet_template_ibfk_1` FOREIGN KEY (`user_key`) REFERENCES `user` (`user_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.diet_template:~10 rows (대략적) 내보내기
+INSERT INTO `diet_template` (`template_id`, `template_name`, `meal_type`, `user_key`) VALUES
+	(1, '저탄고지 아침', '아침', 'U001'),
+	(2, '단백질 중심 점심', '점심', 'U001'),
+	(3, '벌크업 저녁', '저녁', 'U001'),
+	(4, '간단한 아침식사', '아침', 'U002'),
+	(5, '헬스식단 점심', '점심', 'U002'),
+	(6, '저자극 저녁', '저녁', 'U002'),
+	(7, '프로틴 간식', '간식', 'U003'),
+	(8, '클린푸드 점심', '점심', 'U004'),
+	(9, '간단 간식', '간식', 'U004'),
+	(10, '벌크용 고탄수 저녁', '저녁', 'U005');
+
+-- 테이블 newbiehealth.diet_template_detail 구조 내보내기
+CREATE TABLE IF NOT EXISTS `diet_template_detail` (
+  `id` int(11) NOT NULL,
+  `template_id` int(11) DEFAULT NULL,
+  `food_id` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `template_id` (`template_id`),
+  KEY `food_id` (`food_id`),
+  CONSTRAINT `diet_template_detail_ibfk_1` FOREIGN KEY (`template_id`) REFERENCES `diet_template` (`template_id`),
+  CONSTRAINT `diet_template_detail_ibfk_2` FOREIGN KEY (`food_id`) REFERENCES `food` (`food_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.diet_template_detail:~0 rows (대략적) 내보내기
+
+-- 테이블 newbiehealth.exercise 구조 내보내기
+CREATE TABLE IF NOT EXISTS `exercise` (
+  `exercise_id` int(11) NOT NULL,
+  `exercise_name` varchar(20) DEFAULT NULL,
+  `type` enum('MACHINE','CABLE','BODYWEIGHT','DUMBBEL','BARBEL') DEFAULT NULL,
+  `target_muscle` varchar(100) DEFAULT NULL,
+  `body_part` enum('SHOULDER','ARMS','CORE','LEGS','BACK','CHEST','HIP') DEFAULT NULL,
+  `difficulty` int(11) DEFAULT NULL,
+  `image_url` varchar(20) DEFAULT NULL,
+  `video_url` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`exercise_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.exercise:~149 rows (대략적) 내보내기
+INSERT INTO `exercise` (`exercise_id`, `exercise_name`, `type`, `target_muscle`, `body_part`, `difficulty`, `image_url`, `video_url`) VALUES
+	(1, '벤치 프레스', 'BARBEL', '대흉근, 전면삼각근, 상완삼두근', 'CHEST', 1, NULL, 'https://www.youtube.com/watch?v=A2kHURY746E'),
+	(2, '체스트 프레스 머신', 'MACHINE', '대흉근, 전면삼각근, 상완삼두근', 'CHEST', 1, NULL, 'https://www.youtube.com/watch?v=6CPnYJonfUo\n'),
+	(3, '펙덱 머신', 'MACHINE', '대흉근(내측), 소흉근', 'CHEST', 2, NULL, 'https://www.youtube.com/watch?v=bo6ZlZ_qL48\n'),
+	(4, '케이블 크로스 오버', 'CABLE', '대흉근, 소흉근', 'CHEST', 2, NULL, 'https://www.youtube.com/watch?v=0HC3x4xxfd4&t=21s\n'),
+	(5, '딥스 머신', 'MACHINE', '대흉근(하부), 상완삼두근, 전면삼각근', 'CHEST', 3, 'N', 'https://www.youtube.com/watch?v=CbhjAZmrcfw\n'),
+	(6, '인클라인 체스트 프레스 머신', 'MACHINE', '대흉근(상부), 전면삼각근, 상완삼두근', 'CHEST', 4, 'N', 'N'),
+	(7, '디클라인 프레스 머신', 'MACHINE', '대흉근(하부), 상완삼두근', 'CHEST', 2, 'N', 'N'),
+	(8, '랫풀다운 머신', 'MACHINE', '광배근, 대원근, 상완이두근', 'BACK', 6, 'N', 'N'),
+	(9, '시티드 로우 머신', 'MACHINE', '	광배근, 승모근, 능형근', 'BACK', 5, 'N', 'N'),
+	(10, '어시스트 풀업 머신', 'MACHINE', '광배근, 상완이두근, 전완근', 'BACK', 5, 'N', 'N'),
+	(11, 'T바 로우 머신', 'MACHINE', '광배근, 승모근, 능형근', 'BACK', 5, 'N', 'N'),
+	(12, '해머 스트렝스 로우', 'MACHINE', '광배근, 후면삼각근, 승모근', 'BACK', 3, 'N', 'N'),
+	(13, '풀오버 머신', 'MACHINE', '광배근, 대원근', 'BACK', 6, 'N', 'N'),
+	(14, '숄더 프레스 머신', 'MACHINE', '전면삼각근, 측면삼각근, 상완삼두근', 'SHOULDER', 4, 'N', 'N'),
+	(15, '래터럴 레이즈 머신', 'MACHINE', '측면삼각근', 'SHOULDER', 1, 'N', 'N'),
+	(17, '리어 델트 머신', 'MACHINE', '후면삼각근, 능형근, 승모근', 'SHOULDER', 3, 'N', 'N'),
+	(18, '바이셉 컬 머신', 'MACHINE', '상완이두근, 상완근, 전완근', 'ARMS', 5, 'N', 'N'),
+	(19, '트라이 셉스 익스텐션 머신', 'MACHINE', '상완삼두근', 'ARMS', 2, 'N', 'N'),
+	(20, '케이블 머신', 'CABLE', '상완이두근,상완삼두근', 'ARMS', 4, 'N', 'N'),
+	(21, '복근 크런치 머신', 'MACHINE', '복직근', 'CORE', 5, 'N', 'N'),
+	(22, '로만 체어', 'MACHINE', '복직근, 외복사근', 'CORE', 3, 'N', 'N'),
+	(23, '시티드 레그레이즈 머신', 'MACHINE', '하복부(복직근 하부), 장요근', 'CORE', 6, 'N', 'N'),
+	(24, '레그 익스텐션 머신', 'MACHINE', '대퇴사두근', 'LEGS', 7, 'N', 'N'),
+	(25, '스미스 머신', 'MACHINE', '대퇴사두근, 둔근, 햄스트링', 'LEGS', 7, 'N', 'N'),
+	(26, '바벨 백 스쿼트', 'BARBEL', '대퇴사두근, 둔근, 햄스트링', 'LEGS', 3, 'N', 'N'),
+	(27, '해머 스트렝스 스쿼트 머신', 'MACHINE', '대퇴사두근, 둔근', 'LEGS', 1, 'N', 'N'),
+	(28, '레스 컬 머신', 'MACHINE', '햄스트링', 'LEGS', 6, 'N', 'N'),
+	(29, '루마니안 데드리프트', 'BARBEL', '햄스트링, 둔근', 'LEGS', 4, 'N', 'N'),
+	(30, '스미스 머신 데드리프트', 'MACHINE', '햄스트링, 둔근', 'LEGS', 5, 'N', 'N'),
+	(31, '힙 어브덕션 머신', 'MACHINE', '중둔근, 소둔근', 'HIP', 6, 'N', 'N'),
+	(32, '힙 어덕션 머신', 'MACHINE', '내전근', 'HIP', 7, 'N', 'N'),
+	(33, '힙 쓰러스트 머신', 'MACHINE', '대둔근, 햄스트링', 'HIP', 4, 'N', 'N'),
+	(34, '케이블 킥백', 'CABLE', '대둔근', 'HIP', 3, 'N', 'N'),
+	(35, '바벨 힙 쓰러스트', 'BARBEL', '대둔근, 햄스트링', 'HIP', 6, 'N', 'N'),
+	(36, '스탠딩 카프 레이즈 머신', 'MACHINE', '비복근', 'LEGS', 2, 'N', 'N'),
+	(37, '시티드 카프 레이즈 머신', 'MACHINE', '가자미근', 'LEGS', 5, 'N', 'N'),
+	(38, '바벨 벤치프레스', 'BARBEL', '비복근, 가자미근', 'CHEST', 2, 'N', 'N'),
+	(39, '인클라인 벤치프레스', 'BARBEL', '대흉근(상부), 전면삼각근, 상완삼두근', 'CHEST', 7, 'N', 'N'),
+	(40, '디클라인 벤치프레스', 'BARBEL', '대흉근(하부), 상완삼두근', 'CHEST', 7, 'N', 'N'),
+	(42, '덤벨 플라이', 'BARBEL', '대흉근, 소흉근', 'CHEST', 3, 'N', 'N'),
+	(43, '푸시업', 'BODYWEIGHT', '대흉근, 전면삼각근, 상완삼두근', 'CHEST', 5, 'N', 'N'),
+	(44, '딥스', 'BODYWEIGHT', '대흉근(하부), 상완삼두근, 전면삼각근', 'CHEST', 7, 'N', 'N'),
+	(45, '바벨 벤트오버 로우', 'BARBEL', '광배근, 승모근, 능형근, 상완이두근', 'BACK', 3, 'N', 'N'),
+	(47, '바벨 데드리프트', 'BARBEL', '햄스트링, 둔근, 척추기립근, 광배근', 'BACK', 9, 'N', 'N'),
+	(48, '펜들레이 로우', 'BARBEL', '광배근, 승모근, 능형근, 상완이두근', 'BACK', 6, 'N', 'N'),
+	(49, '케이블 로우', 'CABLE', '광배근, 승모근, 능형근', 'BACK', 4, 'N', 'N'),
+	(50, '케이블 풀오버', 'CABLE', '광배근, 대원근', 'BACK', 2, 'N', 'N'),
+	(51, '풀업', 'BODYWEIGHT', '광배근, 상완이두근, 전완근', 'BACK', 3, 'N', 'N'),
+	(52, '친업', 'BODYWEIGHT', '상완이두근, 광배근, 전완근', 'BACK', 6, 'N', 'N'),
+	(55, '바벨 오버헤드 프레스', 'BARBEL', '전면삼각근, 측면삼각근, 상완삼두근', 'SHOULDER', 4, 'N', 'N'),
+	(56, '밀리터리 프레스', 'BODYWEIGHT', '전면삼각근, 측면삼각근, 상완삼두근', 'SHOULDER', 5, 'N', 'N'),
+	(59, '벤트오버 리어 레이즈', 'BODYWEIGHT', '후면삼각근, 능형근, 승모근', 'SHOULDER', 5, 'N', 'N'),
+	(60, '케이블 프론트 레이즈', 'CABLE', '전면삼각근', 'SHOULDER', 7, 'N', 'N'),
+	(61, '케이블 레터럴 레이즈', 'CABLE', '측면삼각근', 'SHOULDER', 3, 'N', 'N'),
+	(62, '케이블 리어 델트 플라이', 'CABLE', '후면삼각근, 능형근, 승모근', 'SHOULDER', 9, 'N', 'N'),
+	(63, '바벨 컬', 'BARBEL', '상완이두근, 상완근, 전완근', 'ARMS', 9, 'N', 'N'),
+	(68, '케이블 컬', 'CABLE', '상완이두근, 전완근', 'ARMS', 2, 'N', 'N'),
+	(69, ' 로프 케이블 컬', 'CABLE', '상완이두근, 전완근', 'ARMS', 8, 'N', 'N'),
+	(73, '바벨 스컬크러셔', 'BARBEL', '상완삼두근', 'ARMS', 4, 'N', 'N'),
+	(74, '프렌치 프레스', 'BODYWEIGHT', '상완삼두근', 'ARMS', 2, 'N', 'N'),
+	(75, '케이블 푸시다운', 'CABLE', '상완삼두근', 'ARMS', 5, 'N', 'N'),
+	(76, '케이블 오버헤드 익스텐션', 'CABLE', '상완삼두근', 'ARMS', 9, 'N', 'N'),
+	(77, '리버스 푸시다운', 'BODYWEIGHT', '상완삼두근', 'ARMS', 9, 'N', 'N'),
+	(78, '크런치', 'BODYWEIGHT', '복직근', 'CORE', 8, 'N', 'N'),
+	(79, '레그 레이즈', 'BODYWEIGHT', ' 복직근(하부), 장요근', 'CORE', 9, 'N', 'N'),
+	(80, '플랭크', 'BODYWEIGHT', '복직근, 복횡근', 'CORE', 2, 'N', 'N'),
+	(81, '바이시클 크런치', 'BODYWEIGHT', '복직근, 외복사근', 'CORE', 7, 'N', 'N'),
+	(82, 'V업', 'BODYWEIGHT', '복직근, 장요근', 'CORE', 1, 'N', 'N'),
+	(83, '마운틴 클라이머', 'BODYWEIGHT', '복직근, 외복사근, 장요근', 'CORE', 6, 'N', 'N'),
+	(84, '케이블 크런치', 'CABLE', '복직근', 'CORE', 8, 'N', 'N'),
+	(85, '바벨 백 스쿼트', 'BARBEL', '대퇴사두근, 둔근, 햄스트링', 'LEGS', 2, 'N', 'N'),
+	(86, '프론트 스쿼트', 'BARBEL', '대퇴사두근, 둔근', 'LEGS', 1, 'N', 'N'),
+	(88, '블가리안 스플릿 스쿼트', 'BODYWEIGHT', '대퇴사두근, 둔근, 햄스트링', 'LEGS', 1, 'N', 'N'),
+	(89, '에어 스쿼트 ', 'BODYWEIGHT', '대퇴사두근, 둔근', 'LEGS', 5, 'N', 'N'),
+	(90, '점프 스쿼트', 'BODYWEIGHT', '대퇴사두근, 둔근', 'LEGS', 6, 'N', 'N'),
+	(91, '벽 스쿼트', 'BODYWEIGHT', '대퇴사두근', 'LEGS', 4, 'N', 'N'),
+	(92, '루마니안 레그 데드리프트', 'BODYWEIGHT', '햄스트링, 둔근', 'LEGS', 9, 'N', 'N'),
+	(93, '스티프 레그 데드리프트', 'BODYWEIGHT', '햄스트링, 둔근', 'LEGS', 4, 'N', 'N'),
+	(94, '바벨 굿모닝', 'BARBEL', '햄스트링, 척추기립근', 'LEGS', 4, 'N', 'N'),
+	(95, '햄스트링 브릿지', 'BODYWEIGHT', '햄스트링, 둔근', 'LEGS', 3, 'N', 'N'),
+	(96, '힙 브릿지', 'BODYWEIGHT', '둔근, 햄스트링', 'HIP', 5, 'N', 'N'),
+	(97, '바벨 힙 쓰러스트', 'BARBEL', '대둔근, 햄스트링', 'HIP', 5, 'N', 'N'),
+	(100, '불가리안 스플릿 스쿼트', 'BARBEL', '대퇴사두근, 둔근, 햄스트링', 'HIP', 5, 'N', 'N'),
+	(101, '루마니안 데드리프트', 'BARBEL', '햄스트링, 둔근', 'HIP', 1, 'N', 'N'),
+	(102, '케이블 킥백', 'CABLE', '대둔근', 'HIP', 1, 'N', 'N'),
+	(103, '케이블 힙 어브덕션', 'CABLE', '중둔근, 소둔근', 'HIP', 3, 'N', 'N'),
+	(104, '글루트 브릿지', 'BODYWEIGHT', '대둔근, 햄스트링', 'HIP', 2, 'N', 'N'),
+	(105, '힙 리프트', 'BODYWEIGHT', '대둔근, 햄스트링', 'HIP', 5, 'N', 'N'),
+	(106, '사이드 런지', 'BODYWEIGHT', '내전근, 중둔근, 대둔근', 'HIP', 6, 'N', 'N'),
+	(107, '와이드 스쿼트', 'BODYWEIGHT', '대둔근, 내전근', 'HIP', 5, 'N', 'N'),
+	(108, '케이블 힙 어덕션', 'CABLE', '내전근', 'HIP', 2, 'N', 'N'),
+	(110, '바벨 카프 레이즈', 'BARBEL', '비복근, 가자미근', 'LEGS', 2, 'N', 'N'),
+	(111, '스미스 머신 카프 레이즈', 'MACHINE', '비복근', 'LEGS', 5, 'N', 'N'),
+	(112, '스탠딩 카프 레이즈', 'BODYWEIGHT', '비복근', 'LEGS', 2, 'N', 'N'),
+	(113, '싱글 레그 카프 레이즈', 'BODYWEIGHT', '비복근', 'LEGS', 4, 'N', 'N'),
+	(114, '인클라인 푸시업', 'BODYWEIGHT', '대흉근(상부), 전면삼각근, 상완삼두근', 'CHEST', 5, 'N', 'N'),
+	(115, '디클라인 푸시업', 'BODYWEIGHT', '대흉근(하부), 전면삼각근, 상완삼두근', 'CHEST', 5, 'N', 'N'),
+	(116, '와이드 푸시업', 'BODYWEIGHT', '대흉근, 전면삼각근, 상완삼두근', 'CHEST', 6, 'N', 'N'),
+	(117, '다이아몬드 푸시업', 'BODYWEIGHT', '대흉근, 전면삼각근, 상완삼두근, 상완삼두근', 'CHEST', 3, 'N', 'N'),
+	(118, '푸시업 홀드', 'BODYWEIGHT', '대흉근, 전면삼각근, 상완삼두근', 'CHEST', 6, 'N', 'N'),
+	(119, '인버티드 로우', 'BODYWEIGHT', '광배근, 상완이두근, 능형근, 승모근', 'BACK', 6, 'N', 'N'),
+	(120, '슈퍼맨', 'BODYWEIGHT', '척추기립근, 승모근, 광배근', 'BACK', 7, 'N', 'N'),
+	(121, '리버스 스노우엔젤', 'BODYWEIGHT', '후면삼각근, 승모근, 능형근', 'BACK', 7, 'N', 'N'),
+	(122, '도어 로우', 'BODYWEIGHT', '광배근, 상완이두근, 전완근', 'BACK', 3, 'N', 'N'),
+	(123, '파이크 푸시업', 'BODYWEIGHT', '전면삼각근, 측면삼각근, 상완삼두근', 'SHOULDER', 7, 'N', 'N'),
+	(124, '핸드스탠드 푸시업', 'BODYWEIGHT', '전면삼각근, 측면삼각근, 상완삼두근', 'SHOULDER', 6, 'N', 'N'),
+	(125, '암서클', 'BODYWEIGHT', '전면삼각근, 측면삼각근, 후면삼각근', 'SHOULDER', 5, 'N', 'N'),
+	(126, 'Y-T-I Raises', 'BODYWEIGHT', '승모근, 능형근, 후면삼각근', 'SHOULDER', 5, 'N', 'N'),
+	(127, '친업', 'BODYWEIGHT', ' 상완이두근, 광배근, 전완근', 'ARMS', 4, 'N', 'N'),
+	(128, '인버티드 로우', 'BODYWEIGHT', '광배근, 상완이두근, 능형근, 승모근', 'ARMS', 4, 'N', 'N'),
+	(129, '타월 컬', 'BODYWEIGHT', '상완이두근, 전완근', 'ARMS', 5, 'N', 'N'),
+	(130, '암 이소메트릭 수축', 'BODYWEIGHT', '상완이두근', 'ARMS', 7, 'N', 'N'),
+	(131, '내로우 푸시업', 'BODYWEIGHT', '상완삼두근, 대흉근', 'ARMS', 3, 'N', 'N'),
+	(132, '힐 터치', 'BODYWEIGHT', '복직근, 외복사근', 'CORE', 3, 'N', 'N'),
+	(133, '스쿼트', 'BODYWEIGHT', '대퇴사두근, 둔근', 'LEGS', 2, 'N', 'N'),
+	(134, '점프 스쿼트', 'BODYWEIGHT', '대퇴사두근, 둔근', 'LEGS', 5, 'N', 'N'),
+	(135, '월싯', 'BODYWEIGHT', '대퇴사두근', 'LEGS', 3, 'N', 'N'),
+	(136, '슬로우 스쿼트', 'BODYWEIGHT', '대퇴사두근, 둔근', 'LEGS', 6, 'N', 'N'),
+	(137, '불가리안 스플릿 스쿼드', 'BODYWEIGHT', ' 대퇴사두근, 둔근, 햄스트링', 'LEGS', 6, 'N', 'N'),
+	(138, '스텝업', 'BODYWEIGHT', '대퇴사두근, 둔근, 햄스트링', 'LEGS', 3, 'N', 'N'),
+	(139, '힙 브릿지', 'BODYWEIGHT', '둔근, 햄스트링', 'LEGS', 2, 'N', 'N'),
+	(140, '싱글 레그 브릿지', 'BODYWEIGHT', ' 둔근, 햄스트링', 'LEGS', 6, 'N', 'N'),
+	(141, '햄스트링 슬라이드', 'BODYWEIGHT', '햄스트링, 둔근', 'LEGS', 2, 'N', 'N'),
+	(142, '힙 힌지', 'BODYWEIGHT', '햄스트링, 둔근', 'LEGS', 2, 'N', 'N'),
+	(143, '힙 브릿지', 'BODYWEIGHT', '둔근, 햄스트링', 'HIP', 5, 'N', 'N'),
+	(144, '싱글 레그 힙 브릿지', 'BODYWEIGHT', ' 둔근, 햄스트링', 'HIP', 5, 'N', 'N'),
+	(145, '킥백', 'BODYWEIGHT', ' 대둔근', 'HIP', 2, 'N', 'N'),
+	(146, '파이어 하이드런트', 'BODYWEIGHT', '대둔근, 중둔근', 'HIP', 5, 'N', 'N'),
+	(147, '레터럴 밴드 워크', 'BODYWEIGHT', ' 중둔근, 대둔근', 'HIP', 3, 'N', 'N'),
+	(148, '와이드 스쿼트', 'BODYWEIGHT', '대둔근, 내전근', 'HIP', 4, 'N', 'N'),
+	(149, '사이드 런지', 'BODYWEIGHT', '내전근, 중둔근, 대둔근', 'HIP', 6, 'N', 'N'),
+	(150, '클로즈 스쿼트', 'BODYWEIGHT', '대퇴사두근, 내전근', 'HIP', 5, 'N', 'N'),
+	(151, '내전 리프트', 'BODYWEIGHT', '내전근', 'LEGS', 4, 'N', 'N'),
+	(152, '사이드 레그 라이즈', 'BODYWEIGHT', ' 중둔근, 소둔근', 'LEGS', 2, 'N', 'N'),
+	(153, '스탠딩 카프 레이즈', 'BODYWEIGHT', '비복근', 'LEGS', 5, 'N', 'N'),
+	(154, '점프잭', 'MACHINE', '전신(비복근, 대퇴사두근 등)', 'LEGS', 5, 'N', 'N'),
+	(155, '런닝머신', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근, 심폐지구력', 'LEGS', 6, 'N', 'N'),
+	(156, '리컴번트 바이크', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근', 'LEGS', 5, 'N', 'N'),
+	(157, '업라이트 바이크', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근', 'LEGS', 2, 'N', 'N'),
+	(158, '스피닝 바이크', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근', 'LEGS', 7, 'N', 'N'),
+	(159, '스텝밀', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근', 'LEGS', 5, 'N', 'N'),
+	(160, '미니 스텝퍼', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근', 'LEGS', 2, 'N', 'N'),
+	(161, '클라이머 머신', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근, 전신유산소', 'LEGS', 6, 'N', 'N'),
+	(162, '일리티컬 머신', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근, 전완근', 'LEGS', 5, 'N', 'N'),
+	(163, '로잉머신', 'MACHINE', ' 광배근, 승모근, 능형근, 상완이두근, 대퇴사두근, 햄스트링, 대둔근, 비복근', 'LEGS', 3, 'N', 'N'),
+	(164, '트레드클라이머', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근', 'LEGS', 2, 'N', 'N'),
+	(165, '에어 바이크', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 상완이두근, 상완삼두근, 어깨', 'LEGS', 2, 'N', 'N'),
+	(166, '커브 러닝머신', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 가자미근', 'LEGS', 2, 'N', 'N'),
+	(167, '점프 트램폴린', 'MACHINE', '대퇴사두근, 햄스트링, 대둔근, 비복근, 코어근육(복직근, 외복사근)', 'LEGS', 1, 'N', 'N');
+
+-- 테이블 newbiehealth.food 구조 내보내기
+CREATE TABLE IF NOT EXISTS `food` (
+  `food_id` int(11) NOT NULL AUTO_INCREMENT,
+  `food_name` varchar(20) DEFAULT NULL,
+  `food_carbohydrate` int(11) DEFAULT NULL,
+  `food_protein` int(11) DEFAULT NULL,
+  `food_fat` int(11) DEFAULT NULL,
+  `food_calories` int(11) DEFAULT NULL,
+  `food_type` enum('채소','과일','음식','간식') DEFAULT NULL,
+  PRIMARY KEY (`food_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.food:~30 rows (대략적) 내보내기
+INSERT INTO `food` (`food_id`, `food_name`, `food_carbohydrate`, `food_protein`, `food_fat`, `food_calories`, `food_type`) VALUES
+	(1, '닭가슴살', 0, 31, 4, 165, '음식'),
+	(2, '삶은 계란', 1, 13, 11, 155, '음식'),
+	(3, '두부', 2, 8, 5, 76, '음식'),
+	(4, '오트밀', 12, 2, 1, 68, '음식'),
+	(5, '고구마', 20, 2, 0, 86, '채소'),
+	(6, '브로콜리', 7, 3, 0, 34, '채소'),
+	(7, '현미밥', 23, 2, 1, 111, '음식'),
+	(8, '그릭요거트 무가당', 4, 10, 0, 59, '음식'),
+	(9, '닭가슴살 소시지', 2, 14, 5, 120, '음식'),
+	(10, '계란 흰자', 1, 11, 0, 52, '음식'),
+	(11, '양배추', 6, 1, 0, 25, '채소'),
+	(12, '시리얼 (무설탕)', 22, 3, 1, 110, '음식'),
+	(13, '현미떡', 21, 2, 0, 100, '간식'),
+	(14, '단호박', 12, 1, 0, 49, '채소'),
+	(15, '사과', 14, 0, 0, 52, '과일'),
+	(16, '바나나', 23, 1, 0, 89, '과일'),
+	(17, '샐러드채소 믹스', 3, 2, 0, 20, '채소'),
+	(18, '닭가슴살 스테이크', 2, 22, 6, 180, '음식'),
+	(19, '연어구이', 0, 20, 13, 208, '음식'),
+	(20, '양상추', 3, 1, 0, 15, '채소'),
+	(21, '삶은 감자', 20, 2, 0, 87, '채소'),
+	(22, '찐 옥수수', 21, 3, 2, 96, '채소'),
+	(23, '현미 누룽지', 25, 3, 1, 120, '음식'),
+	(24, '콩나물', 5, 3, 0, 33, '채소'),
+	(25, '청포묵', 10, 0, 0, 40, '채소'),
+	(26, '샐러드 닭가슴살볼', 2, 16, 4, 135, '음식'),
+	(27, '블루베리', 15, 1, 0, 57, '과일'),
+	(28, '아몬드 (10알)', 22, 21, 50, 579, '간식'),
+	(29, '저지방 우유', 5, 3, 1, 45, '음식'),
+	(30, '곤약밥', 2, 0, 0, 10, '음식');
+
+-- 테이블 newbiehealth.routine_exercise_detail 구조 내보내기
+CREATE TABLE IF NOT EXISTS `routine_exercise_detail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `routine_id` int(11) DEFAULT NULL,
+  `exercise_id` int(11) DEFAULT NULL,
+  `sets` int(11) DEFAULT NULL,
+  `reps` int(11) DEFAULT NULL,
+  `weight` int(11) DEFAULT NULL,
+  `user_key` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `routine_id` (`routine_id`),
+  KEY `exercise_id` (`exercise_id`),
+  KEY `fk_re_detail_user` (`user_key`),
+  CONSTRAINT `fk_re_detail_user` FOREIGN KEY (`user_key`) REFERENCES `user` (`user_key`) ON DELETE CASCADE,
+  CONSTRAINT `routine_exercise_detail_ibfk_1` FOREIGN KEY (`routine_id`) REFERENCES `workout_routine` (`routine_id`),
+  CONSTRAINT `routine_exercise_detail_ibfk_2` FOREIGN KEY (`exercise_id`) REFERENCES `exercise` (`exercise_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.routine_exercise_detail:~30 rows (대략적) 내보내기
+INSERT INTO `routine_exercise_detail` (`id`, `routine_id`, `exercise_id`, `sets`, `reps`, `weight`, `user_key`) VALUES
+	(1, 1, 1, 5, 5, 80, 'U002'),
+	(2, 1, 2, 5, 5, 60, 'U001'),
+	(3, 2, 10, 4, 10, 90, 'U002'),
+	(4, 2, 11, 3, 12, 70, 'U003'),
+	(5, 3, 22, 4, 10, 100, 'U009'),
+	(6, 3, 24, 4, 12, 110, 'U010'),
+	(7, 4, 6, 3, 15, 45, 'U011'),
+	(8, 5, 20, 4, 10, 60, 'U004'),
+	(9, 6, 17, 4, 12, 40, 'U008'),
+	(10, 7, 8, 3, 15, 0, 'U007'),
+	(11, 1, 1, 5, 5, 80, 'U001'),
+	(12, 1, 2, 5, 5, 60, 'U001'),
+	(13, 1, 3, 4, 8, 70, 'U001'),
+	(14, 1, 4, 4, 10, 60, 'U001'),
+	(15, 1, 5, 4, 10, 65, 'U001'),
+	(16, 2, 6, 3, 10, 45, 'U002'),
+	(17, 2, 7, 3, 10, 50, 'U002'),
+	(18, 2, 8, 3, 10, 60, 'U002'),
+	(19, 2, 9, 3, 12, 55, 'U002'),
+	(20, 2, 10, 3, 12, 60, 'U002'),
+	(21, 3, 24, 4, 10, 80, 'U003'),
+	(22, 3, 25, 4, 10, 85, 'U003'),
+	(23, 3, 26, 4, 8, 90, 'U003'),
+	(24, 3, 27, 4, 8, 95, 'U003'),
+	(25, 3, 28, 3, 8, 100, 'U003'),
+	(26, 4, 21, 3, 15, 0, 'U004'),
+	(27, 4, 22, 3, 15, 0, 'U004'),
+	(28, 4, 23, 3, 15, 0, 'U004'),
+	(29, 4, 30, 3, 15, 10, 'U004'),
+	(30, 4, 31, 3, 20, 15, 'U004');
+
+-- 테이블 newbiehealth.statistics 구조 내보내기
+CREATE TABLE IF NOT EXISTS `statistics` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_key` varchar(20) NOT NULL,
+  `date` date NOT NULL,
+  `day_of_week` enum('Mon','Tue','Wed','Thu','Fri','Sat','Sun') NOT NULL,
+  `workout_count` int(11) DEFAULT 0,
+  `goal_achievement_rate` tinyint(3) unsigned DEFAULT NULL CHECK (`goal_achievement_rate` <= 100),
+  `calories_burned` int(10) unsigned DEFAULT NULL,
+  `muscle_strength` int(11) DEFAULT NULL,
+  `body_fat_before` decimal(5,1) DEFAULT NULL,
+  `body_fat_after` decimal(5,1) DEFAULT NULL,
+  `muscle_mass_before` decimal(5,1) DEFAULT NULL,
+  `muscle_mass_after` decimal(5,1) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `daily_calorie_goal` int(11) DEFAULT 0 COMMENT '해당 날짜의 목표 칼로리(kcal)',
+  `activity_minutes` int(11) DEFAULT 0 COMMENT '운동 시간 (분 단위)',
+  `dominant_equipment` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT '기구별 사용 횟수 및 시간 요약' CHECK (json_valid(`dominant_equipment`)),
+  `dominant_equipment_text` text DEFAULT NULL COMMENT '기구별 사용 정보 (JSON string)',
+  PRIMARY KEY (`id`),
+  KEY `user_key` (`user_key`),
+  CONSTRAINT `statistics_ibfk_1` FOREIGN KEY (`user_key`) REFERENCES `user` (`user_key`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.statistics:~7 rows (대략적) 내보내기
+INSERT INTO `statistics` (`id`, `user_key`, `date`, `day_of_week`, `workout_count`, `goal_achievement_rate`, `calories_burned`, `muscle_strength`, `body_fat_before`, `body_fat_after`, `muscle_mass_before`, `muscle_mass_after`, `created_at`, `daily_calorie_goal`, `activity_minutes`, `dominant_equipment`, `dominant_equipment_text`) VALUES
+	(1, 'U001', '2025-07-28', 'Mon', 1, 80, 320, 240, 24.0, 23.8, 28.8, 29.0, '2025-07-27 15:00:00', 400, 40, NULL, '{\r\n  "MACHINE": {"count": 2, "minutes": 25},\r\n  "BODYWEIGHT": {"count": 1, "minutes": 15}\r\n}'),
+	(2, 'U001', '2025-07-29', 'Tue', 2, 85, 143, 242, 23.8, 23.6, 29.0, 29.2, '2025-07-28 15:00:00', 400, 45, NULL, '{\r\n  "MACHINE": {"count": 1, "minutes": 20},\r\n  "CABLE": {"count": 2, "minutes": 25}\r\n}'),
+	(3, 'U001', '2025-07-30', 'Wed', 1, 78, 310, 245, 23.6, 23.4, 29.2, 29.4, '2025-07-29 15:00:00', 400, 40, NULL, '{\r\n  "BODYWEIGHT": {"count": 3, "minutes": 40}\r\n}'),
+	(4, 'U001', '2025-07-31', 'Thu', 2, 90, 345, 247, 23.4, 23.1, 29.4, 29.7, '2025-07-30 15:00:00', 400, 50, NULL, '{\r\n  "MACHINE": {"count": 1, "minutes": 20},\r\n  "BARBEL": {"count": 2, "minutes": 30}\r\n}'),
+	(5, 'U001', '2025-08-01', 'Fri', 1, 70, 330, 243, 23.1, 22.9, 29.7, 29.9, '2025-07-31 15:00:00', 400, 50, NULL, '{\r\n  "MACHINE": {"count": 3, "minutes": 50}\r\n}'),
+	(6, 'U001', '2025-08-02', 'Sat', 2, 88, 340, 248, 22.9, 22.7, 29.9, 30.2, '2025-08-01 15:00:00', 400, 70, NULL, '{\r\n  "MACHINE": {"count": 2, "minutes": 30},\r\n  "BODYWEIGHT": {"count": 2, "minutes": 40}\r\n}'),
+	(7, 'U001', '2025-08-03', 'Sun', 1, 75, 330, 250, 22.7, 22.5, 30.2, 30.4, '2025-08-02 15:00:00', 400, 45, NULL, '{\r\n  "BARBEL": {"count": 2, "minutes": 25},\r\n  "CABLE": {"count": 1, "minutes": 20}\r\n}');
+
+-- 테이블 newbiehealth.user 구조 내보내기
+CREATE TABLE IF NOT EXISTS `user` (
+  `user_key` varchar(20) NOT NULL,
+  `user_id` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `gender` enum('남','여') DEFAULT NULL,
+  `height_cm` float DEFAULT NULL,
+  `weight_kg` float DEFAULT NULL,
+  `fitness_level` int(11) DEFAULT NULL,
+  `goal` enum('다이어트','벌크업','유지어트') DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  PRIMARY KEY (`user_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.user:~41 rows (대략적) 내보내기
+INSERT INTO `user` (`user_key`, `user_id`, `password`, `name`, `age`, `gender`, `height_cm`, `weight_kg`, `fitness_level`, `goal`, `created_at`) VALUES
+	('U001', 'test01', '1234', '최윤서', 25, '남', 175.5, 70, 1, '다이어트', '2025-07-30'),
+	('U002', 'test02', 'abcd', '김영희', 30, '여', 162, 55, 2, '유지어트', '2025-07-30'),
+	('U003', 'test03', 'qwer', '이철수', 28, '남', 180.2, 82, 2, '벌크업', '2025-07-30'),
+	('U004', 'test04', 'pw44', '박지민', 22, '여', 158.3, 48, 1, '다이어트', '2025-07-30'),
+	('U005', 'test05', 'pass5', '최태현', 35, '남', 172.5, 76.5, 2, '유지어트', '2025-07-30'),
+	('U006', 'test06', 'pw66', '강민지', 27, '여', 167, 60, 1, '다이어트', '2025-07-30'),
+	('U007', 'test07', 'test7', '정우성', 40, '남', 183, 85, 3, '벌크업', '2025-07-30'),
+	('U008', 'test08', 'pw88', '한지은', 31, '여', 160, 57, 2, '유지어트', '2025-07-30'),
+	('U009', 'test09', '1239', '오준혁', 26, '남', 176.4, 72, 2, '다이어트', '2025-07-30'),
+	('U010', 'test10', 'abcd10', '서유리', 29, '여', 165, 58, 2, '유지어트', '2025-07-30'),
+	('U011', 'test11', '3493', '김구', 23, '남', 180.2, 78, 2, '벌크업', '2025-07-30'),
+	('U012', 'test12', 'ab12', '이다현', 26, '여', 163, 54, 1, '다이어트', '2025-07-30'),
+	('U013', 'test13', 'qwe13', '최지훈', 33, '남', 178, 74, 2, '벌크업', '2025-07-30'),
+	('U014', 'test14', 'pw14', '민유라', 28, '여', 165, 56, 2, '유지어트', '2025-07-30'),
+	('U015', 'test15', 'pass15', '유현수', 36, '남', 182, 81, 3, '벌크업', '2025-07-30'),
+	('U016', 'test16', 'abcd16', '강수빈', 25, '여', 160, 52, 1, '다이어트', '2025-07-30'),
+	('U017', 'test17', 'zxc17', '조기훈', 32, '남', 174, 68, 2, '유지어트', '2025-07-30'),
+	('U018', 'test18', 'pw18', '한지원', 27, '여', 167, 55, 2, '유지어트', '2025-07-30'),
+	('U019', 'test19', 'test19', '문지호', 38, '남', 179, 85, 3, '벌크업', '2025-07-30'),
+	('U020', 'test20', '2020', '이소은', 29, '여', 168, 59, 2, '유지어트', '2025-07-30'),
+	('U021', 'test21', 'pw21', '정석진', 31, '남', 180, 76, 2, '다이어트', '2025-07-30'),
+	('U022', 'test22', 'pw22', '이선우', 27, '남', 177, 73, 2, '벌크업', '2025-07-30'),
+	('U023', 'test23', 'pass23', '김채영', 30, '여', 162, 52, 1, '다이어트', '2025-07-30'),
+	('U024', 'test24', 'abcd24', '정태현', 35, '남', 180, 76, 2, '유지어트', '2025-07-30'),
+	('U025', 'test25', 'pw25', '박유림', 24, '여', 164, 50, 1, '다이어트', '2025-07-30'),
+	('U026', 'test26', 'pass26', '윤정우', 33, '남', 176, 70, 2, '유지어트', '2025-07-30'),
+	('U027', 'test27', 'pw27', '송지은', 26, '여', 160, 48, 1, '다이어트', '2025-07-30'),
+	('U028', 'test28', 'pass28', '오재현', 31, '남', 179, 75, 2, '벌크업', '2025-07-30'),
+	('U029', 'test29', 'pw29', '하윤지', 28, '여', 166, 53, 2, '유지어트', '2025-07-30'),
+	('U030', 'test30', 'pass30', '노지훈', 37, '남', 181, 84, 3, '벌크업', '2025-07-30'),
+	('U031', 'test31', 'pw31', '김민서', 25, '여', 163, 51, 1, '다이어트', '2025-07-30'),
+	('U032', 'test32', 'pass32', '최우성', 34, '남', 178, 72, 2, '유지어트', '2025-07-30'),
+	('U033', 'test33', 'pw33', '백하은', 29, '여', 165, 55, 2, '유지어트', '2025-07-30'),
+	('U034', 'test34', 'pass34', '남태우', 39, '남', 182, 86, 3, '벌크업', '2025-07-30'),
+	('U035', 'test35', 'pw35', '윤소민', 27, '여', 162, 49, 1, '다이어트', '2025-07-30'),
+	('U036', 'test36', 'pass36', '오민규', 36, '남', 180, 77, 2, '유지어트', '2025-07-30'),
+	('U037', 'test37', 'pw37', '정가은', 31, '여', 168, 58, 2, '유지어트', '2025-07-30'),
+	('U038', 'test38', 'pass38', '임도현', 40, '남', 183, 88, 3, '벌크업', '2025-07-30'),
+	('U039', 'test39', 'pw39', '최다인', 28, '여', 164, 54, 2, '유지어트', '2025-07-30'),
+	('U040', 'test40', 'pass40', '배진수', 32, '남', 177, 74, 2, '유지어트', '2025-07-30'),
+	('U041', 'test41', 'pw41', '서예진', 26, '여', 160, 50, 1, '다이어트', '2025-07-30');
+
+-- 테이블 newbiehealth.workout_record 구조 내보내기
+CREATE TABLE IF NOT EXISTS `workout_record` (
+  `record_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_key` varchar(20) NOT NULL,
+  `exercise_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `sets` int(11) NOT NULL,
+  `reps` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  PRIMARY KEY (`record_id`),
+  KEY `user_key` (`user_key`),
+  KEY `exercise_id` (`exercise_id`),
+  CONSTRAINT `workout_record_ibfk_1` FOREIGN KEY (`user_key`) REFERENCES `user` (`user_key`),
+  CONSTRAINT `workout_record_ibfk_2` FOREIGN KEY (`exercise_id`) REFERENCES `exercise` (`exercise_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.workout_record:~63 rows (대략적) 내보내기
+INSERT INTO `workout_record` (`record_id`, `user_key`, `exercise_id`, `date`, `sets`, `reps`, `weight`) VALUES
+	(2, 'U001', 5, '2025-07-21', 4, 9, 54),
+	(3, 'U001', 3, '2025-07-23', 4, 12, 51),
+	(4, 'U002', 4, '2025-07-26', 5, 9, 67),
+	(5, 'U002', 3, '2025-07-27', 4, 9, 40),
+	(6, 'U002', 4, '2025-07-29', 3, 10, 90),
+	(7, 'U003', 4, '2025-07-26', 5, 11, 73),
+	(8, 'U003', 3, '2025-07-23', 3, 9, 87),
+	(9, 'U003', 5, '2025-07-27', 4, 8, 93),
+	(15, 'U002', 1, '2025-08-02', 4, 9, 72),
+	(16, 'U002', 2, '2025-08-02', 4, 10, 68),
+	(17, 'U002', 3, '2025-08-02', 5, 11, 74),
+	(18, 'U002', 4, '2025-08-02', 4, 12, 62),
+	(19, 'U002', 5, '2025-08-02', 3, 10, 58),
+	(20, 'U003', 1, '2025-08-03', 4, 10, 65),
+	(21, 'U003', 2, '2025-08-03', 4, 10, 67),
+	(22, 'U003', 3, '2025-08-03', 4, 9, 70),
+	(23, 'U003', 4, '2025-08-03', 3, 10, 63),
+	(24, 'U003', 5, '2025-08-03', 3, 12, 59),
+	(25, 'U004', 1, '2025-08-04', 4, 11, 75),
+	(26, 'U004', 2, '2025-08-04', 4, 9, 69),
+	(27, 'U004', 3, '2025-08-04', 5, 12, 76),
+	(28, 'U004', 4, '2025-08-04', 3, 11, 66),
+	(29, 'U004', 5, '2025-08-04', 3, 13, 60),
+	(30, 'U005', 1, '2025-08-05', 4, 10, 72),
+	(31, 'U005', 2, '2025-08-05', 4, 8, 67),
+	(32, 'U005', 3, '2025-08-05', 5, 11, 73),
+	(33, 'U005', 4, '2025-08-05', 3, 12, 64),
+	(34, 'U005', 5, '2025-08-05', 3, 10, 59),
+	(35, 'U001', 1, '2025-08-06', 4, 10, 71),
+	(36, 'U001', 2, '2025-08-06', 4, 9, 66),
+	(37, 'U001', 3, '2025-08-06', 5, 12, 74),
+	(38, 'U001', 4, '2025-08-06', 3, 10, 65),
+	(39, 'U001', 5, '2025-08-06', 3, 14, 58),
+	(40, 'U002', 1, '2025-08-07', 4, 9, 73),
+	(41, 'U002', 2, '2025-08-07', 4, 10, 70),
+	(42, 'U002', 3, '2025-08-07', 5, 10, 76),
+	(43, 'U002', 4, '2025-08-07', 4, 11, 63),
+	(44, 'U002', 5, '2025-08-07', 3, 13, 57),
+	(45, 'U003', 1, '2025-08-08', 4, 9, 69),
+	(46, 'U003', 2, '2025-08-08', 4, 10, 68),
+	(47, 'U003', 3, '2025-08-08', 5, 11, 72),
+	(48, 'U003', 4, '2025-08-08', 3, 10, 60),
+	(49, 'U003', 5, '2025-08-08', 3, 12, 54),
+	(50, 'U004', 1, '2025-08-09', 4, 12, 74),
+	(51, 'U004', 2, '2025-08-09', 4, 9, 67),
+	(52, 'U004', 3, '2025-08-09', 4, 11, 71),
+	(53, 'U004', 4, '2025-08-09', 3, 12, 62),
+	(54, 'U004', 5, '2025-08-09', 3, 13, 55),
+	(55, 'U005', 1, '2025-08-10', 4, 10, 75),
+	(56, 'U005', 2, '2025-08-10', 4, 10, 72),
+	(57, 'U005', 3, '2025-08-10', 5, 10, 78),
+	(58, 'U005', 4, '2025-08-10', 3, 11, 64),
+	(59, 'U005', 5, '2025-08-10', 3, 15, 58),
+	(68, 'U001', 1, '2025-08-06', 4, 10, 76),
+	(69, 'U001', 2, '2025-08-06', 4, 10, 71),
+	(92, 'U001', 7, '2025-07-29', 3, 10, 50),
+	(93, 'U001', 25, '2025-07-29', 3, 5, 50),
+	(94, 'U001', 73, '2025-07-29', 3, 5, 50),
+	(115, 'U001', 5, '2025-08-03', 3, 12, 64),
+	(121, 'U001', 1, '2025-08-01', 5, 5, 80),
+	(122, 'U001', 2, '2025-08-01', 5, 5, 60),
+	(123, 'U001', 1, '2025-08-01', 5, 5, 80),
+	(124, 'U001', 5, '2025-08-01', 4, 10, 65),
+	(125, 'U001', 10, '2025-07-31', 4, 10, 90),
+	(126, 'U001', 11, '2025-07-31', 3, 12, 70),
+	(127, 'U001', 6, '2025-07-31', 3, 10, 45),
+	(128, 'U001', 7, '2025-07-31', 3, 10, 50);
+
+-- 테이블 newbiehealth.workout_routine 구조 내보내기
+CREATE TABLE IF NOT EXISTS `workout_routine` (
+  `routine_id` int(11) NOT NULL,
+  `routine_name` varchar(20) DEFAULT NULL,
+  `user_key` varchar(20) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  PRIMARY KEY (`routine_id`),
+  KEY `user_key` (`user_key`),
+  CONSTRAINT `workout_routine_ibfk_1` FOREIGN KEY (`user_key`) REFERENCES `user` (`user_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 테이블 데이터 newbiehealth.workout_routine:~10 rows (대략적) 내보내기
+INSERT INTO `workout_routine` (`routine_id`, `routine_name`, `user_key`, `description`, `created_at`) VALUES
+	(1, '5x5 헬스 루틴', 'U001', '기초 근력 향상을 위한 5x5 루틴', '2025-07-30'),
+	(2, '상체 집중 루틴', 'U001', '가슴, 등, 어깨 위주 구성', '2025-07-30'),
+	(3, '하체 강화 루틴', 'U002', '스쿼트, 런지, 레그프레스 중심', '2025-07-30'),
+	(4, '전신 순환 루틴', 'U002', '전신 운동을 순환식으로 구성', '2025-07-30'),
+	(5, '체지방 감량 루틴', 'U003', '고강도 인터벌 포함', '2025-07-30'),
+	(6, '벌크업 프로그램', 'U003', '중량 위주 고반복 구성', '2025-07-30'),
+	(7, '홈트 루틴', 'U004', '도구 없이 집에서 가능한 운동', '2025-07-30'),
+	(8, '초보자 웨이트 루틴', 'U005', '기본 머신과 쉬운 동작으로 구성', '2025-07-30'),
+	(9, '여성 코어 루틴', 'U006', '복부, 둔근 위주 코어 강화 운동', '2025-07-30'),
+	(10, '유산소+근력 루틴', 'U007', '러닝과 근력운동 병행 루틴', '2025-07-30');
+
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
