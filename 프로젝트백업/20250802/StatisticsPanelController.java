@@ -1,0 +1,454 @@
+package org.example;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.geom.RoundRectangle2D;
+import java.time.LocalDate;
+import java.time.YearMonth;
+import java.time.format.DateTimeFormatter;
+import java.util.Map;
+import java.util.function.Consumer;
+
+import org.example.component.*;
+import org.example.service.StatisticsService;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.ui.RectangleInsets;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.example.component.MonthCalendarPanel;
+
+public class StatisticsPanelController {
+    
+    // 데이터 불러오는 static 변수들
+    static StatisticsService statisticsServiceInfo = new StatisticsService();
+    static Map<String, Integer> weekly = statisticsServiceInfo.fetchWorkoutCountByDay();
+    static String dayString = LocalDate.now().toString();
+    static String userKey = statisticsServiceInfo.getUserKey_id();
+    
+    // 얘는 종합 분석 업데이트 위해서 새로 객체 생성
+    private static JPanel summaryPanelContainer = new JPanel();
+    
+
+    public static void statistics_show(JPanel panel, App app) {
+        panel.removeAll();
+        panel.setLayout(new BorderLayout());  // flowLayout 에서 수정
+
+        // 상단에 들어갈 박스
+        JPanel middlePanel = new JPanel();
+        middlePanel.setLayout(new BoxLayout(middlePanel, BoxLayout.Y_AXIS));
+        middlePanel.setBackground(Color.BLACK);
+
+        JLabel titleLabel = new JLabel("Statistics");
+        titleLabel.setForeground(Color.WHITE);
+        titleLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 35));
+        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);  // 수직 중앙 정렬
+        titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        titleLabel.setBackground(Color.BLACK);
+        titleLabel.setOpaque(true);
+
+        // 날짜 라벨
+        JLabel dateLabel = new JLabel(LocalDate.now().toString(), SwingConstants.CENTER);
+        dateLabel.setForeground(Color.WHITE);
+        dateLabel.setFont(new Font("Malgun Gothic", Font.PLAIN, 20));
+        
+        // 신체 정보 같이 업데이트 하려고 익명 클래스에 쓰기 위해 넣음
+        JPanel bodyInfoContainer = new JPanel();
+        bodyInfoContainer.setBackground(Color.BLACK);
+        // 패널 위에 패널 위에 패널... <- 리펙토링 나중에 할 필요 존재 ✅✅✅
+
+        // 원형 프로그레스 박스
+        JPanel circleWrap = new JPanel();
+        circleWrap.setOpaque(true);
+        circleWrap.setBackground(Color.BLACK);
+        circleWrap.setLayout(new BorderLayout());
+        circleWrap.setMaximumSize(new Dimension(300, 300));
+
+        circleWrap.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // 여유 여백
+
+        String selectedDate = dateLabel.getText();
+
+        CircularProgressBar progressBar = new CircularProgressBar();
+        progressBar.setPreferredSize(new Dimension(300, 300));
+        progressBar.setProgress(statisticsServiceInfo.percentAccomplish(statisticsServiceInfo.getUserKey_id(), selectedDate));
+        circleWrap.add(progressBar, BorderLayout.CENTER);
+
+        // 신체 정보 컨테이너에 올림(또..?)
+        summaryPanelContainer.setLayout(new BoxLayout(summaryPanelContainer, BoxLayout.Y_AXIS));
+        summaryPanelContainer.add(createSummaryPanel(userKey, dayString));
+
+
+        // 캘린터 표시를 위한 익명 클래스 & 날짜 선택 버튼
+        ActionPrettyButton dateButton = new ActionPrettyButton("조회할 날짜 선택");
+        dateButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // 익명 클래스는 정의와 동시에 객체를 바로 생성해서 쓸 수 있음
+        dateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame calendar = new JFrame("날짜를 선택해주세요");
+
+                calendar.setSize(350, 350);
+                calendar.setLayout(new BorderLayout());
+                calendar.setLocation(0, 0);
+
+                MonthCalendarPanel calendarPanel = new MonthCalendarPanel(new Consumer<LocalDate>() {
+                    @Override
+                    public void accept(LocalDate selectedDate) {
+                        // 달력 닫기
+                        calendar.dispose();
+                        String selectedDateStr = selectedDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")); //
+                        dateLabel.setText("선택된 날짜: " + selectedDate.toString());
+                        int rate = statisticsServiceInfo.percentAccomplish(statisticsServiceInfo.getUserKey_id(), selectedDateStr);
+                        progressBar.setProgress(rate);
+
+
+                        // 신체 정보 패널 갱신
+                        bodyInfoContainer.removeAll();  // 기존 컴포넌트 제거
+                        JPanel updatedPanel = createBodyInfoPanel(userKey, selectedDateStr);
+                        bodyInfoContainer.add(updatedPanel);  // 새로 만든 것 추가
+                        bodyInfoContainer.revalidate();
+                        bodyInfoContainer.repaint();
+
+                        // 종합 분석 패널 갱신
+                        summaryPanelContainer.removeAll();
+                        summaryPanelContainer.add(createSummaryPanel(userKey, selectedDateStr));
+                        summaryPanelContainer.revalidate();
+                        summaryPanelContainer.repaint();
+
+                        // 자동 이동 방지 -> 캘린더 선택 시 밑으로 내려가는 문제 해결을 위해 스크롤 최상단으로 이동
+                        SwingUtilities.invokeLater(() -> {
+                            middlePanel.scrollRectToVisible(new Rectangle(0, 0, 1, 1));
+                        });
+                    }
+                });
+
+                calendar.add(calendarPanel, BorderLayout.CENTER);
+                calendar.setVisible(true);
+
+            }
+        });
+
+
+
+        // middlePanel.add(calendar);
+
+        // 스크롤바
+        JScrollPane pageScroll = new JScrollPane(middlePanel);
+        pageScroll.setBorder(null);
+        pageScroll.getVerticalScrollBar().setUnitIncrement(16);
+
+        middlePanel.add(Box.createVerticalStrut(20));
+
+        /* !! 패널에 추가하는 부분 !! */
+
+        // 상단 제목 배치
+        middlePanel.add(Box.createVerticalStrut(20));
+        middlePanel.add(titleLabel);
+        middlePanel.add(Box.createVerticalStrut(30));
+
+
+        // 신체 정보 패널
+        bodyInfoContainer.add(createBodyInfoPanel(userKey, LocalDate.now().toString()));
+        middlePanel.add(bodyInfoContainer);
+        middlePanel.add(Box.createVerticalStrut(30));
+        org.example.UIUtils.addTitleLabel(middlePanel, "운동 목표 달성률", 30, Color.WHITE);
+        middlePanel.add(Box.createVerticalStrut(3));
+        
+        // 날짜 라벨
+        dateLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        middlePanel.add(dateLabel);
+        middlePanel.add(Box.createVerticalStrut(20));
+        middlePanel.add(dateButton);
+
+        // 원형 목표 달성률 라벨
+        middlePanel.add(Box.createVerticalStrut(20));
+        middlePanel.add(circleWrap);
+        middlePanel.add(Box.createVerticalStrut(20));
+        circleWrap.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        // 종합 분석 패널
+        middlePanel.add(summaryPanelContainer);
+        middlePanel.add(Box.createVerticalStrut(20));
+
+        panel.add(pageScroll, BorderLayout.CENTER); // 스크롤바
+
+
+        // 자동 이동 방지 -> 캘린더 선택 시 밑으로 내려가는 문제 해결을 위해 스크롤 최상단으로 이동
+        SwingUtilities.invokeLater(() -> {
+            middlePanel.scrollRectToVisible(new Rectangle(0, 0, 1, 1));
+        });
+
+
+        // 마우스 이벤트 처리 시 재배치, 변화 알림 및 재 페인팅
+        panel.revalidate(); // 레이아웃 재계산
+        panel.repaint();
+    }
+
+    // 신체 정보 패널
+    private static JPanel createBodyInfoPanel(String userKey, String dayString) {
+        RoundedPanel1 roundedBodyInfoPanel = new RoundedPanel1(50);
+
+        roundedBodyInfoPanel.setBackground(Color.BLACK);
+        roundedBodyInfoPanel.setLayout(new GridBagLayout());  // flowLayout -> 수직 정렬 기준 무조건 상단.
+
+        Map<String, String> info = statisticsServiceInfo.fetchBodyInfo(userKey, dayString);
+
+        StatBox weightBox = new StatBox("체중(kg)", info.get("weight_kg"));
+        StatBox fatBox = new StatBox("체지방률(%)", info.get("body_fat_after"));
+        StatBox muscleBox = new StatBox("근육량(kg)", info.get("muscle_mass_after"));
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(20, 20, 20, 20);
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.CENTER;
+
+        gbc.gridx = 0;
+        roundedBodyInfoPanel.add(weightBox, gbc);
+        gbc.gridx = 1;
+        roundedBodyInfoPanel.add(fatBox, gbc);
+        gbc.gridx = 2;
+        roundedBodyInfoPanel.add(muscleBox, gbc);
+
+        return roundedBodyInfoPanel;
+    }
+
+    // 종합 분석 감싸는 박스 패널 추가
+
+    private static JPanel createSummaryPanel(String userKey, String dayString) {
+        JPanel wrapper = new JPanel();
+        wrapper.setBackground(Color.BLACK);
+        wrapper.setLayout(new BoxLayout(wrapper, BoxLayout.Y_AXIS));
+
+        RoundedPanel1 box = new RoundedPanel1(30);
+
+        box.setLayout(new BoxLayout(box, BoxLayout.Y_AXIS));
+        box.setBackground(new Color(141, 196, 244));
+        box.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+        box.setAlignmentX(Component.CENTER_ALIGNMENT);
+        box.setMaximumSize(new Dimension(350, 1500));
+
+        addLabeledText(box,"운동 습관 분석", 24, Color.BLACK, 6);
+        addLabeledText(box,"(한 주 기준)", 12, Color.BLACK, 10);
+        box.add(Box.createVerticalStrut(10));
+
+        Map<String, Integer> workoutByDay = weekly;  // static 변수
+        String timeText = getTotalAcitivityTimeText(workoutByDay);
+
+        JLabel totalLabel = fieldViewText(timeText, 27, Color.BLACK);
+        box.add(totalLabel);
+
+        WeeklyChartPanel chartPanel = new WeeklyChartPanel();
+
+        box.add(Box.createVerticalStrut(10));
+        box.add(chartPanel);
+
+        // 코드 너무 길어지는 것 같아서 메소드 리펙토링함 (addLabeledText)
+        box.add(Box.createVerticalStrut(10));
+        addLabeledText(box, "이번 주 총 소모 칼로리", 20, Color.BLACK, 20);
+        
+        // 총 칼로리 불러오기
+        JLabel totalCalories = fieldViewText(String.valueOf(statisticsServiceInfo.totalCalories(userKey, dayString)) + " kcal", 40, Color.BLACK);
+        box.add(totalCalories);
+
+        box.add(Box.createVerticalStrut(20));
+        box.add(new LineSetting(1));
+        box.add(Box.createVerticalStrut(5));
+        addLabeledText(box, "체지방률, 근육량 변화 요약", 20, Color.BLACK, 5);
+        addLabeledText(box, "(지난 주 대비)", 20, Color.DARK_GRAY, 5);
+        JLabel fatmass = fieldViewText( "체지방률 : " + String.valueOf(statisticsServiceInfo.changeFatMass(userKey, dayString)) + " % 감소", 30, Color.BLACK);
+        box.add(fatmass);
+
+        JLabel muscleMass = fieldViewText("근육량 : " + String.valueOf(statisticsServiceInfo.changeMuscleMass(userKey, dayString)) + " kg 증가", 30, Color.BLACK);
+        box.add(muscleMass);
+
+        box.add(Box.createVerticalStrut(20));
+        box.add(new LineSetting(1));
+        box.add(Box.createVerticalStrut(5));
+        addLabeledText(box, "한 줄 코멘트", 20, Color.BLACK, 10);
+
+        box.add(Box.createVerticalStrut(10));
+
+        JTextArea oneCommentLine = CommentLine("너무너무 훌륭해요!\n지금까지 꾸준히 운동하셨네요!\n");  // JTextArea - \n 사용을 위해
+        oneCommentLine.setOpaque(false);
+
+        box.add(Box.createVerticalStrut(20));
+        box.add(oneCommentLine);
+        box.add(Box.createVerticalStrut(10));
+        // LineSetting 객체 : 구분선
+
+        wrapper.add(box);
+        return wrapper;
+    }
+
+    private static void addLabeledText(JPanel panel, String text, int fontSize, Color color, int spacingBefore) {
+        panel.add(Box.createVerticalStrut(spacingBefore));
+        panel.add(org.example.UIUtils.createTitleLabel(text, fontSize, color));
+    }
+
+    public static JLabel fieldViewText(String text, int fontSize, Color color) {
+        JLabel label = new JLabel(text);
+        label.setForeground(color);
+        label.setAlignmentX(Component.CENTER_ALIGNMENT);
+        label.setFont(new Font("Malgun Gothic", Font.BOLD, fontSize));
+
+        return label;
+    }
+
+    public static String getTotalAcitivityTimeText(Map<String, Integer> mapDay) {
+        int totalActivityTimes = 0;
+
+        Map<String, Integer> dataDayTimeCounts = statisticsServiceInfo.fetchWorkoutCountByDay();
+
+
+        for (Map.Entry<String, Integer> entry : dataDayTimeCounts.entrySet()) {
+            totalActivityTimes += entry.getValue();
+        }
+
+        int hours = totalActivityTimes / 60;
+        int minutes = totalActivityTimes % 60;
+
+        return String.format("총 운동 시간 : %d시간 %d분", hours, minutes);
+    }
+
+    // JTextArea -> 자동 줄바꿈 가능!!!
+    public static JTextArea CommentLine(String comm) {
+        JTextArea comment = new JTextArea(comm);
+        comment.setFont(new Font("Malgun Gothic", Font.BOLD, 22));
+        comment.setLineWrap(true);
+        comment.setBackground(null);
+
+        comment.setMargin(new Insets(0, 20, 0, 0));
+
+        return comment;
+    }
+}
+
+// 위의 신체 정보 블록 클래스
+
+class StatBox extends JPanel {
+
+    JLabel valueLabel;
+
+    public StatBox(String title, String value) {
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setOpaque(false);
+
+        RoundedPanel1 roundedStatBox = new RoundedPanel1(20);
+        roundedStatBox.setLayout(new BoxLayout(roundedStatBox, BoxLayout.Y_AXIS));
+        roundedStatBox.setBackground(new Color(141, 196, 244, 255));
+        roundedStatBox.setOpaque(false);
+
+        Dimension size = new Dimension(100, 100);
+        roundedStatBox.setPreferredSize(size);
+        roundedStatBox.setMaximumSize(size); // 반드시 함께 설정하기
+
+        JLabel titleLabel = org.example.UIUtils.createTitleLabel(title, 14, Color.BLACK);
+        valueLabel = org.example.UIUtils.createTitleLabel(value, 35, Color.BLACK);
+
+        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        valueLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        roundedStatBox.add(Box.createVerticalStrut(10));
+        roundedStatBox.add(titleLabel);
+        roundedStatBox.add(Box.createVerticalStrut(5));
+        roundedStatBox.add(valueLabel);
+
+        add(roundedStatBox);
+    }
+
+    // 신체 정보 바꾸고 싶을 때 쓰는 메소드
+    public void updateValue(String newValue) {
+        valueLabel.setText(newValue);
+    }
+}
+
+class WeeklyChartPanel extends JPanel {
+    StatisticsService jdbcStatWeekDayCounts = new StatisticsService();
+
+    public WeeklyChartPanel() {
+        setLayout(new BorderLayout());
+
+        String[] days = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        String[] daysKorean = {"일", "월", "화", "수", "목", "금", "토"};
+
+        // 데이터셋 생성(요일 및 운동 횟수)
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+
+        Map<String, Integer> dataDayTimeCounts = jdbcStatWeekDayCounts.fetchWorkoutCountByDay();
+
+        for (int i = 0; i < days.length; i++) {
+            int count = dataDayTimeCounts.getOrDefault(days[i], 0);
+            dataset.addValue(count, "운동 시간", daysKorean[i]);
+        }
+
+        // 꺾은선 차트
+        JFreeChart lineChart = ChartFactory.createLineChart(
+                "요일별 운동 시간",
+                "요일",  // X축 레이블
+                "활동 시간",  // Y축 레이블
+                dataset,  // 그래프에 들어갈 데이터셋
+                PlotOrientation.VERTICAL,  // 차트 방향 (세로 꺾은선)
+                false, // 범례 표시 여부
+                true,  // 툴팁 표시 여부(마우스 올릴 시 값 설명)
+                false  // URL 링크 여부
+        );
+
+        lineChart.setBackgroundPaint(new Color(185, 228, 255));  // 차트 배경색
+
+        ChartPanel chartPn = new ChartPanel(lineChart);
+        chartPn.setPreferredSize(new Dimension(350, 200));
+        chartPn.setBackground(Color.WHITE);  // 차트 패널 안쪽 색
+        chartPn.setMaximumSize(new Dimension(350, 350));
+
+        Font font = new Font("Malgun Gothic", Font.PLAIN, 12);
+
+        CategoryPlot plot = lineChart.getCategoryPlot();
+
+        plot.setInsets(new RectangleInsets(10, 10, 10, 10));  // 안쪽 여백 확보
+
+        plot.setBackgroundPaint(Color.WHITE);
+
+        NumberAxis rangeAxis = (NumberAxis) plot.getRangeAxis();
+        rangeAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+
+        plot.getDomainAxis().setLabelFont(font);  // x축 레이블
+        plot.getDomainAxis().setTickLabelFont(font);  // x축 눈금
+        plot.getRangeAxis().setLabelFont(font);  // y축 레이블
+        plot.getRangeAxis().setTickLabelFont(font);  // y축 눈금
+
+        lineChart.getTitle().setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+
+        add(chartPn, BorderLayout.CENTER);
+    }
+}
+
+
+// 구분선 긋는 클래스
+
+class LineSetting extends JPanel {
+    public LineSetting(int thickness) {
+        setBackground(Color.DARK_GRAY);
+        setMaximumSize(new Dimension(Integer.MAX_VALUE, thickness)); // 가로 전체로 확장
+        setPreferredSize(new Dimension(400, thickness));
+        setBorder(null);  // 여백 제거
+    }
+    
+    @Override
+    public Insets getInsets() {
+        return new Insets(0, 0, 0, 0); // 내부 여백 제거
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(getBackground());
+        g.drawLine(0, 0 ,getWidth() - 1, 0);  // 수평 직선
+    }
+}
