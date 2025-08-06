@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Chunjae_IT_BootCamp/v-pj/pom.xml" />
+        <option value="$PROJECT_DIR$/Chunjae_IT_BootCamp/class/week03/day10/day10/pom.xml" />
+        <option value="$PROJECT_DIR$/Chunjae_IT_BootCamp/class/week03/20250704/day11_1/pom.xml" />
+        <option value="$PROJECT_DIR$/Chunjae_IT_BootCamp/class/week03/day08_20250630/pom.xml.txt" />
+        <option value="$PROJECT_DIR$/Chunjae_IT_BootCamp/class/week03/day08(20250630)/pom.xml.txt" />
+        <option value="$PROJECT_DIR$/Chunjae_IT_BootCamp/homework/김한재_0704/day11_20250704/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

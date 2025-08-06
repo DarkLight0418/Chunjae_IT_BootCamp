@@ -13,7 +13,7 @@
   <stayAlive>true</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>D:\JAE\Class\exe\dist\runner.ico</icon>
+  <icon>DD:\JAE\Class\exe\dist\runner.ico</icon>
   <classPath>
     <mainClass>day04.E</mainClass>
   </classPath>
