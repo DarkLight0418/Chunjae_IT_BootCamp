@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="day11 (1)" />
+        <module name="day11" />
+        <module name="day10" />
+        <module name="v-pj (2)" />
+        <module name="v-pj" />
+        <module name="v-pj (1)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
