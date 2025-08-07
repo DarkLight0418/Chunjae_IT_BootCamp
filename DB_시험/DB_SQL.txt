@@ -1,0 +1,40 @@
+DBMS(DataBase Management System)
+- DB를 효율적으로 관리해주는 시스템 소프트웨어
+-> DB : 지속적으로 사용되고 관리되는 '데이터'들의 집합
+
+기초적인 SQL문
+DQL(DataBase Query Language)
+= SELECT * FROM ? -> ? 테이블에 있는 * 컬럼의 데이터를 보여줘!
+
+
+테이블 관련 용어(1)
+-> 테이블 - 릴레이션
+-> 열 - 컬럼(Column) - 속성
+-> 행 - 로우(row) - 항목
+
+----------------------
+릴레이션 -> 테이블
+인스턴스 -> 튜플들의 집합
+스키마 -> 컬럼의 집합
+
+
+제약조건 5가지 (6)
+- Default 값 - 기본적으로 자동 입력되는 값
+- Primary Key(기본키) => 중복 X, NOT NULL
+- Foregin Key(외래키) - 참조키 -> 테이블 간의 관계 선언 연결 ==> 무결성 보장
+- Unique - 중복되지 않는 유일함.
+- Check - 특정 조건에 맞게 데이터 검증
+
+truncate delete와의 차이점(14) 
+=> truncate는 부분 삭제 불가!
+
+DML 3가지(3)
+
+-> insert update delete
+
+DCL 3가지
+
+-> rollback commit grant
+
+트랜잭션
+-> 데이터베이스의 실행 절차 하나의 작업 단위

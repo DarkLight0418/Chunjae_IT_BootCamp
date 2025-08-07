@@ -1,0 +1,8 @@
+Servlet: Java <- HTML
+JSP: HTML <- Java
+
+JSP(.jsp) -> Servlet(.java) -> .class -> 서비스
+기호            자바
+
+스프링 원리를 이해하기 위해서
+

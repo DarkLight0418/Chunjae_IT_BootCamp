@@ -1,0 +1,24 @@
+#siu {
+    font-size: 100px;
+    color: gray;
+}
+
+.hi {
+    font-size: 34px;
+    color: blue;
+    background-color: ivory;
+}
+
+.hi2 {
+    font-size: 32px;
+}
+
+.button1 {
+    background-color: aquamarine;
+    width: 120px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 1px solid red;
+    color: #fff;
+}
