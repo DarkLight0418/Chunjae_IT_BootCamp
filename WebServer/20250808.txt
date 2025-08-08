@@ -1,0 +1,19 @@
+web.xml -> 서블릿 - 서블릿 매핑(실제 보여질 이름)
+
+자바는 classes에 다른 파일은 root에
+
+req.getMethod();
+
+service 메소드는 모든 요청을 다 받음 -> service -> doGet, doPost
+
+단락형 프로토콜 (StateLess)
+
+패킷 -> 데이터를 쪼갠 덩어리
+-> 1 A B  10  ---> 
+-> 헤더  바디
+
+
+상태 유지를 위해 '세션'을 씀
+
+
+1 WebApp == 1 WebSite == 1 WebContext 

@@ -1,0 +1,162 @@
+1. (객관식)
+다음 중 “도메인(Domain)”의 변경이 데이터베이스에 미치는 영향으로 올바른 것은?
+A) 테이블의 모든 속성값이 자동으로 초기화된다 
+B) 해당 속성의 값 범위가 바뀌므로, 일부 데이터는 유효하지 않게 될 수 있다 o
+C) 테이블의 모든 튜플이 삭제된다 
+D) 데이터베이스 전체가 삭제된다
+
+2. (객관식)
+아래 중, 집계 함수와 그룹 함수의 차이를 올바르게 설명한 것은?
+A) 집계 함수는 여러 행의 값을 하나의 결과로 요약한다.
+B) 그룹 함수는 반드시 WHERE절에서만 사용된다. x 
+C) 집계 함수와 그룹 함수는 완전히 동일하다. x
+D) 집계 함수는 하나의 튜플에만 적용된다. x
+
+3. (객관식)
+다음 SQL 문을 실행했을 때 결과가 0인 경우, 가장 가능성이 높은 원인은?
+sql
+
+SELECT  COUNT(*)  FROM  member  WHERE  email  LIKE  '%naver.com';
+
+A) member 테이블에 행이 없다
+B) email 컬럼에 'naver.com'이 포함된 값이 없다 o
+C) SELECT문에 오류가 있다
+D) 모든 email 값이 NULL이다
+
+4. (객관식)
+다음 중 DML로 할 수 없는 작업은?
+
+A) 기존 행의 일부 컬럼 값 변경
+B) 새로운 행 추가
+C) 테이블 구조(컬럼 타입) 변경 o
+D) 기존 행 삭제
+
+5. (객관식)
+트랜잭션 내에서 SAVEPOINT를 사용하는 이유로 옳은 것은?
+A) DDL 명령을 실행하기 위해
+B) 일부 작업만 선택적으로 ROLLBACK 하려고 o
+C) 트랜잭션의 실행 순서를 바꾸려고
+D) 인덱스를 생성하기 위해
+
+6. (객관식)
+다음 제약조건 중 “부모-자식 관계(참조 무결성)”에 직접적으로 관여하는 것은?
+A) PRIMARY KEY
+B) FOREIGN KEY o
+C) UNIQUE
+D) CHECK
+
+7. (객관식)
+아래 SQL의 실행 결과로 옳은 것은?
+
+sql
+
+CREATE TABLE test (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(10) NOT NULL,
+  age INT DEFAULT 20
+);
+INSERT INTO test (name) VALUES ('홍길동');
+SELECT name, age FROM test;
+
+A) name은 ‘홍길동’, age는 0
+B) name은 ‘홍길동’, age는 NULL
+C) name은 ‘홍길동’, age는 20 o
+D) 오류 발생
+
+8. (객관식) *
+아래 SQL 중 실행 결과가 가장 많은 행을 반환하는 것은?
+A) SELECT * FROM table1 WHERE col1 IS NULL;
+B) SELECT * FROM table1 WHERE 1=0;
+C) SELECT * FROM table1 WHERE 1=1; o
+D) SELECT * FROM table1 WHERE col1 = 'abc';
+
+9. (객관식) *
+다음 중 모델링 3단계 중 **논리적 모델링(Logical Modeling)**에 해당하는 활동은? 
+A) 인덱스 및 파티션 설계
+B) 엔터티-관계 도출 및 속성 식별 o
+C) 컬럼 데이터타입 및 길이 지정
+D) SQL문 생성
+
+10. (객관식)
+다음 관계 중, 실제 데이터 중복 가능성이 가장 높은 것은?
+A) 1:1 관계 
+B) 1:N 관계 
+C) N:M 관계 o
+D) 1:0 관계 
+
+11. (객관식) *
+아래 SQL의 실행 결과는?
+
+sql
+복사
+
+DELETE FROM test WHERE 1=1;
+SELECT COUNT(*) FROM test;
+
+(단, test 테이블엔 원래 10개의 행이 있었음)
+A) 0 o
+B) 1
+C) 10 
+D) NULL
+
+12. (객관식)
+다음 중 “DDL” 명령어만으로 수행 가능한 것은?
+A) 테이블의 모든 데이터만 삭제 
+B) 테이블 구조 자체 삭제 o
+C) 데이터 값 일부만 수정 
+D) 트랜잭션 취소
+
+13. (객관식)
+아래 중 “정규화”의 결과로 기대할 수 있는 효과로 가장 적합한 것은?
+A) 테이블 수가 반드시 감소
+B) 데이터 무결성 향상 및 이상 현상 최소화 o
+C) 데이터 입력 속도 무조건 향상
+D) 데이터 중복 증가
+
+14. (객관식)
+인덱스(Index)를 사용하지 않을 때 발생할 수 있는 현상은?
+A) 데이터 조회가 느려질 수 있다 o
+B) 데이터가 자동으로 정렬된다
+C) 중복 데이터가 사라진다
+D) 데이터 삽입 속도가 빨라진다
+
+15. (객관식) *
+다음 중 SQL 실행 순서(실제 DB 엔진이 처리하는 순서)로 옳은 것은?
+A) SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY
+B) FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY o
+C) WHERE → SELECT → FROM → GROUP BY → HAVING → ORDER BY
+D) SELECT → WHERE → FROM → GROUP BY → HAVING → ORDER BY
+
+16. (객관식)
+MariaDB에서 현재 날짜(시각 아님)만 반환하고 싶을 때 사용하는 함수는?
+A) NOW()
+B) CURDATE() o
+C) DATE_ADD()
+D) GETDATE() 
+
+17. (객관식) *
+제약조건 CHECK의 올바른 사용 예시는?
+A) CHECK salary > 0 
+B) CHECK (salary > 0)
+C) CHECK salary = 0 
+D) CHECK (salary = 0 OR salary > 0) o
+
+18. (객관식)
+다음 중 아래 SQL을 사용했을 때 발생할 수 있는 문제점은?
+sql
+
+ALTER TABLE student ADD COLUMN age INT NOT NULL;
+
+A) 아무 문제 없음
+B) 기존 데이터에 NULL이 들어가 오류 발생 o -> 디폴트 설정 안해줘서?
+C) 자동으로 모든 값이 0이 된다
+D) student 테이블이 삭제된다
+
+
+19. (객관식)
+다음 중 FK(FOREIGN KEY)의 주요 효과는?
+A) 테이블 구조를 삭제할 수 있다
+B) 데이터 중복을 허용한다
+C) 참조 무결성을 보장한다 o
+D) 자동으로 인덱스를 생성한다
+

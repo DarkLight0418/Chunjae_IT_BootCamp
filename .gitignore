@@ -3,3 +3,5 @@ jdk-17.0.12/
 modeling/workspace
 *.class
 Project/NewbieFitness/java_files
+WebServer/settings
+WebServer/tomcat10/bin
