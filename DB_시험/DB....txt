@@ -5,16 +5,16 @@
 5. 함수
 6. 제약 조건(Constraint) 5가지
 7. pass
-8. 마리아 DB 계정 생성 쿼리 -> 개정 생성 DDL문
+8. 마리아 DB 계정 생성 쿼리 -> 계정 생성 DDL문
 9. 모델링 3단계 - 개념 논리 물리
 10. 관계(주관식)
 	(1) Cardinality 관점 -> 일대다 다대다
 	(2) Relationship Type 관점 -> 식별 비식별
 11. 정의 쓰기(가장 중요한 키워드 2가지) (주관식)
 12. 계좌이체 ? (주관식 - 롤백 or 트랜잭션?)
-13. DDL 종류 (create alter, drop, ...)
+13. DDL 종류 (create, alter, drop, ...)
 14. 삭제 ( delete or  ? ) (주관식) -> TRUNCATE
-= truncate -> 통째로 삭제
+= truncate -> 통째로 삭제 초기화
 
 15. 마리아DB 시간 관련 함수
 16. 제약조건 pass
