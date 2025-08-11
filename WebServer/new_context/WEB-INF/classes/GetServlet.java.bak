@@ -1,7 +1,0 @@
-package soo.sv;
-
-import jakarta.servlet.http.*;
-import jakarta.servlet.*;
-import java.io.*;
-
-public class HelloServlet extends HttpServlet {

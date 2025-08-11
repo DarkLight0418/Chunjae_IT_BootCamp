@@ -44,7 +44,7 @@ request.setAttribute("tomcatExamplesUrl", "/examples/");
                 <br class="separator" />
             </div>
             <div id="asf-box">
-                <h1>한재의 페이지</h1>
+                <h1>${pageContext.servletContext.serverInfo}</h1>
             </div>
             <div id="upper" class="curved container">
                 <div id="congrats" class="curved container">

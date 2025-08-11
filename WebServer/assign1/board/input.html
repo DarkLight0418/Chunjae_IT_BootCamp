@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내용 입력</title>
+</head>
+<body>
+    <h1>게시판 글 작성</h1>
+    <form name="작성폼" action="insert.do" method="post">
+        <table border="1" width="400" height="300">
+	      <tr>
+		     <td width="30%" colspan="4" align="center"><h2>입력폼</h2></td> 
+		  </tr>
+		  <tr>
+		     <th width="30%">작성자 이름</th> 
+			 <td><input name="writer" size="20"></td>
+		  </tr>
+
+		  <tr>
+		     <th width="30%">이메일</th> 
+			 <td><input name="email" size="20"></td>
+		  </tr>
+
+		  <tr>
+		     <th width="30%">제목</th> 
+			 <td><input name="subject" size="20"></td>
+		  </tr>
+		  <tr>
+		     <th width="30%">내용</th> 
+			 <td><input name="content" style="width:200px; height:120px; align:center;"></td>
+		  </tr>
+		  <tr>
+		     <td colspan="2" align="center">
+			     <input type="submit" value="전송"/>
+				 <input type="reset" value="초기화"/>
+			 </td> 
+		  </tr>
+	   </table>
+    </form>
+	<a href="../">인덱스 창으로</a>
+	<a href="list.do">글 목록으로</a>
+
+</body>
+</html>

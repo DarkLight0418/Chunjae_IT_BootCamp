@@ -47,4 +47,23 @@
         <servlet-name>PostServletName</servlet-name>
         <url-pattern>/post.do</url-pattern>
     </servlet-mapping>
+
+	  <servlet>
+		  <servlet-name>AddrServletListName</servlet-name>
+		  <servlet-class>soo.sv.addr.AddrServletList</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		  <servlet-name>AddrServletListName</servlet-name>
+		  <url-pattern>/addr/list.do</url-pattern>
+	  </servlet-mapping>
+
+	  <servlet>
+		  <servlet-name>AddrServletInName</servlet-name>
+		  <servlet-class>soo.sv.addr.AddrServletIn</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		  <servlet-name>AddrServletInName</servlet-name>
+		  <url-pattern>/addr/insert.do</url-pattern>
+	  </servlet-mapping>
+
 </web-app>

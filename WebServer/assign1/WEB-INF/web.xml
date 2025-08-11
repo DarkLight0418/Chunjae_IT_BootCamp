@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0"
+         metadata-complete="true">
+
+
+    <display-name>Assign1</display-name>
+    <description>
+        Assign1
+    </description>
+
+
+ <!-- 서블릿 매핑(어떤 클래스가 어떤 주소로 쓰일지)-->
+
+	  <servlet>
+		  <servlet-name>BoardListName</servlet-name>
+		  <servlet-class>board.BoardList</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+
+		  <servlet-name>BoardListName</servlet-name>
+		  <url-pattern>/board/list.do</url-pattern>
+	  </servlet-mapping>
+
+	  <servlet>
+		  <servlet-name>InsertListName</servlet-name>
+		  <servlet-class>board.InsertList</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		  <servlet-name>InsertListName</servlet-name>
+		  <url-pattern>/board/insert.do</url-pattern>
+	  </servlet-mapping>
+
+	  <servlet>
+		  <servlet-name>DeleteListName</servlet-name>
+		  <servlet-class>board.DeleteList</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		  <servlet-name>DeleteListName</servlet-name>
+		  <url-pattern>/board/del.do</url-pattern>
+	  </servlet-mapping>
+
+	
+      <servlet>
+		  <servlet-name>ModifyListName</servlet-name>
+		  <servlet-class>board.ModifyList</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+		  <servlet-name>ModifyListName</servlet-name>
+		  <url-pattern>/board/modify.do</url-pattern>
+	  </servlet-mapping>
+</web-app>

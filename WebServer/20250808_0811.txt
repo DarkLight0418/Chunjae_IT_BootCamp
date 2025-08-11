@@ -1,0 +1,80 @@
+web.xml -> 서블릿 - 서블릿 매핑(실제 보여질 이름)
+
+자바는 classes에 다른 파일은 root에
+
+req.getMethod();
+
+service 메소드는 모든 요청을 다 받음 -> service -> doGet, doPost
+
+단락형 프로토콜 (StateLess)
+
+패킷 -> 데이터를 쪼갠 덩어리
+-> 1 A B  10  ---> 
+-> 헤더  바디
+
+
+상태 유지를 위해 '세션'을 씀
+
+
+1 WebApp == 1 WebSite == 1 WebContext 
+
+언로딩 -> 서버 정책에 따라, 갱신 시, shutdown 시
+
+
+< 20250811 저번주 복습 >
+
+(1) WebApp  
+   1 WebContext == 1 WebSite == 1 WebApp
+
+(2) 구조  
+  NewContext 
+     | 
+      WEB-INF
+	    |
+		- web.xml ( DD )  
+		- classes/a.b.A.class   
+		- src/.java
+
+
+(3) tomcat이 Context로 인식하게 하기 
+   <Context path="/nc" docBase="D:\SOO\WebServer\NewContext"/>
+
+(4) Servlet 작성/컴파일 
+    1) public class A extends HttpServlet{
+		   public void init(){} //로딩 
+		   public void service(req, res){ //요청시마다
+			  //7가지 전송메소드 
+		   }  
+		   public void destroy(){} //언로딩 
+	   }
+    2) 클래스패스
+    set classpath=.;D:\SOO\WebServer\tomcat10\lib\servlet-api.jar
+	3) 컴파일 
+	src> javac -d ../classes *.java
+
+(5) web.xml ( DD: Deployment Descriptor )
+  <servlet>
+      <servlet-name>HelloServletName</servlet-name>
+      <servlet-class>soo.sv.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>HelloServletName</servlet-name>
+      <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+
+(6) http://localhost:8080/hello 
+
+(7) Tip(JDBC)
+	1) Driver 로딩 
+	2) Connection 생성 
+	3) Statement 생성 
+	4) Statement 실행 
+	   - execute();
+	   - executeUpdate();
+	   - executeQuery();
+	5) Data 추출( ResultSet rs ) 
+	   - next()
+	   - previous()
+	   - beforeFirst()
+	   - afterLast()
+	6) close
