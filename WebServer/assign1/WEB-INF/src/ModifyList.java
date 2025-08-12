@@ -35,10 +35,10 @@ public class ModifyList extends HttpServlet {
 		String email = req.getParameter("email");
 		String subject = req.getParameter("subject");
 		String content = req.getParameter("content");
-		String seqStr = req.getParameter("seq");
 
-		int seq = Integer.parseInt(seqStr);
+		int seq = Integer.parseInt(req.getParameter("seq"));
 
+		
 		//2. DB에 insert 
 		try{	
 			pstmt.setString(1, email);
@@ -49,6 +49,7 @@ public class ModifyList extends HttpServlet {
 			pln("modifyList seq :" + seq);
 			
 			pstmt.executeUpdate();
+
 		}catch(SQLException se){
 			System.out.println("sql 예외:" + se);
 		}

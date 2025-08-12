@@ -1,0 +1,34 @@
+JSP 구현되는 내용
+
+서비스 내에 4개 클래스 자동 import
+
+< Servlet 단점 > 
+
+1. pw.println(""); 
+2. Context/WEB-INF/classes 논리적 경로
+3. Context/WEB-INF/web.xml 등록 
+4. 반복코딩  
+    import jakarta.servlet.*;
+	import jakarta.servlet.http.*;
+    import java.io.*;
+
+	extends HttpServlet
+
+    public void service(HttpServletRequest req, HttpServletResponse res) 
+		throws ServletException, IOException{}
+
+	res.setContentType("text/html;charset=utf-8");
+	PrintWriter pw = res.getWriter();
+5. Beans 사용 지저분 
+
+
+get만 ?로 받아올 수 있음. post는 안됨
+
+인덱스 파일 -> welcome-file-list
+<a href='../'> 인덱스 </a>
+
+DBCP 
+
+<jsp:useBean id="dbcp' class="soo.DbcpBean" scope="application"/>
+
+context.xml -> web.xml -> dbcp -> jsp 사용

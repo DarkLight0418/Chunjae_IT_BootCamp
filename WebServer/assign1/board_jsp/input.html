@@ -6,16 +6,15 @@
     <title>내용 입력</title>
 </head>
 <body>
-    <h1>게시판 글 수정</h1>
-    <form name="수정 폼" action="modify.do" method="post">
+    <h1>게시판 글 작성</h1>
+    <form name="작성폼" action="insert.do" method="post">
         <table border="1" width="400" height="300">
 	      <tr>
-		     <td width="30%" colspan="4" align="center"><h2>수정 폼</h2></td> 
+		     <td width="30%" colspan="4" align="center"><h2>입력폼</h2></td> 
 		  </tr>
-
 		  <tr>
 		     <th width="30%">작성자 이름</th> 
-			 <td><input name="writer" size="20" readonly="readonly"></td> <!-- 입력을 막기 위한 readonly 속성(말 그대로 읽는 것만!) -->
+			 <td><input name="writer" size="20"></td>
 		  </tr>
 
 		  <tr>
@@ -40,7 +39,7 @@
 	   </table>
     </form>
 	<a href="../">인덱스 창으로</a>
-	<a href="list.do">글 목록으로</a>
+	<a href="list.jsp">글 목록으로</a>
 
 </body>
 </html>
