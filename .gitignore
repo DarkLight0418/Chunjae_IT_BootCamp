@@ -4,4 +4,3 @@ modeling/workspace
 *.class
 Project/NewbieFitness/java_files
 WebServer/settings
-WebServer/tomcat10/bin
