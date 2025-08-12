@@ -143,9 +143,19 @@
       <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
 
-		<Context path="/nc" docBase="D:\JAE\Chunjae_IT_BootCamp\WebServer\new_context" reloadable="true"/>
+		<Context path="/nc" docBase="D:\JAE\Chunjae_IT_BootCamp\WebServer\new_context" reloadable="true">
+			<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+			maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+			username="scott" password="tiger" driverClassName="org.mariadb.jdbc.Driver"
+			url="jdbc:mariadb://127.0.0.1:3306/java_schema"/>
+	    </Context>
 
-		<Context path="/assign1" docBase="D:\JAE\Chunjae_IT_BootCamp\WebServer\assign1" reloadable="true"/>
+		<Context path="/assign1" docBase="D:\JAE\Chunjae_IT_BootCamp\WebServer\assign1" reloadable="true">
+		<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+			maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+			username="scott" password="tiger" driverClassName="org.mariadb.jdbc.Driver"
+			url="jdbc:mariadb://127.0.0.1:3306/java_schema"/>
+	    </Context>
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->

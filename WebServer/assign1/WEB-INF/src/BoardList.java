@@ -79,7 +79,7 @@ public class BoardList extends HttpServlet {
 					pw.println("<td>"+content+"</td>");
 					pw.println("<td>"+rdate+"</td>");
 					pw.println("<td align='center'><a href='del.do?seq="+seq+"'>삭제</a></td>");
-					pw.println("<td align='center'><a href='modify.html'="+seq+"'>수정</a></td>");
+					pw.println("<td align='center'><a href='modify.do?seq="+seq+"'>수정</a></td>");
 				pw.println("</tr>");
 			}
 		}catch(SQLException se){
