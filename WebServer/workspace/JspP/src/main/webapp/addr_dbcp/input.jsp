@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=utf-8"%>
+
 <meta charset="utf-8">
 <style>
 	table, th, td {
@@ -12,10 +14,9 @@
 <body onload="document.f.name.focus()">
 <center>
    <h1>
-	
 		Address Input JSP
    </h1>
-   <form name="f" action="insert.do" method="post">
+   <form name="f" action="insert.jsp" method="post">
        <table border="1" width="300" height="200">
 	      <tr>
 		     <td width="30%" colspan="2" align="center"><h2>입력폼</h2></td> 

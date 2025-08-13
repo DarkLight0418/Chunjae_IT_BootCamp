@@ -1,0 +1,91 @@
+<%%> 스크립트렛 -> service();
+<%=%> 식  -> 스크립트렛과 같은 거
+
+
+(서버 측 메모리 공간 매체)
+scope -> application -> 영역에 하나만 만들어짐
+
+----------------------------------------------------
+
+1. JSP 
+	(1) 구성요소
+		1) Fixed Template Data ( HTML )
+
+		2) JSP elements 
+			<1> 지시어 ( Directive Element )
+				<%@ %>
+			<2> 스크립팅 엘리먼츠( Scripting Elements ) 
+				<%!%> : 선언( Declarelation )
+				<%%> : 스크립트렛( Scriptlet )
+				<%=%> : 식( Expression )
+			<3> JSP표준태그 ( JSP action )
+				<jsp:XXX /> 
+			<4> JSTL 
+				<%@ taglib .. %>
+				<c:if >
+			<5> EL ( Expression Language )
+				${}
+			//<6> CTL
+		
+	(2) 디폴트 객체(9가지)
+		1) 설명 
+			JSP문서에서 객체를 생성하지않고도 <%%> or <%=%> 에서 사용할 수 있는 객체
+
+		2) 종류 
+			<1> out ( JspWriter )
+
+			<2> response ( HttpServletResponse )
+
+			<3> request ( HttpServletRequest )
+
+			<4> session ( HttpSession )
+
+			<5> application ( ServletContext )
+
+			<6> page ( Object )
+
+			<7> pageContext ( PageContext )
+
+			<8> config ( ServletConfig )
+
+				정의) web.xml 
+				<servlet>
+				  <servlet-name>servletEx</servlet-name>
+				  <jsp-file>/jspEx.jsp</jsp-file>
+				  <init-param>
+					  <param-name>adminId</param-name>
+					  <param-value>admin</param-value>
+				  </init-param>
+				</servlet>
+
+				사용) jspEx.jsp
+				<%
+					String adminId = config.getInitParameter("adminId");
+				%>
+
+			<9> exception  ( Throwable )
+
+	(3) 주석 (3가지)
+		1) <%-- --%>
+		2) // /**/
+		3) <!-- -->
+
+2. Scope 종류 ( 서버측 메모리 공간 객체 )
+	(1) application 
+	(2) session 
+	(3) request 
+	(4) page 
+
+
+-------------------------
+< Model1( MV모델 ) > 
+Clinet <-> JSP <-> Model <->  DB 
+
+< 소스 작업 절차 > 
+addr.mv.model.AddrDTO.java 생성 
+addr.mv.model.AddrDAO.java 생성
+addr_mv/list.jsp 수정 
+addr_mv/insert.jsp 수정 
+addr_mv/del.jsp 수정 
+
+<jsp:useBean id=소문자 시작 class=대문자 시작>

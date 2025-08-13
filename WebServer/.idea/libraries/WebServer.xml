@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="WebServer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/addr_designer.zip!/" />
+      <root url="jar://$PROJECT_DIR$/designer.zip!/" />
+      <root url="jar://$PROJECT_DIR$/NewContext.zip!/" />
+      <root url="jar://$PROJECT_DIR$/addr_dbcp.zip!/" />
+      <root url="jar://$PROJECT_DIR$/addr_jsp.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

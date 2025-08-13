@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=utf-8" 
      import="javax.sql.DataSource, java.sql.*"%>
+     
 <jsp:useBean id="dbcp" class="soo.dbcp.DbcpBean" scope="application"/>
 
 <meta charset='utf-8'>
