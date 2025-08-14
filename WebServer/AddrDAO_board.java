@@ -129,7 +129,7 @@ public class AddrDAO_board {
 		ResultSet rs = null;
 		try{
 			con = ds.getConnection();
-			pstmt = con.preparedStatement(sql);
+			//pstmt = con.Statement(sql);
 			rs = pstmt.executeQuery();
 			
 			pstmt.setLong(1, seq);

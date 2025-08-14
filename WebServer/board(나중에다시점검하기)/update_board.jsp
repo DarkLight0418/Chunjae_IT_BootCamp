@@ -1,5 +1,7 @@
-<%@ page contentType="text/html;charset=utf-8"
-import="addr.mv.model.AddrDTO_board, java.util.*"%>
+<%--
+
+<%@ page contentType="text/html;charset=utf-8" 
+     import="addr.mv.model.AddrDTO_board"%>
 <jsp:useBean id="addrDAO_board" class="addr.mv.model.AddrDAO_board" scope="application"/>
 
 <meta charset="utf-8">
@@ -17,7 +19,7 @@ import="addr.mv.model.AddrDTO_board, java.util.*"%>
 <center>
 
 <% 
-	long b = addrDAO_board.getSeq();
+	long b = AddrDTO_board.getSeq();
 	ArrayList<AddrDTO_board> content_board = addrDAO_board.contents(b);
     if(content_board != null && content_board.size() != 0){
     	for(AddrDTO_board dto : content_board){
@@ -69,3 +71,5 @@ import="addr.mv.model.AddrDTO_board, java.util.*"%>
 %>
 </center>
 </body>
+
+--%>
