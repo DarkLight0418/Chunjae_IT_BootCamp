@@ -1,0 +1,6 @@
+지금에 충실하자!!
+
+auto_increment -1
+
+MVC 모델
+

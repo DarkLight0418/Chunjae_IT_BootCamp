@@ -19,7 +19,8 @@
 	</h1>
 	<a href='input.jsp'>입력</a> 
 	&nbsp;&nbsp;&nbsp;
-	<a href='../'>인덱스</a>
+	<a href='../'>인덱스</a>  <!-- mvc 위배 -->
+	
 <table border='1' cellpadding='7' cellspacing='2' width='50%'>
 	<tr>
 		<th>번호</th>
