@@ -45,7 +45,7 @@ public class AddrController extends HttpServlet{
 	
 	private void input(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		response.sendRedirect("input.js");
+		response.sendRedirect("input.jsp");
 	}
 	
 	private void insert(HttpServletRequest request, HttpServletResponse response) 

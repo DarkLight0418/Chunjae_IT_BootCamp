@@ -23,4 +23,10 @@ public class AddrService {
 	public boolean deleteS(long seq) {
 		return dao.delete(seq);
 	}
+	public boolean updateS(Address dto, long seq) {
+		return dao.update(dto, seq);
+	}
+	public boolean contentS(long seq) {
+		return dao.content(seq);
+	}
 }
