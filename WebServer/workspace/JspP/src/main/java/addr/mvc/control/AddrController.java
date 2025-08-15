@@ -67,7 +67,7 @@ public class AddrController extends HttpServlet {
 		
 		AddrService service = AddrService.getInstance();
 		boolean flag = service.deleteS(seq);
-		//response.sendRedirect("addr.do");
+		//response.sendRedirect("addr.do");  // 알림 팝업이 필요없을 경우
 		
 		request.setAttribute("flag", flag);
 		request.setAttribute("kind", "del");

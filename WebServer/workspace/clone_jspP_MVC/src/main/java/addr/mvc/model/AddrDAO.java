@@ -31,14 +31,14 @@ class AddrDAO {
 		Statement stmt = null;
 		ResultSet rs = null;
 		
-		String sql = "select * from ADDRESS order by SEQ desc";
+		String sql = "select * from ADDRESS";
 		try {
 			con = ds.getConnection();
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(sql);
 		
 			while(rs.next()) {
-				int seq = rs.getInt(1);
+				long seq = rs.getLong(1);
 				String name = rs.getString(2);
 				String addr = rs.getString(3);
 				java.sql.Date rdate = rs.getDate(4);
@@ -50,7 +50,7 @@ class AddrDAO {
 			return null;
 		} finally {
 			try {
-				rs.close();
+				if(rs != null) rs.close();
 				stmt.close();
 				con.close();
 			} catch(SQLException se) {}
@@ -97,6 +97,65 @@ class AddrDAO {
 				pstmt.close();
 				con.close();
 			} catch (SQLException se) {}
+		}
+	}
+	boolean update(Address dto, long seq) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		String sql = "update ADDRESS set name=?, addr=? where SEQ=?";
+		
+		try {
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, dto.getName());
+			pstmt.setString(2, dto.getAddr());
+			pstmt.setLong(3, dto.getSeq());
+			
+			int i = pstmt.executeUpdate();
+			if(i > 0) return true;
+			else return false;
+		} catch (SQLException se) {
+			return false;
+		} finally {
+			try {
+				pstmt.close();
+				con.close();
+			} catch (SQLException se) {}
+		}
+	}
+	boolean content(long seq) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from ADDRESS where SEQ=?";
+		
+		try {
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setLong(1, seq);
+			rs = pstmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				long seqNo = rs.getLong(1);
+				String name = rs.getString(2);
+				String addr = rs.getString(3);
+				java.sql.Date rdate = rs.getDate(4);
+			}
+			
+			return true;
+		} catch (SQLException se) {
+			System.out.println("sql 조회 예외 발생 : " + se);
+			return false;
+		} finally {
+			try {
+				if (rs!=null) rs.close();
+				pstmt.close();
+				con.close();
+			} catch (SQLException se) {
+			}
 		}
 	}
 }
