@@ -125,7 +125,7 @@ class AddrDAO {
 			} catch (SQLException se) {}
 		}
 	}
-	boolean content(long seq) {
+	boolean content(Address dto) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -135,7 +135,7 @@ class AddrDAO {
 		try {
 			con = ds.getConnection();
 			pstmt = con.prepareStatement(sql);
-			pstmt.setLong(1, seq);
+			pstmt.setLong(1, dto.getSeq());
 			rs = pstmt.executeQuery(sql);
 			
 			while(rs.next()) {

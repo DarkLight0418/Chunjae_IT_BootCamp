@@ -26,7 +26,7 @@ public class AddrService {
 	public boolean updateS(Address dto, long seq) {
 		return dao.update(dto, seq);
 	}
-	public boolean contentS(long seq) {
-		return dao.content(seq);
+	public boolean contentS(Address dto) {
+		return dao.content(dto);
 	}
 }
