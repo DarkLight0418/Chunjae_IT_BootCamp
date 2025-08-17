@@ -25,4 +25,3 @@
 %>
 location.href="addr.do";
 </script>
-[출처] DAY40 FullStack Java 12기 - MVC Model2 게시판|작성자 kinhyo
