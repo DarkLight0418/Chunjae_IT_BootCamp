@@ -77,7 +77,7 @@ public class BoardController extends HttpServlet {
 					Board dto = new Board();
 					dto.setSeq(seq);
 					
-					Board result = BoardService.getInstance().Content(dto);
+					Board result = BoardService.getInstance().content(dto);
 					
 					request.setAttribute("board", result);
 					forward(request, response, "/mvcboard/content.jsp");
