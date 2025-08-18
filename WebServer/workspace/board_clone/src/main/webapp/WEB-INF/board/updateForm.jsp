@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%@ page import="board.mvc.model.BoardService" %>
-<%@ page import="mvc.domain.Board" %>
+<%@ page import="board.mvc.domain.Board" %>
 
 <%
     request.setCharacterEncoding("utf-8");

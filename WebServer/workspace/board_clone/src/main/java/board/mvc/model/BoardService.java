@@ -20,7 +20,7 @@ public class BoardService {
 	public void delete(long seq) {
 		dao.delete(seq);
 	}
-	public Board Content(Board dto) {
+	public Board content(Board dto) {
 		return dao.content(dto);
 	}
 	public void update(Board dto) {

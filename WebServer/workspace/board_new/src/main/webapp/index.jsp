@@ -11,14 +11,11 @@
 		</style>
 	</head>
 	<body style="text-align:center">
-	<h1>JspP MVC Index</h1>
+	<h1>MVC Index</h1>
     <br/>
 	    <a href="addr_dbcp/list.jsp">DBCP주소록</a><br/>
 	    <a href="addr_mv/list.jsp">주소록(Model1)</a><br/>
 	    <a href="address/addr.do">주소록(Model2)</a><br/>
-	    <a href="mvcboard/board.do">게시판</a><br/>
-	    
-	    
-	   	<a href="file/file.do?m=form">파일 업로드 폼</a></br>
+	    <a href="board.do">게시판</a><br/>
 	</body>
 </html>
