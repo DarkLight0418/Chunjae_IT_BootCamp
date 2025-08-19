@@ -4,5 +4,9 @@ class AddrSQL {
 	final static String LIST = "select * from ADDRESS order by SEQ desc";
 	final static String INSERT = "insert into ADDRESS(name, addr, rdate) values(?,?,now())";
 	final static String DELETE = "delete from ADDRESS where SEQ=?";
+	
+	// for ajax
+	final static String SELECT_BY_SEQ = "select * from ADDRESS where seq=?";
+	final static String SELECT_BY_NAME = "select * from ADDRESS where NAME like ? order by NAME";
 }
 

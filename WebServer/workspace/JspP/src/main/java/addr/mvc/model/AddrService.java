@@ -25,4 +25,14 @@ public class AddrService {
 	public boolean deleteS(long seq) {
 		return dao.delete(seq);
 	}
+	
+	// for Ajax
+	
+	public Address selectBySeqS(long seq) {
+		return dao.selectBySeq(seq);
+	}
+	
+	public ArrayList<Address> selectByNameS(String na) {
+		return dao.selectByName(na);
+	}
 }
