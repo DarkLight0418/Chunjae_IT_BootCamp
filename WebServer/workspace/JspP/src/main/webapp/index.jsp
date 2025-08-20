@@ -21,5 +21,17 @@
 	   	<a href="file/file.do?m=form">파일 업로드 폼</a></br>
 	   	<a href="ajax/ajax.do">비동기 통신</a></br>
 	   	<a href="ajax/ajax.do?m=auto_form">자동 완성</a></br>
+	   	
+	   	<c:choose>
+			<c:when test="${empty loginOkUser}">
+				<a href="login/login.do?m=form">로그인</a>
+			</c:when>
+			<c:otherwise>
+				<font style="color:green">${loginOkUser.name}</font>님 환영합니다 ^^ 
+				<br/>
+				<a href="login/login.do?m=logout">로그아웃</a>
+			</c:otherwise>
+		</c:choose>
+	   	
 	</body>
 </html>
