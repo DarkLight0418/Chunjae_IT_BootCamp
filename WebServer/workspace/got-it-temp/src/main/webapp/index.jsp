@@ -14,6 +14,7 @@
 <body style="text-align:center">
 	
 	<h1>게시판 테스트</h1>
-	<a href="<%=request.getContextPath()%>/board.do?action=qna">qna 게시판</a>
+	<a href="<%=request.getContextPath()%>/board.do?type=qna">qna 게시판</a><br>
+	<a href="<%=request.getContextPath()%>/board.do?type=knowledgeShare">지식나눔 게시판</a>
 </body>
 </html>

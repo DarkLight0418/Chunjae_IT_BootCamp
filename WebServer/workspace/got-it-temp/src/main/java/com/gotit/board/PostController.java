@@ -18,10 +18,11 @@ public class PostController extends HttpServlet {
 		String type = request.getParameter("type");  // 게시판 이름
 		String action = request.getParameter("action");
 		
-		if (action != null) {
-			action = action.trim();
-			switch (action) {
-				case "qna" :	qna(request, response); break;
+		if (type != null) {
+			 type = type.trim();
+			switch (type) {
+				case "qna" : qna(request, response); break;
+				case "knowledgeShare" : knowledgeShare(request, response); break; 
 				default: response.sendRedirect("../");
 			}
 		}
@@ -32,6 +33,14 @@ public class PostController extends HttpServlet {
 		String qnaPage = "/WEB-INF/board/qnaBoard.jsp";
 		
 		RequestDispatcher rd = request.getRequestDispatcher(qnaPage);
+		rd.forward(request, response);
+	}
+	
+	private void knowledgeShare(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		String kSPage = "/WEB-INF/board/knowledgeShareBoard.jsp";
+		
+		RequestDispatcher rd = request.getRequestDispatcher(kSPage);
 		rd.forward(request, response);
 	}
 }
