@@ -18,7 +18,7 @@ public class AddrController extends HttpServlet{
 
 	public void service(HttpServletRequest request, HttpServletResponse response)
 		throws ServletException, IOException { 
-		String m = request.getParameter("m");
+		String m = request.getParameter("m");  // 전달된 매개변수 값 가져오는 메소드
 	
 		if(m != null) {
 			m = m.trim();

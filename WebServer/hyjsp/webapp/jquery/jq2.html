@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div>DIV 내용</div>
+		<div id="div-id" class="test test2">DIV내용</div>
+		<p class="test">P내용</p>
+		<p class="test2">P내용2</p> 
+		<br/>
+		<button>버튼</button>
+		
+		<script>
+			$('button').click(function(){
+				alert('버튼 클릭 됨');
+				//$('div').hide();
+				//$("#div-id").hide();
+				$(".test2").hide();
+			});
+		</script>
+	</body>
+</html>
