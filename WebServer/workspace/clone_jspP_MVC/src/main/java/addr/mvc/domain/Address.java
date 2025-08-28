@@ -29,7 +29,6 @@ public class Address {
 	public Date getRdate() {
 		return rdate;
 	}
-
 	
 	public void setSeq(long seq) {
 		this.seq = seq;
