@@ -1,4 +1,4 @@
-package com.gotit.board;
+package gotit.board;
 
 import java.sql.*;
 
