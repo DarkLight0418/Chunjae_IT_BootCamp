@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*===== 기본 세팅 =====*/
+@import url('https://rsms.me/inter/inter.css');
+html {font-family: 'Inter', sans-serif;}
+
+@supports (font-variation-settings: normal) {html {font-family: 'Inter var', sans-serif;}}
+:root {
+	/* 배경 */
+	--color-bg-main: #2e86de; 
+	--color-bg-lightblack: rgba(0, 0, 0, 0.3);
+	--color-bg-white: #fff;
+	--color-bg-gray: #F9FAFB;
+	--color-bg-bluegray: #E8EDF1;
+	--color-bg-black: #000;
+	--color-bg-lightblue:  rgba(46, 134, 222, 0.1);
+
+	/* 텍스트 */
+  --text-color-main: #111827; 
+  --text-color-darkgray: #374151;
+	--text-color-gray: #6B7280;
+	--text-color-gold: #816d3a;
+	--text-color-silver: #95A5A6;
+	--text-color-bronze: #CD7F32;
+	--text-color-lightgray: #4b5563;
+
+	/* 그림자 */
+	--shadow-default: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+	--shadow-primary: 0 4px 8px rgba(0,0,0,0.1);
+	
+	/* 테두리 */
+	--color-border-primary: 1px solid rgba(102, 108, 117, 0.3);
+	--color-border-default: 1px solid #666C754D;
+}
+
+
+:root {
+  /* 기본 컬러 */
+  --background-white: #fff;
+  --background-sub: #f3f4f6;
+
+  /* 배경색 */
+  --color-bg-main: #f7f8f8;
+  --color-bg-sub: #6a6a6a;
+  --color-bg-point: #2e86de;
+  --color-bg-point-hover: #54a0ff;
+
+  /* 텍스트 */
+  --color-text-point: #2e86de;
+  --color-text-main: #111827;
+  --color-text-sub: #374151;
+  --color-text-white: #ffffff;
+  --color-text-default: #4b5563;
+  --color-text-error: #dc3545;
+  --color-text-disabled: #b0b0b0;
+
+  /* 테두리 */
+  --color-border-default: 1px solid #ccc;
+  --color-border-error: #dc3545;
+
+}
+
+body, html {
+	overflow-x: hidden;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    text-decoration: none;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	color: #000;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
