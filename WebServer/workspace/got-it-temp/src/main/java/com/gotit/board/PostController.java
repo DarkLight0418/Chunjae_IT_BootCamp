@@ -22,7 +22,7 @@ public class PostController extends HttpServlet {
 			 type = type.trim();
 			switch (type) {
 				case "qna" : qna(request, response); break;
-				case "knowledgeShare" : knowledgeShare(request, response); break; 
+				case "knowledge" : knowledge(request, response); break; 
 				default: response.sendRedirect("../");
 			}
 		}
@@ -36,7 +36,7 @@ public class PostController extends HttpServlet {
 		rd.forward(request, response);
 	}
 	
-	private void knowledgeShare(HttpServletRequest request, HttpServletResponse response) 
+	private void knowledge(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		String kSPage = "/WEB-INF/board/knowledgeShareBoard.jsp";
 		
