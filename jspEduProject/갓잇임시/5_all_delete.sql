@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS notifications;
+DROP TABLE IF EXISTS reports;
+DROP TABLE IF EXISTS post_scraps;
+DROP TABLE IF EXISTS post_likes;
+DROP TABLE IF EXISTS post_comments;
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS boards;
+DROP TABLE IF EXISTS board_types;
+DROP TABLE IF EXISTS board_categories;
+DROP TABLE IF EXISTS user_points;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS user_badges;

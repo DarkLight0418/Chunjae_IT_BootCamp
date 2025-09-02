@@ -16,6 +16,18 @@
   limitations under the License.
 --><!-- The contents of this file will be loaded for each web application --><Context>
 
+	<Resource name="jdbc/gotit" 
+          auth="Container"
+          type="javax.sql.DataSource"
+          driverClassName="org.mariadb.jdbc.Driver"
+          url="jdbc:mariadb://localhost:3306/got_it_schema"
+          username="got"
+          password="got12"
+          maxTotal="20"
+          maxIdle="10"
+          maxWaitMillis="10000"/>
+
+
     <!-- Default set of monitored resources. If one of these changes, the    -->
     <!-- web application will be reloaded.                                   -->
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
