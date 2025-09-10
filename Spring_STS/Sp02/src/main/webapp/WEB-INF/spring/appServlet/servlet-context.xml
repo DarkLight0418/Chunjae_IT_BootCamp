@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- DispatcherServlet Context: 이 서블릿(appServlet)이 요청을 처리하기 위한 인프라 설정 파일 -->
+
+    <!-- @Controller 기반의 애노테이션 방식을 활성화 -->
+    <annotation-driven />
+
+    <!-- 
+        /resources/** 경로로 들어오는 HTTP GET 요청을 
+        /resources/ 디렉토리 안의 정적 리소스(JS, CSS, 이미지 등)로 매핑해서 서빙 
+        (즉, 정적 파일을 DispatcherServlet이 직접 처리하지 않고 이 매핑을 통해 반환)
+    -->
+    <resources mapping="/resources/**" location="/resources/" />
+	<resources mapping="/designer/**" location="/designer/" />
+	
+
+    <!-- 
+        컨트롤러에서 반환한 뷰 이름을 실제 JSP 파일로 매핑해주는 설정
+        예: return "home"; → /WEB-INF/views/home.jsp 로 해석됨
+    -->
+    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <beans:property name="prefix" value="/WEB-INF/views/" />
+        <beans:property name="suffix" value=".jsp" />
+    </beans:bean>
+    
+    <!-- khj.md.controller 패키지 안의 @Controller, @RestController 등을 스캔 -->
+    <context:component-scan base-package="khj.md.controller"></context:component-scan>
+
+    <!-- khj.md.mapper 패키지 안의 @Repository, @Mapper 등을 스캔 -->
+    <context:component-scan base-package="khj.md.mapper"></context:component-scan>
+</beans:beans>
