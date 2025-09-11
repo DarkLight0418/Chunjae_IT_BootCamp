@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="khj.board.mapper.BoardMapper">
+	<!-- 세미콜론 하면 안됨 -->
+	
+	<select id="list" parameterType="PageInfo" resultType="Board">
+		select * from BOARD order by SEQ desc limit #{startRow}, #{listLimit};
+	</select>
+	
+	<insert id="insert" parameterType="Board">
+		insert into Board(WRITER, EMAIL, SUBJECT, CONTENT, RDATE) values(#{writer}, #{email}, #{subject}, #{content}, now())  
+	</insert>
+	<delete id="delete" parameterType="long">
+		delete from BOARD where SEQ=#{seq}
+	</delete>
+	<select id="content" resultType="Board" parameterType="long">
+		select * from BOARD where SEQ=#{seq}
+	</select>
+	<select id="viewUpdate" resultType="Board" parameterType="long">
+		select * from BOARD where SEQ=#{seq}
+	</select>
+	<update id="modify" parameterType="Board">
+		update BOARD set WRITER=#{writer}, EMAIL=#{email}, SUBJECT=#{subject}, CONTENT=#{content}, RDATE=NOW() where SEQ=#{seq}
+	</update>
+	
+	<select id="countBoard" resultType="int">
+		select count(*) from BOARD;
+	</select>
+</mapper>
