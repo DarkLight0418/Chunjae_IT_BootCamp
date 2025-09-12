@@ -2,6 +2,8 @@ package khj.board.mapper;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import khj.board.domain.Board;
 import khj.board.domain.PageInfo;
 
@@ -13,4 +15,5 @@ public interface BoardMapper {
 	int modify(Board board);
 	int selectBoard(PageInfo pageInfo);
 	int countBoard();
+	void saveFile(long seq, MultipartFile file);
 }
