@@ -16,16 +16,19 @@
 		   {
 		      if(document.input.elements[i].value == "")
 			  {
+		    	 
 			     alert("모든 값을 입력 하셔야 합니다. ");
 				 return false;
 			  }
 		   }
 		   document.input.submit();
        }
+	   
+
 	</script>
   </head>
   <body onload="input.writer.focus()">
-	<font color="gray" size='4' face="휴먼편지체">
+	<font color="gray" size='5' face="휴먼편지체">
     <center>
 	   <hr width="600" size='2' color="gray" noshade>
 	      <h3> Spring Board</h3>
@@ -55,6 +58,13 @@
 		     <td align="center">CONTENT</td>
 			 <td><textarea  name="content" rows="15" cols="70"></textarea></td>
 		  </tr>
+		  <!-- 
+		  <tr>
+		  	 <td align="center">FILE</td>
+		  	 <td><input type="file" name="file" size="60">
+		  </tr>
+		  
+		   -->
 		  <tr>
 		     <td colspan="2" align="center">
 			    <input type="button" value="전송" onclick="check()">

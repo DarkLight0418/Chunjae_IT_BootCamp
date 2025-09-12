@@ -17,7 +17,7 @@
 <h3> Spring Board</h3>
 <font color='gray' size='4' face='휴먼편지체'>
 <a href='../'>인덱스</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- &nbsp *줄 바꿈 없는 공백(Non-breaking Space) -->
 <a href='write.do'>글쓰기</a><br/>
 </font>
 <hr width='600' size='2' color='gray' noshade>
@@ -29,6 +29,7 @@
 	<th color='gray'>e-mail</th>
 	<th color='gray'>subject</th>
 	<th color='gray'>date</th>
+	<th color='gray'>file</th>
 </TR>
 
 <c:if test="${empty boardList}">
@@ -48,6 +49,7 @@
 		  </a>
 		</TD>
 		<TD>${boardList.rdate}</TD>
+		<td>파일 목록 보여질 곳</td>
 	   </TR> 
 </c:forEach>
 
@@ -57,18 +59,27 @@
     (총페이지수 : ${pageInfo.maxPage}) &nbsp;
     &nbsp;&nbsp;
     
+    <c:if test="${pageInfo.startPage > 1}">
+    	<a href="list.do?cp=${pageInfo.startPage - 1}&ps=${pageInfo.listLimit}">이전</a>&nbsp
+	<!-- nbsp 줄 바꿈 없는 공백(Non-breaking Space) -->
+    </c:if>
+    
     <c:forEach begin="${pageInfo.startPage}" end="${pageInfo.endPage}" var="i">
-        <a href="list.do?cp=${i}&ps=${pageInfo.pageNum}">
             <c:choose>
             	<c:when test="${i == pageInfo.pageNum}">
-                	<strong>${i}</strong>
+                	<strong>[${i}]</strong>
                 </c:when>
                 <c:otherwise>
                 	<a href="list.do?cp=${i}&ps=${pageInfo.listLimit}">[${i}]</a>
                 </c:otherwise>
             </c:choose>
-    	</a>&nbsp;
+    	&nbsp;
     </c:forEach>
+    <c:if test="${pageInfo.endPage < pageInfo.maxPage}">
+    	<a href="list.do?cp=${pageInfo.endPage + 1}&ps=${pageInfo.listLimit}">다음</a>
+    </c:if>
+    
+    
     ( TOTAL : ${pageInfo.listCount} )
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -82,9 +93,10 @@
     <script language="javascript">
        function f(select){
            //var el = document.getElementById("psId");
+           let cp = select.value;
            var ps = select.value;
            //alert("ps : " + ps);
-           location.href="list.do?cp="${i}"&ps="+ps;
+           location.href="list.do?cp=1&ps="+ps;
        }
     </script>
     

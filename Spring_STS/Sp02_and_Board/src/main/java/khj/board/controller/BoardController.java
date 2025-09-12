@@ -1,5 +1,7 @@
 package khj.board.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import khj.board.domain.Board;
@@ -28,22 +31,20 @@ public class BoardController {
 	public ModelAndView list() {
 		return new ModelAndView("board/list","boardList", boardService.listB());
 	}
-	// 임시로 비교하라고 남겨둔 거
+	// 임시로 비교하라고 남겨둔 거(지금 작동하는 건 list 메소드에서 페이징도 같이 합니다)
 	*/
 	
-	@GetMapping("list.do")  // cp : current page, ps : page size
-	public ModelAndView list(int cp,
-			@RequestParam(defaultValue = "5") int ps) {
+	@GetMapping("list.do")  // cp : current page, ps : page size (@RequestParam 자동으로 매핑)
+	public ModelAndView list(@RequestParam(defaultValue = "1") int cp,
+			@RequestParam(defaultValue = "5") int ps, @RequestParam(defaultValue = "5") int pageTotalNum) {
 		int total = boardService.countBoard();
-			
-		PageInfo pageInfo = new PageInfo(total, cp, ps, 5);
+	
+		PageInfo pageInfo = new PageInfo(total, cp, ps, pageTotalNum);
 		List<Board> list = boardService.listB(pageInfo);
 
-		/*
 		System.out.println("[DEBUG] pageNum=" + pageInfo.getPageNum());
 		System.out.println("[DEBUG] startRow=" + pageInfo.getStartRow());
 		System.out.println("[DEBUG] rowCount=" + pageInfo.getRowCount());
-		*/
 		
 		ModelAndView mv = new ModelAndView("board/list");
 		mv.addObject("boardList", list);
@@ -57,16 +58,24 @@ public class BoardController {
 		return new ModelAndView("board/content", "board", board);
 	}
 	
-	// 글쓰긔
+	// 글쓰긔 & 파일 첨부
 	@GetMapping("write.do")
 	public String viewWrite() {
 		return "board/write";
 	}
 	
 	@PostMapping("write.do")
-	public String insert(Board board) {
+	//public String insert(Board board) {
+	public String insert(Board board, @RequestParam("file") MultipartFile file) throws IOException {
 		boardService.insertB(board);
-		return "redirect:board/list.do";
+		
+		/*
+		if(!file.isEmpty()) {
+			boardService.saveFile(board.getSeq(), file);
+		}
+		
+		*/
+		return "redirect:list.do";
 	}
 	
 	// 수정
@@ -94,19 +103,18 @@ public class BoardController {
 	    return new ModelAndView("board/update", "board", board);
 	}
 
+	@GetMapping("del.do")
+	public String delete(long seq) {
+		boardService.deleteB(seq);
+		return "redirect:list.do";
+	}
+	
 	
 	@PostMapping("update.do")
 	public String modify(Board board) {
 		boardService.modifyB(board);
 		
-		return "redirect:/board/list.do";
+		return "redirect:list.do";
 	}
 	
-	/*
-	// 페이징하는 법?
-	
-	public ModelAndView paging(@RequestParam(defaultValue = "3") int pageNum) {
-		return new ModelAndView("board/list");
-	}
-	*/
 }

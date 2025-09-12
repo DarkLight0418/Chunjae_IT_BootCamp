@@ -38,6 +38,11 @@
 		<beans:property name="maxUploadSizePerFile" value="2097152"/>
 		<beans:property name="maxInMemorySize" value="10485756"/>
 	</beans:bean>
+	
+	<beans:bean id="fileDownloadView" class="khj.md.fileset.FileDownloadView"/>
+	<beans:bean id="fileViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<beans:property name="order" value="0" />
+	</beans:bean>
     
     
     <!-- khj.md.controller 패키지 안의 @Controller, @RestController 등을 스캔 -->

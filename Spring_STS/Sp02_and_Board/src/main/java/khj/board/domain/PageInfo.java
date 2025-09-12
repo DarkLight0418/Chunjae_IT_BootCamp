@@ -13,7 +13,7 @@ public class PageInfo {
 	private int pageNum; // 현재 페이지 번호
 	private int listLimit;  // 페이지 당 게시물 목록 갯수
 	private int listCount;  // 총 게시물 수
-	private int pageListLimit; // 페이지 당 표시할 페이지 번호 수
+	private int pageTotalNum; // 페이지 당 표시할 페이지 번호 수
 	
 	private int maxPage; // 전체 페이지 수
 	private int startPage; // 시작 페이지 번호
@@ -22,18 +22,20 @@ public class PageInfo {
 	private int rowCount; // DB 조회 끝 row
 
 	
-	public PageInfo(int listCount, int pageNum, int listLimit, int pageListLimit) {
+	public PageInfo(int listCount, int pageNum, int listLimit, int pageTotalNum) {
+		
 		this.listCount = listCount;
 		this.pageNum = pageNum;
-		this.listLimit = (listLimit > 0 ? listLimit : 3);
-		this.pageListLimit = pageListLimit;
+		this.listLimit = listLimit;
+		this.pageTotalNum = (pageTotalNum > 0 ? pageTotalNum : 3);
+		
 		
 		this.maxPage = (int)Math.ceil((double)listCount / this.listLimit);
 		
-		this.endPage = (int)Math.ceil((double)pageNum / pageListLimit) * pageListLimit;
+		this.endPage = (int)Math.ceil((double)pageNum / pageTotalNum) * pageTotalNum;
 		if (endPage > maxPage) endPage = maxPage;
 		
-		this.startPage = endPage - pageListLimit + 1;
+		this.startPage = endPage - pageTotalNum + 1;
 		if (startPage < 1) startPage = 1;
 		
 		this.startRow = (pageNum - 1) * this.listLimit;  // 오프셋??

@@ -63,6 +63,10 @@
 	<td><textarea id='ta' name='content' rows='15' cols='70'>${board.content}</textarea></td>
 </tr>
 <tr>
+	<td align="center">FILE</td>
+	<td><input type="file" name="file" size="60"></td>
+</tr>
+<tr>
 	 <td colspan='2' align='center'>
 		<input type='submit' value='수정'>
 		<input type="button" value="다시입력" onclick="f()">
