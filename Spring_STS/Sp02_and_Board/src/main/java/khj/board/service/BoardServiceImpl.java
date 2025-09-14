@@ -58,15 +58,5 @@ public class BoardServiceImpl implements BoardService {
 	public int selectBoard(PageInfo pageInfo) {
 		return boardMapper.selectBoard(pageInfo);
 	}
-	
-	/*
-	@Override
-	public void saveFile(File file, Model model, HttpServletRequest request, HttpServletResponse response) {
-		if (file.isEmpty()) return;
-		
-		FileDownloadView fdv = new FileDownloadView();
-		Map<String, String> fdvMap = fdv.render(model, request, response);
-		
-	}
-	*/
+
 }

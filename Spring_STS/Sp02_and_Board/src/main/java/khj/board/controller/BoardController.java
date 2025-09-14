@@ -2,6 +2,7 @@ package khj.board.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 import khj.board.domain.Board;
 import khj.board.domain.PageInfo;
 import khj.board.service.BoardService;
+import khj.board.service.FileService;
+import khj.md.fileset.FileDownloadView;
+import khj.md.fileset.path.Path;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor  // 생성자
@@ -25,6 +29,7 @@ import lombok.AllArgsConstructor;
 public class BoardController {
 	
 	private BoardService boardService;
+	//private FileService fileService;
 	
 	/*
 	@GetMapping("list.do")
@@ -106,6 +111,7 @@ public class BoardController {
 	@GetMapping("del.do")
 	public String delete(long seq) {
 		boardService.deleteB(seq);
+		
 		return "redirect:list.do";
 	}
 	
@@ -117,4 +123,31 @@ public class BoardController {
 		return "redirect:list.do";
 	}
 	
+	/*
+	
+	@GetMapping("form_mt.do")
+	public String formMt() {
+		return "file/form_mt";
+	}
+	@PostMapping("upload_mt.do")
+	public String uploadMt(ArrayList<MultipartFile> files) {
+		for(MultipartFile file :files) {
+			String ofname = file.getOriginalFilename();
+			if(ofname != null) ofname = ofname.trim();
+			if(ofname.length() != 0) {
+				String url = fileService.saveAtStore(file);
+				//System.out.println("@Upload file URL: " + url);
+			}
+		}
+		
+		return "redirect:list.do";
+	}
+
+	
+	@GetMapping("download.do")
+	public ModelAndView downloadFile(@RequestParam("fname") String fname) {
+		File file = new File("C:/Users/KIMHANJAE2/test", fname);
+		return new ModelAndView(new FileDownloadView(), "downloadFile", file);
+	}
+	*/
 }
