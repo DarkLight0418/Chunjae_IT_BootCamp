@@ -27,14 +27,14 @@ public class FileController {
 	
 	@PostMapping("upload.do")
 	public String upload(String name, MultipartFile file) {
-		//pln("@FileController name: " + name);
-		//pln("@FileController file: " + file);
+		//System.out.println("@FileController name: " + name);
+		//System.out.println("@FileController file: " + file);
 		
 		String ofname = file.getOriginalFilename();
 		if(ofname != null) ofname = ofname.trim();
 		if(ofname.length() != 0) {
 			String url = fileUploadService.saveAtStore(file);
-			pln("@Upload file URL: " + url);
+			System.out.println("@Upload file URL: " + url);
 		}
 		
 		//return "flie/list";
@@ -81,7 +81,7 @@ public class FileController {
 			if(ofname != null) ofname = ofname.trim();
 			if(ofname.length() != 0) {
 				String url = fileUploadService.saveAtStore(file);
-				//pln("@Upload file URL: " + url);
+				//System.out.println("@Upload file URL: " + url);
 			}
 		}
 		

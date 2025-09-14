@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="khj.board.mapper.AttachmentMapper">
+
+	<insert id="insert" parameterType="khj.board.domain.Attachment"
+				useGeneratedKeys="true" keyProperty="id">
+	 	INSERT INTO attachment(board_seq, fname, ofname, fsize, content_type) 
+	 	VALUES (#{seq}, #{fname}, #{ofname}, #{fsize}, #{contentType})
+	</insert>
+	
+	<!-- 특정 게시글의 첨부파일 목록 -->
+	<select id="findByBoardSeq" parameterType="int" resultType="khj.board.domain.Attachment">
+	    SELECT * FROM attachment
+	    WHERE board_seq = #{seq}
+	</select>
+	
+	<!-- 특정 게시글의 첨부파일 삭제 -->
+	<delete id="deleteByBoardSeq" parameterType="int">
+	    DELETE FROM attachment WHERE board_seq = #{seq}
+	</delete>
+
+</mapper>

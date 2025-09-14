@@ -6,7 +6,7 @@
 	<!-- 세미콜론 하면 안됨 -->
 	
 	<select id="list" parameterType="PageInfo" resultType="Board">
-		select * from BOARD order by SEQ desc limit #{startRow}, #{listLimit};
+		select * from BOARD order by SEQ desc limit #{startRow}, #{listLimit}
 	</select>
 	<insert id="insert" parameterType="Board">
 		insert into Board(WRITER, EMAIL, SUBJECT, CONTENT, RDATE) values(#{writer}, #{email}, #{subject}, #{content}, now())  
@@ -24,7 +24,7 @@
 		update BOARD set WRITER=#{writer}, EMAIL=#{email}, SUBJECT=#{subject}, CONTENT=#{content}, RDATE=NOW() where SEQ=#{seq}
 	</update>
 	<select id="countBoard" resultType="int">
-		select count(*) from BOARD;
+		select count(*) from BOARD
 	</select>
 	
 	<!-- 
