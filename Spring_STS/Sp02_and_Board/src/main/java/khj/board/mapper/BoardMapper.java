@@ -16,4 +16,7 @@ public interface BoardMapper {
 	int selectBoard(PageInfo pageInfo);
 	int countBoard();
 	void saveFile(long seq, MultipartFile file);
+	List<Board> searchBySubject(String subject);
+	List<Board> searchByContent(String content);
+	List<Board> searchByWriter(String writer);
 }

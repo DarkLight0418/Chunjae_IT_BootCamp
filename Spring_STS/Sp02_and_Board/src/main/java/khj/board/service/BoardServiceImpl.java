@@ -59,4 +59,18 @@ public class BoardServiceImpl implements BoardService {
 		return boardMapper.selectBoard(pageInfo);
 	}
 
+	@Override
+	public List<Board> searchBySubject(String subject) {
+		return boardMapper.searchBySubject(subject);
+	}
+	
+	@Override
+	public List<Board> searchByContent(String content) {
+		return boardMapper.searchByContent(content);
+	}
+	
+	@Override
+	public List<Board> searchByWriter(String writer){
+		return boardMapper.searchByWriter(writer);
+	}
 }

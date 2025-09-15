@@ -38,17 +38,17 @@
 	</tr>
 </c:if>
 
-<c:forEach items="${boardList}" var="boardList">     
+<c:forEach items="${boardList}" var="board">     
     <TR align='center' noshade>
-		<TD>${boardList.seq}</TD>
-		<TD>${boardList.writer}</TD>
-		<TD>${boardList.email}</TD>
+		<TD>${board.seq}</TD>
+		<TD>${board.writer}</TD>
+		<TD>${board.email}</TD>
 	    <TD>
-	      <a href="content.do?seq=${boardList.seq}">
-		    ${boardList.subject}
+	      <a href="content.do?seq=${board.seq}">
+		    ${board.subject}
 		  </a>
 		</TD>
-		<TD>${boardList.rdate}</TD>
+		<TD>${board.rdate}</TD>
 		<td>파일 목록 보여질 곳</td>
 	   </TR> 
 </c:forEach>
@@ -102,16 +102,16 @@
     
 </font>
 <hr width='600' size='2' color='gray' noshade>
-<!--
-<form action="">
-      <select name="catgo">
-        <option value="subject">제목</option>
-        <option value="writer">글쓴이</option>
-        <option value="content">내용</option>
+
+	<form action="${pageContext.request.contextPath}/board/search.do" method="get">
+      <select name="type">
+        <option value="subject ${type == 'subject' ? 'selected' : ''}">제목</option>
+        <option value="writer" ${type == 'writer' ? 'selected' : ''}>글쓴이</option>
+        <option value="content" ${type == 'content' ? 'selected' : ''}>내용</option>
       </select>
       <input type="text" name="keyword" size="40" required="required" /> <button>검색</button>
     </form> 
--->    
+      
 </center>
 </body>
 </html>

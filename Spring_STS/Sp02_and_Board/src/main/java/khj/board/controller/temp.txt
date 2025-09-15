@@ -1,0 +1,56 @@
+	//private FileService fileService;
+
+
+/*
+	
+	@GetMapping("form_mt.do")
+	public String formMt() {
+		return "file/form_mt";
+	}
+	@PostMapping("upload_mt.do")
+	public String uploadMt(ArrayList<MultipartFile> files) {
+		for(MultipartFile file :files) {
+			String ofname = file.getOriginalFilename();
+			if(ofname != null) ofname = ofname.trim();
+			if(ofname.length() != 0) {
+				String url = fileService.saveAtStore(file);
+				//System.out.println("@Upload file URL: " + url);
+			}
+		}
+		
+		return "redirect:list.do";
+	}
+
+	
+	@GetMapping("download.do")
+	public ModelAndView downloadFile(@RequestParam("fname") String fname) {
+		File file = new File("C:/Users/KIMHANJAE2/test", fname);
+		return new ModelAndView(new FileDownloadView(), "downloadFile", file);
+	}
+	*/
+	
+	
+	===============================================================
+	
+	// update.do 요청이 들어왔을 때 실행되는 컨트롤러 메소드
+	@GetMapping("update.do")  
+	public ModelAndView viewUpdate(@RequestParam("seq") long seq) {
+	        /*  @RequestParam("seq") 
+		 		- HTTP 요청 파라미터 중 "seq" 값을 메소드 인자로 바인딩
+	            - 예: update.do?seq=10 이라면 long seq = 10 으로 매핑됨
+	            - 기본적으로 required=true라서 "seq" 파라미터가 없으면 400 에러 발생
+	            - 필요에 따라 (required=false, defaultValue="0") 옵션을 줄 수 있음
+	    */
+	    //  boardService.contentB(seq)
+	    //  - 서비스 계층 호출
+	    //  - 전달받은 seq(게시글 번호)로 DB에서 해당 게시글(Board 객체)을 조회
+	    //  - DAO/Mapper에서 select 쿼리를 실행한 결과를 Board 객체로 반환
+	    
+	    Board board = boardService.contentB(seq);
+
+	    // ModelAndView("board/update", "board", board)
+	    //  - 뷰 이름: "board/update" → /WEB-INF/views/board/update.jsp 로 포워딩
+	    //  - 모델 속성: 이름("board"), 값(board 객체)
+	    //  - JSP에서 ${board.writer}, ${board.email} 형태로 데이터 접근 가능
+	    return new ModelAndView("board/update", "board", board);
+	}

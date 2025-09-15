@@ -11,5 +11,8 @@
 	<mappers>
 		 <mapper resource="khj/md/mapper/AddressMapper.xml"/>
 		 <mapper resource="khj/board/mapper/BoardMapper.xml"/>
+		 <mapper resource="khj/md/mapper/AddressAjaxMapper.xml"/>
 	</mappers>
+	
+	<!-- 매퍼 생략 가능 -->
 </configuration>
