@@ -16,4 +16,8 @@ public interface BoardService {
 	int countBoard();
 	int selectBoard(PageInfo pageInfo);
 	//void saveFile(long seq, MultipartFile file);
+	
+	List<Board> searchBySubject(String subject);
+	List<Board> searchByContent(String content);
+	List<Board> searchByWriter(String writer);
 }

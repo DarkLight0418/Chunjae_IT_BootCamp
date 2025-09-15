@@ -3,11 +3,13 @@ package khj.board.controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +31,7 @@ import lombok.AllArgsConstructor;
 public class BoardController {
 	
 	private BoardService boardService;
-	//private FileService fileService;
+
 	
 	/*
 	@GetMapping("list.do")
@@ -88,23 +90,7 @@ public class BoardController {
 	// update.do 요청이 들어왔을 때 실행되는 컨트롤러 메소드
 	@GetMapping("update.do")  
 	public ModelAndView viewUpdate(@RequestParam("seq") long seq) {
-	        /*  @RequestParam("seq") 
-		 		- HTTP 요청 파라미터 중 "seq" 값을 메소드 인자로 바인딩
-	            - 예: update.do?seq=10 이라면 long seq = 10 으로 매핑됨
-	            - 기본적으로 required=true라서 "seq" 파라미터가 없으면 400 에러 발생
-	            - 필요에 따라 (required=false, defaultValue="0") 옵션을 줄 수 있음
-	    */
-	    //  boardService.contentB(seq)
-	    //  - 서비스 계층 호출
-	    //  - 전달받은 seq(게시글 번호)로 DB에서 해당 게시글(Board 객체)을 조회
-	    //  - DAO/Mapper에서 select 쿼리를 실행한 결과를 Board 객체로 반환
-	    
 	    Board board = boardService.contentB(seq);
-
-	    // ModelAndView("board/update", "board", board)
-	    //  - 뷰 이름: "board/update" → /WEB-INF/views/board/update.jsp 로 포워딩
-	    //  - 모델 속성: 이름("board"), 값(board 객체)
-	    //  - JSP에서 ${board.writer}, ${board.email} 형태로 데이터 접근 가능
 	    return new ModelAndView("board/update", "board", board);
 	}
 
@@ -123,31 +109,40 @@ public class BoardController {
 		return "redirect:list.do";
 	}
 	
-	/*
-	
-	@GetMapping("form_mt.do")
-	public String formMt() {
-		return "file/form_mt";
-	}
-	@PostMapping("upload_mt.do")
-	public String uploadMt(ArrayList<MultipartFile> files) {
-		for(MultipartFile file :files) {
-			String ofname = file.getOriginalFilename();
-			if(ofname != null) ofname = ofname.trim();
-			if(ofname.length() != 0) {
-				String url = fileService.saveAtStore(file);
-				//System.out.println("@Upload file URL: " + url);
-			}
+	@GetMapping("search.do")
+	public String search(
+			@RequestParam("type") String type,
+			@RequestParam("keyword") String keyword,
+			Model model
+			) {
+		
+		List<Board> boardList;
+		
+		switch (type) {
+			case "subject" :
+				boardList = boardService.searchBySubject(keyword);
+				System.out.println("제목 입력된 값 : " + keyword);
+				break;
+			case "content" :
+				boardList = boardService.searchByContent(keyword);
+				System.out.println("내용 입력된 값 : " + keyword);
+				break;
+			case "writer" :
+				boardList = boardService.searchByWriter(keyword);
+				System.out.println("작성자 입력된 값 : " + keyword);
+				break;
+			default:
+				boardList = Collections.emptyList();
 		}
 		
-		return "redirect:list.do";
+		model.addAttribute("boardList", boardList);
+		model.addAttribute("type", type);
+		
+		/*
+		 value(list) 객체를 name("list") 이름으로 추가함.
+		 뷰 코드에서는 name("list")으로 지정한 이름을 통해서 value(list)를 사용함.
+		*/
+		
+		return "board/list";
 	}
-
-	
-	@GetMapping("download.do")
-	public ModelAndView downloadFile(@RequestParam("fname") String fname) {
-		File file = new File("C:/Users/KIMHANJAE2/test", fname);
-		return new ModelAndView(new FileDownloadView(), "downloadFile", file);
-	}
-	*/
 }

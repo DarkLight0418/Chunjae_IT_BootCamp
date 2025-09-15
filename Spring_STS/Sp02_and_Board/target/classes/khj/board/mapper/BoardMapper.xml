@@ -5,6 +5,7 @@
 <mapper namespace="khj.board.mapper.BoardMapper">
 	<!-- 세미콜론 하면 안됨 -->
 	
+	<!-- 게시판 불러오기 CRUD 및 페이징 -->
 	<select id="list" parameterType="PageInfo" resultType="Board">
 		select * from BOARD order by SEQ desc limit #{startRow}, #{listLimit}
 	</select>
@@ -27,6 +28,21 @@
 		select count(*) from BOARD
 	</select>
 	
+	 
+	 <!-- 게시글 검색 기능 -->
+	<select id="searchBySubject" resultType="Board" parameterType="String">
+		select * from BOARD where SUBJECT like concat('%', #{subject}, '%')
+	</select>
+	
+	<select id="searchByContent" resultType="Board" parameterType="String">
+		select * from BOARD where CONTENT like concat('%', #{content}, '%')
+	</select> 
+	
+	
+	<select id="searchByWriter" resultType="Board" parameterType="String">
+		select * from BOARD where WRITER like concat('%', #{writer}, '%')
+	</select>
+	<!-- 파일... -->
 	<!-- 
 	<insert id="saveFile" parameterType="khj.board.domain.Attachment" useGeneratedKeys="true" keyProperty="seq">
 		INSERT INTO ATTACHMENT
