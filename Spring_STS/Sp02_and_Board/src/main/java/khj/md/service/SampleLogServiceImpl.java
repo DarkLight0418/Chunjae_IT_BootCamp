@@ -1,0 +1,19 @@
+package khj.md.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class SampleLogServiceImpl implements SampleLogService {
+
+	@Override
+	public int add(String str1, String str2) throws Exception {
+		int i1 = Integer.parseInt(str1);
+		int i2 = Integer.parseInt(str2);
+		
+		try {
+			Thread.sleep(10); // 10ms
+		} catch (InterruptedException ie) {}
+		
+		return i1 + i2;
+	}
+}

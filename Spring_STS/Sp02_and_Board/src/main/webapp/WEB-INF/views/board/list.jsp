@@ -105,7 +105,7 @@
 
 	<form action="${pageContext.request.contextPath}/board/search.do" method="get">
       <select name="type">
-        <option value="subject ${type == 'subject' ? 'selected' : ''}">제목</option>
+        <option value="subject" ${type == 'subject' ? 'selected' : ''}">제목</option>
         <option value="writer" ${type == 'writer' ? 'selected' : ''}>글쓴이</option>
         <option value="content" ${type == 'content' ? 'selected' : ''}>내용</option>
       </select>

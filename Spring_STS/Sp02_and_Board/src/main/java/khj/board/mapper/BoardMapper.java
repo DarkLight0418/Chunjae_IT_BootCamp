@@ -2,6 +2,7 @@ package khj.board.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.web.multipart.MultipartFile;
 
 import khj.board.domain.Board;
@@ -16,7 +17,7 @@ public interface BoardMapper {
 	int selectBoard(PageInfo pageInfo);
 	int countBoard();
 	void saveFile(long seq, MultipartFile file);
-	List<Board> searchBySubject(String subject);
-	List<Board> searchByContent(String content);
-	List<Board> searchByWriter(String writer);
+	List<Board> searchBySubject(@Param("subject") String subject);
+	List<Board> searchByContent(@Param("content") String content);
+	List<Board> searchByWriter(@Param("writer") String writer);
 }

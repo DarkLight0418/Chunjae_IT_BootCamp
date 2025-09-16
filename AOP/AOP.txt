@@ -1,0 +1,23 @@
+< AOP(Aspect Oriented Programming 관점지향프로그래밍) > 
+- 종적관심( Core concern )
+- 횡적관심( Cross-cutting concern : 공통관심사항 ) 
+
+
+그러니까)
+종적 관심
+- CRUD 같은 기능들 - 보이는 코드들
+횡적 관심
+- 보이지 않는 코드들(로그, 보안, 트랜잭션)
+
+
+- 로그랑 트랜잭션 => 서비스에 있는 로직
+--> 독립된 원자를 조합하는 거
+
+매퍼 < 서비스 (업무 로직이 복잡해지면 지금처럼 흘러가지 않음)
+
+@Log4j
+@Aspect
+@Component  // service도 controller도 아닌 하나의 기능단위
+public class SampleLogAdvice { //Aspect을 지시하는 클래스
+
+DML 트랜잭션 담당

@@ -25,6 +25,10 @@
 		<hr>
 		<br>
 		<a href="file/file_dd.do">드래그 앤 드롭</a>
+		<br>
+		<hr>
+		<br>
+		<a href="rest_addr/write.do">RESTful Form</a>
 	</p>
 </font>
 </body>
