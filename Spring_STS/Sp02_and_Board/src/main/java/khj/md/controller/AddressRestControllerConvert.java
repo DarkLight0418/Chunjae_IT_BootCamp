@@ -31,7 +31,7 @@ public class AddressRestControllerConvert {
 		http://localhost:8080/rest_addr/create1.json?name=가2&addr=나2
 		http://localhost:8080/rest_addr/create1.xml?name=가3&addr=나3
 	 */
-	@GetMapping("/creates1")  // 자바스크립트 객체는 dto만
+	@GetMapping("/create1")  // 자바스크립트 객체는 dto만
 	public void create1(Address address) {	// 파라미터를 jsObj 로 받는 경우
 		log.info("@AddressRestController create1() address: " + address);
 		addressAjaxService.insertS(address);
@@ -45,15 +45,22 @@ public class AddressRestControllerConvert {
 	 	{"name" : "나는", "addr" : "바보다"}
 	 */
 	
+	@PostMapping("/create2")
+    public void create2(@RequestBody Address address) { //파라미터를 JSON으로 받을 때 
+        log.info("@AddressRestController create2() address: " + address);
+        addressAjaxService.insertS(address);
+    }
+	/*
 	@PostMapping("/creates2")  // JSON은 @RequestBody 쓰기
 	public ResponseEntity<?> create2(@RequestBody Address address) {	// 파라미터를 JSON 으로 받는 경우
 		log.info("@AddressRestController create2() address: " + address);
 		addressAjaxService.insertS(address);
 		return ResponseEntity.ok(address);
 	}
+	*/
 
     //(2) Read 
-    @GetMapping("reads")
+    @GetMapping
     public List<Address> read(){
         List<Address> list = addressAjaxService.listS();
         return list;
@@ -61,7 +68,7 @@ public class AddressRestControllerConvert {
     //http://127.0.0.1:8080/rest_addr/read 또는 read.xml
     //http://127.0.0.1:8080/rest_addr/read.json
     
-    @GetMapping("reads/{seq}")
+    @GetMapping("/{seq}")
     public Address read(@PathVariable long seq){
         Address address = addressAjaxService.selectBySeqS(seq);
         return address;
@@ -70,7 +77,7 @@ public class AddressRestControllerConvert {
     //http://127.0.0.1:8080/rest_addr/read/3.xml
     //http://127.0.0.1:8080/rest_addr/read/3.json
     
-    @GetMapping("reads/{na}")
+    @GetMapping("/{na}")
     public List<Address> read(@PathVariable String na){
         List<Address> list  = addressAjaxService.selectByNameS(na);
         return list;
@@ -80,7 +87,7 @@ public class AddressRestControllerConvert {
     //http://127.0.0.1:8080/rest_addr/read/search/홍.json
     
     //(3) Delete
-    @DeleteMapping("delations/{seq}")
+    @DeleteMapping("/{seq}")
     public void delete(@PathVariable long seq) {
         addressAjaxService.deleteS(seq);
     }
