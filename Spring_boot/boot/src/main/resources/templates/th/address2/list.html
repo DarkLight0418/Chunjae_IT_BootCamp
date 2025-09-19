@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+           border: 1px solid black;
+           border-collapse: collapse;
+        }
+        th, td {
+           padding: 5px;
+        }
+        a { text-decoration:none }
+    </style>
+</head>
+
+<body style="text-align:center">
+<center>
+    <h1>
+        Address List with SpringBoot(JdbcTemplate:타임리프)
+    </h1>
+    <a th:href='@{write}'>입력</a><br/>
+    <table border='1' cellpadding='7' cellspacing='2' width='50%'>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>주소</th>
+            <th>날짜</th>
+            <th>삭제</th>
+        </tr>
+
+
+        <tr th:if="${#lists.isEmpty(list)}">
+            <td align='center' colspan='5'>데이터가 없음 ㅠㅠ</td>
+        </tr>
+
+
+        <tr th:each="address : ${list}">
+            <td align='center' th:text="${address.seq}"></td>
+            <td th:text="${address.name}"></td>
+            <td th:text="${address.addr}"></td>
+            <td th:text="${#dates.format(address.rdate, 'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td align='center'>
+                <a th:href='@{del(seq=${address.seq})}'>삭제</a>
+            </td>
+        </tr>
+
+    </table>
+</center>
+</body>
+</html>
