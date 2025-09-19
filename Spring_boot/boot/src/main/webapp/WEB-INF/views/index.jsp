@@ -1,0 +1,17 @@
+<%@ page contentType ="text/html;charset=utf-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<meta charset="utf-8">
+<style>
+    a{text-decoration:none}
+</style>
+<body style="text-align:center">
+<h2>index.jsp </h2>
+
+<a href="address/list.do">주소록(Jdbc)</a><br/>
+<a href="board/list.do">게에시이파안(아직 안만듦)</a><br/>
+<a href="address2/list.do">주소록(JdbcTemplate or mybatis or JPA)</a><br/>
+<a href="th/address2/list">주소록(JdbcTemplate타임리프 or mybatis(타임리프) or JPA(타임리프))</a><br/>
+<a href="board2/list.do">게시판(JPA)(아직 안만듦)</a>(미션)<br/>
+<a href="address2/list.do">주소록(Spring Data JPA)</a>
+
+</body>
