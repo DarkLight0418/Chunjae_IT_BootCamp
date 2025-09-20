@@ -1,9 +1,8 @@
 package khj.boot.service;
 
+import khj.app.boot.service.AddressService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class JdbcMariaAddressServiceTest {
 
