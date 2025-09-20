@@ -1,9 +1,10 @@
 package khj.boot.repository;
 
+import khj.app.boot.repository.JdbcMariaAddressRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import khj.boot.domain.Address;
+import khj.app.boot.domain.Address;
 import java.util.List;
 
 @SpringBootTest

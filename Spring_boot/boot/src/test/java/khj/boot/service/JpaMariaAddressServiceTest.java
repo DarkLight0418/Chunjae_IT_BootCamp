@@ -1,11 +1,12 @@
 package khj.boot.service;
 
 import jakarta.transaction.Transactional;
+import khj.app.boot.service.AddressService2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Commit;
-import khj.boot.domain.Address;
+import khj.app.boot.domain.Address;
 import java.util.List;
 
 @Transactional  // test에도 같이 필요한 어노테이션

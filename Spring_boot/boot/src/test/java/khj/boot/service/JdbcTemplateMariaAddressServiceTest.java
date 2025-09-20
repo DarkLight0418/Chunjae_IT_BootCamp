@@ -1,13 +1,12 @@
 package khj.boot.service;
 
+import khj.app.boot.service.AddressService2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import khj.boot.domain.Address;
+import khj.app.boot.domain.Address;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class JdbcTemplateMariaAddressServiceTest {
