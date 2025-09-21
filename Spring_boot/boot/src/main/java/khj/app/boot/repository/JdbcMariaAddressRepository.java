@@ -19,7 +19,7 @@ public class JdbcMariaAddressRepository implements AddressRepository {
     public JdbcMariaAddressRepository(DataSource dataSource){
         this.dataSource = dataSource;
     }
-    Connection getConnection(){
+    public Connection getConnection(){
         return DataSourceUtils.getConnection(dataSource);
     }
     private void close(Connection con) throws SQLException {

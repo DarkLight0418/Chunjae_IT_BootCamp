@@ -1,9 +1,10 @@
 package khj.app;
 
 import jakarta.persistence.EntityManager;
+import khj.app.board.mapper.BoardMapper;
 import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
 import khj.app.board.service.BoardService;
-import khj.app.board.service.SpringDataJPABoardService;
+import khj.app.board.service.JPAMyBatisBoardService;
 import khj.app.boot.service.AddressService;
 import khj.app.boot.service.AddressService2;
 import khj.app.boot.service.JpaMariaAddressService;
@@ -44,8 +45,12 @@ public class SpringConfig {
 
     @Autowired
     SpringDataJpaMariaBoardRepository boardRepository;
+
+    @Autowired
+    BoardMapper boardMapper;
+
     @Bean
     public BoardService boardService() {
-        return new SpringDataJPABoardService(boardRepository);
+        return new JPAMyBatisBoardService(boardRepository, boardMapper);
     }
 }
