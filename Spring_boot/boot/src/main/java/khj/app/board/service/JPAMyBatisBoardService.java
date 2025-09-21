@@ -1,26 +1,33 @@
 package khj.app.board.service;
 
 import khj.app.board.domain.Board;
+import khj.app.board.domain.PageInfo;
+import khj.app.board.mapper.BoardMapper;
 import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class SpringDataJPABoardService implements BoardService {
+public class JPAMyBatisBoardService implements BoardService {
 
-    private final SpringDataJpaMariaBoardRepository repo;
+    private final SpringDataJpaMariaBoardRepository repo;  // JPA
+    private final BoardMapper boardMapper;  // MyBatis
+
 
     @Autowired
-    public SpringDataJPABoardService(SpringDataJpaMariaBoardRepository repo) {
+    public JPAMyBatisBoardService(SpringDataJpaMariaBoardRepository repo,
+                                  BoardMapper boardMapper) {
         this.repo = repo;
+        this.boardMapper = boardMapper;
     }
 
     @Override
-    public List<Board> findBoardList(Pageable pageable) {
-        return repo.findAll(pageable).getContent();
+    public List<Board> findBoardList(PageInfo pageInfo) {
+        return boardMapper.listB(pageInfo);
     }
 
     @Override
@@ -67,5 +74,15 @@ public class SpringDataJPABoardService implements BoardService {
     @Override
     public List<Board> findByWriter(String writer) {
         return repo.findByWriter(writer);
+    }
+
+    // Mybatis 전용
+    @Override
+    public int selectBoard(PageInfo pageInfo) {
+        return boardMapper.selectBoard(pageInfo);
+    }
+    @Override
+    public int countBoard() {
+        return boardMapper.countBoard();
     }
 }

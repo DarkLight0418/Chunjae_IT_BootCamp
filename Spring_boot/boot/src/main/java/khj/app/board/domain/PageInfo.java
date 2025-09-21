@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 //getter setter 그리고 생성자들 -> 스프링으로 불러옵니다.
-
 public class PageInfo {
 	private int pageNum; // 현재 페이지 번호
 	private int listLimit;  // 페이지 당 게시물 목록 갯수
@@ -41,7 +40,7 @@ public class PageInfo {
 		this.startRow = (pageNum - 1) * this.listLimit;  // 오프셋??
 		this.rowCount = listLimit;
 	}
-	
+
 
 	// 제일 마지막 페이지 계산
 	public void calcLastPage(int listCount, int listLimit) {
