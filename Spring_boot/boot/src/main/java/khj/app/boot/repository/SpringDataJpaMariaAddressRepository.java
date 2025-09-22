@@ -1,5 +1,7 @@
 package khj.app.boot.repository;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import khj.app.boot.domain.Address;
 import java.util.List;
@@ -10,4 +12,6 @@ public interface SpringDataJpaMariaAddressRepository extends JpaRepository<Addre
     List<Address> findByNameAndAddr(String name, String addr); //And 연산자
     List<Address> findByNameOrAddr(String name, String addr); //Or 연산자
     List<Address> findByNameContaining(String name); //XXXContaining()은 like연산자
+
+    Page<Address> findByOrderBySeqDesc(Pageable pageable);
 }
