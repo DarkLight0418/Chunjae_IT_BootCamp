@@ -1,6 +1,7 @@
 package khj.app.board.repository;
 
 import khj.app.board.domain.Board;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -25,4 +26,6 @@ public interface SpringDataJpaMariaBoardRepository extends JpaRepository<Board, 
     List<Board> findByContent(String content); //And 연산자
     List<Board> findByWriter(String writer); //Or 연산자
     //List<Board> findByNameContaining(String name); //XXXContaining()은 like연산자
+
+    Page<Board> findByOrderBySeqDesc(Pageable pageable);
 }

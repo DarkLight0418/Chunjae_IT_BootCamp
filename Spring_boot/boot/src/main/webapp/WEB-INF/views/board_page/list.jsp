@@ -35,11 +35,11 @@
 
 <c:if test="${empty boardList}">
 	<tr align="center">
-		<td align="center" colspan="5">데이터가 하나도 없어요 ㅜㅜ</td>
+		<td align="center" colspan="6">데이터가 하나도 없어요 ㅜㅜ</td>
 	</tr>
 </c:if>
 
-<c:forEach items="${boardList}" var="board">     
+<c:forEach items="${boardList.content}" var="board">
     <TR align='center' noshade>
 		<TD>${board.seq}</TD>
 		<TD>${board.writer}</TD>
@@ -57,38 +57,38 @@
 </TABLE>
 <hr width='600' size='2' color='gray' noshade>
 <font color='gray' size='3' face='휴먼편지체'>
-    (총페이지수 : ${pageInfo.maxPage}) &nbsp;
+    (총페이지수 : ${boardList.totalPages}) &nbsp;
     &nbsp;&nbsp;
 
-    <c:if test="${pageInfo.startPage > 1}">
-    	<a href="list.do?cp=${pageInfo.startPage - 1}&ps=${pageInfo.listLimit}">이전</a>&nbsp
+    <c:if test="${hasPrev}">
+        <a href="list.do?page=${boardList.number - 1}&size=${boardList.size}">이전</a>
 	<!-- nbsp 줄 바꿈 없는 공백(Non-breaking Space) -->
     </c:if>
     
-    <c:forEach begin="${pageInfo.startPage}" end="${pageInfo.endPage}" var="i">
+    <c:forEach begin="0" end="${boardList.totalPages - 1}" var="i">
             <c:choose>
-            	<c:when test="${i == pageInfo.pageNum}">
-                	<strong>[${i}]</strong>
+            	<c:when test="${i == boardList.number}">
+                	<strong>[${i+1}]</strong>
                 </c:when>
                 <c:otherwise>
-                	<a href="list.do?cp=${i}&ps=${pageInfo.listLimit}">[${i}]</a>
+                	<a href="list.do?page=${i}&size=${boardList.size}">[${i+1}]</a>
                 </c:otherwise>
             </c:choose>
     	&nbsp;
     </c:forEach>
-    <c:if test="${pageInfo.endPage < pageInfo.maxPage}">
-    	<a href="list.do?cp=${pageInfo.endPage + 1}&ps=${pageInfo.listLimit}">다음</a>
+    <c:if test="${hasNext}">  <!-- 아예 태그를 받아올거임 컨트롤러에서 -->
+        <a href="list.do?page=${boardList.number + 1}&size=${boardList.size}">다음</a>
     </c:if>
     
     
-    ( TOTAL : ${pageInfo.listCount} )
+    ( TOTAL : ${boardList.totalElements} )
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        페이지 사이즈 : 
     <select id="psId" name="ps" onchange="f(this)">
-	   <option value="3" ${pageInfo.listLimit == 3 ? 'selected' : ''}>3</option>
-       <option value="5" ${pageInfo.listLimit == 5 ? 'selected' : ''}>5</option>
-       <option value="10" ${pageInfo.listLimit == 10 ? 'selected' : '' }>10</option>
+	   <option value="3" ${boardList.size == 3 ? 'selected' : ''}>3</option>
+       <option value="5" ${boardList.size == 5 ? 'selected' : ''}>5</option>
+       <option value="10" ${boardList.size == 10 ? 'selected' : '' }>10</option>
     </select>
     
     <script language="javascript">
@@ -97,7 +97,7 @@
            let cp = select.value;
            var ps = select.value;
            //alert("ps : " + ps);
-           location.href="list.do?cp=1&ps="+ps;
+           location.href="list.do?page=0&size="+ps;
        }
     </script>
     
