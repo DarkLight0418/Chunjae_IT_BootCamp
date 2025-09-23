@@ -23,7 +23,7 @@ public class Author { //Author:Book = 1:N
     @ToString.Exclude
     private List<Book> books = new ArrayList<>(); //getBooks()호출
 
-    public void addBook(Book book){ //연관관계 메소드
+    public void addBook(Book book){ // 연관 관계 메소드
         books.add(book);
         book.setAuthor(this);
     }
