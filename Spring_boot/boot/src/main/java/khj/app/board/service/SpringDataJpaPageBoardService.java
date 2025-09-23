@@ -25,6 +25,11 @@ public class SpringDataJpaPageBoardService implements PageBoardService {
     }
 
     @Override
+    public Board findBoardDetail(long seq) {
+        return springDataJpaMariaBoardRepository.findById(seq).orElse(null);
+    }
+
+    @Override
     public BoardListResult getBoardListResult(Pageable pageable) {
         Page<Board> pList = springDataJpaMariaBoardRepository.findByOrderBySeqDesc(pageable);
         int page = pList.getNumber(); //페이지번호
@@ -47,5 +52,21 @@ public class SpringDataJpaPageBoardService implements PageBoardService {
     @Override
     public void deleteB(long seq) {
         springDataJpaMariaBoardRepository.deleteById(seq);
+    }
+
+
+    @Override
+    public Page<Board> searchBySubject(String keyword, Pageable pageable) {
+        return springDataJpaMariaBoardRepository.findBySubjectContaining(keyword, pageable);
+    }
+
+    @Override
+    public Page<Board> searchByContent(String keyword, Pageable pageable) {
+        return springDataJpaMariaBoardRepository.findByContentContaining(keyword, pageable);
+    }
+
+    @Override
+    public Page<Board> searchByWriter(String keyword, Pageable pageable) {
+        return springDataJpaMariaBoardRepository.findByWriterContaining(keyword, pageable);
     }
 }
