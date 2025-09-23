@@ -1,5 +1,5 @@
 package khj.app.board.service;
-
+/*
 import khj.app.board.domain.Board;
 import khj.app.board.domain.PageInfo;
 import org.springframework.data.domain.Page;
@@ -23,4 +23,6 @@ public interface BoardService {
     // Mybatis 전용
     int selectBoard(PageInfo pageInfo);
     int countBoard();
+
 }
+ */

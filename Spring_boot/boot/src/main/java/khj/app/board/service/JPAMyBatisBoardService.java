@@ -10,7 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+/*
 @Service
 public class JPAMyBatisBoardService implements BoardService {
 
@@ -50,7 +50,7 @@ public class JPAMyBatisBoardService implements BoardService {
         return springDataJpaMariaBoardRepository.updateBoard(board);
     }
 
- */
+
     @Override
     public int countAllBoards() {
         return (int) repo.count();
@@ -86,3 +86,4 @@ public class JPAMyBatisBoardService implements BoardService {
         return boardMapper.countBoard();
     }
 }
+*/

@@ -74,23 +74,23 @@
         <!-- 페이지 크기(페이지당 게시글 수)를 선택하는 드롭다운 -->
         페이지 싸이즈 :
         <select id="psId" name="ps" onchange="f(this)">
-            <!-- JSTL choose문: 조건에 따라 어떤 option을 선택(selected) 상태로 보여줄지 결정 -->
+            <%-- JSTL choose문: 조건에 따라 어떤 option을 선택(selected) 상태로 보여줄지 결정 --%>
             <c:choose>
-                <!-- 만약 현재 listResult.size 값이 3이라면 -->
+                <%-- 만약 현재 listResult.size 값이 3이라면 --%>
                 <c:when test="${listResult.size == 3}">
                     <option value="3" selected>3</option> <!-- 선택된 상태 -->
                     <option value="5">5</option>
                     <option value="10">10</option>
                 </c:when>
 
-                <!-- 만약 현재 listResult.size 값이 5라면 -->
+                <%-- 만약 현재 listResult.size 값이 5라면 --%>
                 <c:when test="${listResult.size == 5}">
                     <option value="3">3</option>
                     <option value="5" selected>5</option> <!-- 선택된 상태 -->
                     <option value="10">10</option>
                 </c:when>
 
-                <!-- 만약 현재 listResult.size 값이 10이라면 -->
+                <%-- 만약 현재 listResult.size 값이 10이라면 --%>
                 <c:when test="${listResult.size == 10}">
                     <option value="3">3</option>
                     <option value="5">5</option>

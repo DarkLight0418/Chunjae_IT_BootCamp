@@ -21,10 +21,10 @@ public interface SpringDataJpaMariaBoardRepository extends JpaRepository<Board, 
     int selectBoardPage(Pageable pageable);
 */
 
-    List<Board> findBySubject(String subject);//테이블 컬럼에 의존적인 select는 직접 만들어줘야 함
+    Page<Board> findBySubjectContaining(String keyword, Pageable pageable);//테이블 컬럼에 의존적인 select는 직접 만들어줘야 함
     //JPQL -> select a from Address a where a.name=:name
-    List<Board> findByContent(String content); //And 연산자
-    List<Board> findByWriter(String writer); //Or 연산자
+    Page<Board> findByContentContaining(String keyword, Pageable pageable); //And 연산자
+    Page<Board> findByWriterContaining(String keyword,Pageable pageable); //Or 연산자
     //List<Board> findByNameContaining(String name); //XXXContaining()은 like연산자
 
     Page<Board> findByOrderBySeqDesc(Pageable pageable);

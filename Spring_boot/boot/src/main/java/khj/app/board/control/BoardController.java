@@ -1,10 +1,11 @@
 package khj.app.board.control;
 
+/*
 
 import khj.app.board.domain.Board;
 import khj.app.board.domain.PageInfo;
 import khj.app.board.service.BoardService;
-import khj.app.board.service.JPAMyBatisBoardService;
+//import khj.app.board.service.JPAMyBatisBoardService;
 import org.eclipse.tags.shaded.org.apache.xpath.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -86,4 +87,4 @@ public class BoardController {
         boardService.saveBoard(board);
         return "redirect:list.do";
     }
-}
+ */

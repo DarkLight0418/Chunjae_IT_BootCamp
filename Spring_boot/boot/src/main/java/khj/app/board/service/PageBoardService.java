@@ -10,5 +10,9 @@ public interface PageBoardService {
     Page<Board> findAll(Pageable pageable);
     BoardListResult getBoardListResult(Pageable pageable);
     Board insertB(Board board);
+    Board findBoardDetail(long seq);
     void deleteB(long seq);
+    public Page<Board> searchBySubject(String keyword, Pageable pageable);
+    public Page<Board> searchByContent(String keyword, Pageable pageable);
+    public Page<Board> searchByWriter(String keyword, Pageable pageable);
 }

@@ -3,6 +3,8 @@ package khj.app.board.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.domain.Page;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -10,17 +12,24 @@ import lombok.NoArgsConstructor;
 //getter setter 그리고 생성자들 -> 스프링으로 불러옵니다.
 public class PageInfo {
 	private int pageNum; // 현재 페이지 번호
-	private int listLimit;  // 페이지 당 게시물 목록 갯수
-	private int listCount;  // 총 게시물 수
-	private int pageTotalNum; // 페이지 당 표시할 페이지 번호 수
-	
-	private int maxPage; // 전체 페이지 수
-	private int startPage; // 시작 페이지 번호
-	private int endPage; // 끝 페이지 번호
-	private int startRow; // DB 조회 시작 row
-	private int rowCount; // DB 조회 끝 row
+    private int pageSize; // 한 페이지당 게시글 수
+    private int totalPages; // 전체 페이지 수
+    private long totalElements; // 전체 게시글 수
+    
+    private int startPage; // 시작 페이지 번호 
+    private int endPage; // 끝 페이지 번호
+    private boolean prev;  // 이전 블록 존재 여부
+    private boolean next;  // 다음 블록 존재 여부
+    
+	private int listLimit;  // 페이지 당 게시물 목록 갯수 (Mybatis)
+	private int listCount;  // 총 게시물 수 (Mybatis)
+	private int pageTotalNum; // 페이지 당 표시할 페이지 번호 수 (Mybatis)
+	private int maxPage; // 전체 페이지 수 (Mybatis)
+	private int startRow; // DB 조회 시작 row (Mybatis)
+	private int rowCount; // DB 조회 끝 row (Mybatis)
 
 	
+    // Mybatis 전용
 	public PageInfo(int listCount, int pageNum, int listLimit, int pageTotalNum) {
 		
 		this.listCount = listCount;
@@ -42,15 +51,33 @@ public class PageInfo {
 	}
 
 
+    // Spring Data JPA 전용
+    
+    public PageInfo(Page<?> page, int blockSize) {
+        this.pageNum = page.getNumber() + 1;
+        this.pageSize = page.getSize();
+        this.totalPages = page.getTotalPages();
+        this.totalElements = page.getTotalElements();
+
+        int currentBlock = (int) Math.ceil((double) pageNum / blockSize);
+        this.startPage = (currentBlock - 1) * blockSize + 1;
+        this.endPage = Math.min(currentBlock * blockSize, totalPages);
+
+        this.prev = startPage > 1;
+        this.next = endPage < totalPages;
+    }
+
+
+
+	/*
+
 	// 제일 마지막 페이지 계산
 	public void calcLastPage(int listCount, int listLimit) {
 		setEndPage((int) Math.ceil((double) listCount / (double) listLimit));
 		// Math.ceil 올림 메소드
 	}
-	
-	// 시작, 끝 페이지 계산
-	/*
-	
+
+    // 시작, 끝 페이지 계산
 	public void calcStartEndPage(int pageNum, int listLimit) {
 		setEndPage(((int) Math.ceil((double)pageNum / (double)listLimit)) * pageNum);
 		if (getEndPage())
