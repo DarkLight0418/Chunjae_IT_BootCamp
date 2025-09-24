@@ -8,7 +8,7 @@ import lombok.ToString;
 
 import java.util.*;
 
-@Entity
+@Entity  // 테이블로 바뀌는 것(테이블과 동일하게 해줄 필요 있음)
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

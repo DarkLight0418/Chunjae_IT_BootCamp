@@ -1,60 +1,67 @@
 package khj.app.boot.service;
 
-import khj.app.boot.domain.Author;
-import khj.app.boot.domain.Book;
-import khj.app.boot.repository.SpringDataJpaMariaAuthorRepository;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
+import khj.app.boot.domain.Author;
+import khj.app.boot.domain.Book;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
-class BookServiceTest {
-
+class BookServiceTest { //미션
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    private SpringDataJpaMariaAuthorRepository authorRepo;
-
-
     @Test
     void insertBook() {
-        Author author = new Author();
-        author.setName("갓창우");
-        authorRepo.save(author);
-
         Book book = new Book();
-        book.setTitle("프로그래밍 천재의 삶");
-        book.setAuthor(author);
-        bookService.insertBook(book);
-        System.out.println("insertBook() 메소드 잘 들어갔니~?" + book);
-    }
+        book.setTitle("누군가 널 위해 기도한당");
 
+        Long authorId = 2L;
+        Author author = new Author();
+        author.setId(authorId);
+        book.setAuthor(author);
+
+        bookService.insertBook(book);
+    }
     @Test
     void getBooks() {
         List<Book> books = bookService.getBooks();
-        for (Book book : books) {
-            System.out.println("book: " + book);
-        }
+        pln("getBooks() books: " + books);
     }
-
     @Test
     void testGetBooks() {
-    }
+        Long authorId = 2L;
+        Author author = new Author();
+        author.setId(authorId);
 
+        List<Book> books =bookService.getBooks(author);
+        pln("testGetBooks() books: " + books);
+    }
+    @Transactional
     @Test
     void getBook() {
+        Long bookId = 4L;
+        Book book = bookService.getBook(bookId);
+        String title = book.getTitle();
+        Author author = book.getAuthor();
+        pln("getBook() bookId: " + bookId + ", title: " + title + ", author: " + author);
     }
-
     @Test
     void updateBook() {
+        Long bookId = 3L;
+        String newTitle = "오라클UP";
+        Book book = bookService.updateBook(bookId, newTitle);
+        pln("updateBook() book: " + book);
     }
-
     @Test
     void deleteBook() {
+        Long bookId = -1L;
+        bookService.deleteBook(bookId);
+    }
+
+    void pln(String str){
+        System.out.println(str);
     }
 }
