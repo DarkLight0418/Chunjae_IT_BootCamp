@@ -11,5 +11,10 @@
 
 <a href="openai/chat.do">Open AI 확인</a><br/><br/>
 <a href="springai/chat.do">SpringAI Chat</a><br/>
+<a href="springai/image.do">SpringAI Image</a><br/>
+<a href="springai/speech.do">SpringAI Speech(TTA)</a><br/>
+<a href="springai/transcription.do">SpringAI Transcription(ATT)</a><br/>
+<a href="springai/embedding.do">SpringAI Embedding</a><br/>
+<a href="springai/moderation.do">SpringAI Moderation</a><br/>
 </body>
 </html>
