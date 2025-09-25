@@ -1,14 +1,22 @@
 package khj.ai;
 
 import io.micrometer.observation.ObservationRegistry;
+import khj.ai.service.SpringAI03Service;
+import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.ai.model.tool.ToolCallingManager;
-import org.springframework.ai.openai.OpenAiChatModel;
-import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.ai.moderation.ModerationModel;
+import org.springframework.ai.openai.*;
+//import org.springframework.ai.embedding.EmbeddingModel;
+//import org.springframework.ai.openai.OpenAiEmbeddingModel;
 import org.springframework.ai.openai.api.OpenAiApi;
+import org.springframework.ai.openai.api.OpenAiAudioApi;
+import org.springframework.ai.openai.api.OpenAiImageApi;
+import org.springframework.ai.openai.api.OpenAiModerationApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.support.RetryTemplate;
+import khj.ai.service.SpringAI03ServiceImpl;
 
 @Configuration
 public class OpenAiConfig {
@@ -48,5 +56,46 @@ public class OpenAiConfig {
         );
 
         return openAiChatModel;
+    }
+
+    @Bean
+    public OpenAiImageModel openAiImageModel() {
+        OpenAiImageApi openAiImageApi = OpenAiImageApi.builder()
+                .apiKey(openAiApiKey)
+                .build();
+
+        return new OpenAiImageModel(openAiImageApi);
+    }
+
+    @Bean
+    public OpenAiAudioSpeechModel openAiAudioSpeechModel() {
+        OpenAiAudioApi openAiAudioApi = OpenAiAudioApi.builder()
+                .apiKey(openAiApiKey).build();
+
+        return new OpenAiAudioSpeechModel(openAiAudioApi);
+    }
+
+    @Bean
+    public SpringAI03Service springAI03Service(OpenAiAudioSpeechModel model) {
+        return new SpringAI03ServiceImpl(model);
+    }
+
+    @Bean
+    public OpenAiAudioTranscriptionModel openAiAudioTranscriptionModel() {
+        OpenAiAudioApi openAiAudioApi = OpenAiAudioApi.builder().apiKey(openAiApiKey).build();
+
+        return new OpenAiAudioTranscriptionModel(openAiAudioApi);
+    }
+
+    @Bean
+    public EmbeddingModel EmbeddingModel() {
+        OpenAiApi openAiApi = OpenAiApi.builder().apiKey(openAiApiKey).build();
+        return new OpenAiEmbeddingModel(openAiApi);
+    }
+
+    @Bean
+    public ModerationModel moderationModel() {
+        OpenAiModerationApi openAiApi = OpenAiModerationApi.builder().apiKey(openAiApiKey).build();
+        return new OpenAiModerationModel(openAiApi);
     }
 }
