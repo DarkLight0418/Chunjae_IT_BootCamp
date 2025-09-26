@@ -63,7 +63,7 @@
 		   
 		  <tr>
 		  	 <td align="center">FILE</td>
-		  	 <td><input type="file" name="file" size="60">
+		  	 <td><input type="file" name="files" size="60">
 		  </tr>
 		  
 		   <tr>
