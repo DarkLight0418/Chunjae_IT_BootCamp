@@ -1,6 +1,8 @@
 package khj.app.board.domain;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,4 +27,7 @@ public class Board {
     @Column(updatable = true)
 	private Date rdate;
 	// private MultipartFile file;
+
+    @OneToMany(mappedBy = "board", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Attachment> attachments = new ArrayList<>();
 }

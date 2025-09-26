@@ -1,14 +1,33 @@
 package khj.app.board.service;
 
 import jakarta.transaction.Transactional;
+import khj.app.board.domain.Attachment;
 import khj.app.board.domain.Board;
 import khj.app.board.dto.BoardListResult;
+import khj.app.board.repository.AttachmentRepository;
 import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.UUID;
 
 @Transactional
 @RequiredArgsConstructor
@@ -16,6 +35,9 @@ import org.springframework.stereotype.Service;
 public class SpringDataJpaPageBoardService implements PageBoardService {
     @Autowired
     private final SpringDataJpaMariaBoardRepository springDataJpaMariaBoardRepository;
+
+    @Autowired
+    private final AttachmentRepository attachmentRepository;
 
     @Override
     public Page<Board> findAll(Pageable pageable) {
@@ -43,10 +65,38 @@ public class SpringDataJpaPageBoardService implements PageBoardService {
         return new BoardListResult(pList, page, size, totalCount, totalPageCount);
     }
 
+    @Value("${file.dir}")
+    private String fileDir;
+
+    @Transactional
     @Override
-    public Board insertB(Board board) {
-        board = springDataJpaMariaBoardRepository.save(board);
-        return board;
+    public Board insertB(Board board,
+                         @RequestPart(value="file",required = false) List<MultipartFile> files) throws IOException {
+        Board saveBoard = springDataJpaMariaBoardRepository.save(board);
+
+        File dirStore = new File(fileDir);
+        if(!dirStore.exists()) dirStore.mkdirs();
+
+        for(MultipartFile file : files) {
+            if (!file.isEmpty()) {
+                String uuid = UUID.randomUUID().toString();
+                String saveName = uuid + "_" + file.getOriginalFilename();
+
+                java.nio.file.Path savePath = java.nio.file.Paths.get(fileDir, saveName);
+                Files.copy(file.getInputStream(), savePath);
+
+                Attachment attach = new Attachment();
+                attach.setBoard(saveBoard);
+                attach.setFname(saveName);
+                attach.setOfname(file.getOriginalFilename());
+                attach.setFsize(file.getSize());
+                attach.setContentType(file.getContentType());
+
+                saveBoard.getAttachments().add(attach);
+            }
+        }
+
+        return springDataJpaMariaBoardRepository.save(saveBoard);
     }
 
     @Override
@@ -68,5 +118,18 @@ public class SpringDataJpaPageBoardService implements PageBoardService {
     @Override
     public Page<Board> searchByWriter(String keyword, Pageable pageable) {
         return springDataJpaMariaBoardRepository.findByWriterContaining(keyword, pageable);
+    }
+
+    @Override
+    public ResponseEntity<Resource> getAttachment(Long id) throws IOException {
+        Attachment attachment = attachmentRepository.findById(id).orElseThrow();
+        java.nio.file.Path path = java.nio.file.Paths.get(fileDir, attachment.getFname());
+        Resource resource = new UrlResource(path.toUri());
+
+        return ResponseEntity.ok().contentType(MediaType.parseMediaType(attachment.getContentType()))
+                .header(HttpHeaders.CONTENT_DISPOSITION,
+                        "attachment; filename=\"" +
+                                URLEncoder.encode(attachment.getOfname(), "UTF-8") + "\"")
+                .body(resource);
     }
 }

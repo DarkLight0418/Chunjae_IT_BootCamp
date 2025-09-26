@@ -1,5 +1,6 @@
 package khj.app.board.repository;
 
+/*
 import khj.app.board.domain.Board;
 import khj.app.board.domain.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -153,3 +154,5 @@ public class JdbcMariaBoardRepository implements BoardRepository {
         } catch (SQLException se) {}
     }
 }
+
+ */

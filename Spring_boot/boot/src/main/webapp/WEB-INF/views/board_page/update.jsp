@@ -37,7 +37,7 @@
 
 <!-- <c:set var="seq" value="${board.seq}" scope="page"/> -->
 
-<form name='updateForm' method='post' action='update.do'>
+<form name='updateForm' method='post' action='update.do' enctype="multipart/form-data">
 <input type="hidden" name="seq" value="${board.seq}">
 <table border='0' width='600' align='center' cellpadding='3' cellspacing='1' bordercolor='gray'>	
 
@@ -64,7 +64,7 @@
 </tr>
 <tr>
 	<td align="center">FILE</td>
-	<td><input type="file" name="file" size="60"></td>
+	<td><input type="file" name="files" size="60"></td>
 </tr>
 <tr>
 	 <td colspan='2' align='center'>

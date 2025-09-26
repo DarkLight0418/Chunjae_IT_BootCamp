@@ -4,6 +4,7 @@ package khj.app.board.control;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import khj.app.board.domain.Attachment;
 import khj.app.board.domain.Board;
 import khj.app.board.domain.PageInfo;
 import khj.app.board.dto.BoardListResult;
@@ -12,18 +13,21 @@ import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
 // import khj.app.board.service.BoardService;
 import khj.app.board.service.PageBoardService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
+import java.util.List;
 
 @RequestMapping("board_page")
 @RequiredArgsConstructor
@@ -52,9 +56,11 @@ public class PageBoardController {
     public String write() {
         return "board_page/write";
     }
+
     @PostMapping("write.do")
-    public String write(Board board) {
-        pageBoardService.insertB(board);
+    public String write(Board board,
+                        @RequestParam("files")List<MultipartFile> files) throws IOException {
+        pageBoardService.insertB(board, files);
         return "redirect:list.do";
     }
 
@@ -81,9 +87,13 @@ public class PageBoardController {
     }
 
     @PostMapping("update.do")
-    public String update(Board board) {
-        pageBoardService.insertB(board);
-        return "redirect:list.do";
+    public String update(Board board, List<MultipartFile> files) {
+        try {
+            pageBoardService.insertB(board, files);
+            return "redirect:list.do";
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @GetMapping("search.do")
@@ -120,5 +130,10 @@ public class PageBoardController {
         model.addAttribute("keyword", keyword);
 
         return "board_page/list";
+    }
+
+    @GetMapping("download/{id}")
+    public ResponseEntity<Resource> download(@PathVariable Long id) throws IOException {
+        return pageBoardService.getAttachment(id);
     }
 }
