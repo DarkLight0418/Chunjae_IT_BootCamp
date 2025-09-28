@@ -8,12 +8,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
+@ToString(exclude = "attachments")
 public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // 기본키 생성을 DB에게 위임(MySQL - 오토 그거)

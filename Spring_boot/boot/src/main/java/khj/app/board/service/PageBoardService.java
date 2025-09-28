@@ -17,6 +17,7 @@ public interface PageBoardService {
     Page<Board> findAll(Pageable pageable);
     BoardListResult getBoardListResult(Pageable pageable);
     Board insertB(Board board, List<MultipartFile> files) throws IOException;
+    void updateB(Board board, List<MultipartFile> files, List<Long> deleteFileIds) throws IOException;
     Board findBoardDetail(long seq);
     void deleteB(long seq);
     public Page<Board> searchBySubject(String keyword, Pageable pageable);

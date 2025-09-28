@@ -87,9 +87,11 @@ public class PageBoardController {
     }
 
     @PostMapping("update.do")
-    public String update(Board board, List<MultipartFile> files) {
+    public String update(Board board,
+                         @RequestParam(value = "files", required = false) List<MultipartFile> files,
+                         @RequestParam(value = "deleteFileIds", required = false) List<Long> deleteFileIds) {
         try {
-            pageBoardService.insertB(board, files);
+            pageBoardService.updateB(board, files, deleteFileIds);
             return "redirect:list.do";
         } catch (IOException e) {
             throw new RuntimeException(e);

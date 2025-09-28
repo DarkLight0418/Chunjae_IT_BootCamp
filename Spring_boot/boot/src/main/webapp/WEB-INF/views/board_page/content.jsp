@@ -21,16 +21,16 @@
 		<c:choose>
 			<c:when test="${empty board}">
 			<tr align="center">
-				<td align="center" rowspan="5">데이터가 하나도 없어요 ㅜㅜ</td>
+				<td align="center" rowspan="6">데이터가 하나도 없어요 ㅜㅜ</td>
 			</tr>
 		</c:when>
 		<c:otherwise>
 			<tr>
-			<td width='20%' align='center'>No</td>
+			<td width='15%' align='center'>No</td>
 			<td>${board.seq}</td>
 			</tr>
 			<tr>
-			<td width='20%' align='center'>Writer</td>
+			<td width='15%' align='center'>Writer</td>
 			<td>${board.writer}</td>
 			</tr>
 			<tr>
@@ -44,6 +44,16 @@
 			<tr>
 			<td align='center'>Contents</td>
 			<td>${board.content}</td>
+            </tr>
+            <tr>
+            <td align='center'>Files</td>
+            <td>
+                <c:forEach items="${board.attachments}" var="file">
+                    <a href="download.do?fileId=${file.id}">
+                        ${file.ofname} (${file.fsize} bytes}
+                    </a>
+                </c:forEach>
+            </td>
 			</tr>
 		</c:otherwise>
 		</c:choose>

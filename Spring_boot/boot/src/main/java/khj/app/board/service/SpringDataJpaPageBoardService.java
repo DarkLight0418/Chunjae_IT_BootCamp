@@ -7,6 +7,7 @@ import khj.app.board.dto.BoardListResult;
 import khj.app.board.repository.AttachmentRepository;
 import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
 import lombok.RequiredArgsConstructor;
+import org.eclipse.tags.shaded.org.apache.xpath.operations.Mult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -97,6 +98,50 @@ public class SpringDataJpaPageBoardService implements PageBoardService {
         }
 
         return springDataJpaMariaBoardRepository.save(saveBoard);
+    }
+
+    @Transactional
+    @Override
+    public void updateB(Board board, List<MultipartFile> files, List<Long> deleteFileIds) throws IOException {
+        Board existing = springDataJpaMariaBoardRepository.findById(board.getSeq())
+                .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 존재하지 않습니다.."));
+        existing.setSubject(board.getSubject());
+        existing.setContent(board.getContent());
+        //existing.setWriter(board.getWriter());
+
+        if (deleteFileIds != null && !deleteFileIds.isEmpty()) {
+            for (Long fileId : deleteFileIds) {
+                Attachment attachment = attachmentRepository.findById(fileId)
+                        .orElseThrow(() -> new IllegalArgumentException("첨부 파일 없음 id=" + fileId));
+
+                Path path = Paths.get(fileDir, attachment.getFname());
+                Files.deleteIfExists(path);
+
+                existing.getAttachments().remove(attachment);
+                attachmentRepository.delete(attachment);
+            }
+        }
+        if (files != null && !files.isEmpty()) {
+            for(MultipartFile file : files) {
+                if (!file.isEmpty()) {
+                    String uuid = UUID.randomUUID().toString();
+                    String saveName = uuid + "_" + file.getOriginalFilename();
+
+                    java.nio.file.Path savePath = java.nio.file.Paths.get(fileDir, saveName);
+                    Files.copy(file.getInputStream(), savePath);
+
+                    Attachment attach = new Attachment();
+                    attach.setBoard(existing);
+                    attach.setFname(saveName);
+                    attach.setOfname(file.getOriginalFilename());
+                    attach.setFsize(file.getSize());
+                    attach.setContentType(file.getContentType());
+
+                    existing.getAttachments().add(attach);
+                }
+            }
+        }
+        springDataJpaMariaBoardRepository.save(existing);
     }
 
     @Override

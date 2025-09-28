@@ -44,7 +44,7 @@
 <tr>
    <td width='20%' align='center' >WRITER</td>
    <td>
-      <input name='writer' value="${board.writer}"/>
+      <input name='writer' value="${board.writer}" readonly/>
    </td>
 </tr>
 
@@ -63,11 +63,36 @@
 	<td><textarea id='ta' name='content' rows='15' cols='70'>${board.content}</textarea></td>
 </tr>
 <tr>
-	<td align="center">FILE</td>
-	<td><input type="file" name="files" size="60"></td>
+	<td align="center">FILE(existing)</td>
+	<td>
+        <c:if test="${not empty board.attachments}">
+            <c:forEach items="${board.attachments}" var="file">
+                <div class="file-item">
+                    <a href="download.do?fileId=%{fild.id}">
+                        ${file.ofname} ({file.fsize} bytes)
+                    </a>
+                    <label>
+                        <input type="checkbox" name="deleteFileIds" value="${file.id}">
+                        삭제
+                    </label>
+                </div>
+            </c:forEach>
+        </c:if>
+        <c:if test="${empty board.attachments}">
+            첨부된 파일이 없습니다
+        </c:if>
+        <input type="file" name="files" size="60">
+    </td>
+</tr>
+
+<tr>
+	<td align="center">add new files</td>
+    <td>
+        <input type="file" name="fies" multiple size="60">
+    </td>
 </tr>
 <tr>
-	 <td colspan='2' align='center'>
+    <td colspan='2' align='center'>
 		<input type='submit' value='수정'>
 		<input type="button" value="다시입력" onclick="f()">
 	 </td>
