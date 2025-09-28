@@ -50,7 +50,13 @@
 		  </a>
 		</TD>
 		<TD>${board.rdate}</TD>
-		<td>파일 목록 보여질 곳</td>
+		<td>
+            <c:forEach items="${board.attachments}" var="file">
+                <a href="download.do?fileId=${file.id}">
+                    ${file.ofname} (${file.fsize} bytes}
+                </a>
+            </c:forEach>
+        </td>
 	   </TR> 
 </c:forEach>
 

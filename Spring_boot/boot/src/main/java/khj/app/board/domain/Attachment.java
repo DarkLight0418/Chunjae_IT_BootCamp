@@ -6,11 +6,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@ToString(exclude = "board")
 public class Attachment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)  // 기본키 생성을 DB에게 위임(MySQL - 오토 그거)
@@ -25,4 +27,5 @@ public class Attachment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "board_seq")
     private Board board;
+
 }
