@@ -52,7 +52,7 @@
 		<TD>${board.rdate}</TD>
 		<td>
             <c:forEach items="${board.attachments}" var="file">
-                <a href="download.do?fileId=${file.id}">
+                <a href="download/${file.id}">
                     ${file.ofname} (${file.fsize} bytes}
                 </a>
             </c:forEach>

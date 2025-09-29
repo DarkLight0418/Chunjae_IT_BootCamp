@@ -4,12 +4,9 @@ package khj.app.board.control;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
-import khj.app.board.domain.Attachment;
 import khj.app.board.domain.Board;
 import khj.app.board.domain.PageInfo;
-import khj.app.board.dto.BoardListResult;
-import khj.app.board.repository.BoardRepository;
-import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
+import khj.app.board.repository.PageBoardRepository;
 // import khj.app.board.service.BoardService;
 import khj.app.board.service.PageBoardService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +15,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,7 +31,7 @@ import java.util.List;
 public class PageBoardController {
     private final PageBoardService pageBoardService;
     // private final BoardService boardService;
-    private final SpringDataJpaMariaBoardRepository spBoardRepository;
+    private final PageBoardRepository spBoardRepository;
 
     @GetMapping("list.do")
     public String list(@RequestParam(defaultValue = "0") int page,

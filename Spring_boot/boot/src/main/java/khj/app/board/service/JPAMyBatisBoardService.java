@@ -1,15 +1,5 @@
 package khj.app.board.service;
 
-import khj.app.board.domain.Board;
-import khj.app.board.domain.PageInfo;
-import khj.app.board.mapper.BoardMapper;
-import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 /*
 @Service
 public class JPAMyBatisBoardService implements BoardService {

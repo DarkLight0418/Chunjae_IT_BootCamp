@@ -5,9 +5,8 @@ import khj.app.board.domain.Attachment;
 import khj.app.board.domain.Board;
 import khj.app.board.dto.BoardListResult;
 import khj.app.board.repository.AttachmentRepository;
-import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
+import khj.app.board.repository.PageBoardRepository;
 import lombok.RequiredArgsConstructor;
-import org.eclipse.tags.shaded.org.apache.xpath.operations.Mult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -33,9 +32,9 @@ import java.util.UUID;
 @Transactional
 @RequiredArgsConstructor
 @Service
-public class SpringDataJpaPageBoardService implements PageBoardService {
+public class PageBoardServiceImpl implements PageBoardService {
     @Autowired
-    private final SpringDataJpaMariaBoardRepository springDataJpaMariaBoardRepository;
+    private final PageBoardRepository springDataJpaMariaBoardRepository;
 
     @Autowired
     private final AttachmentRepository attachmentRepository;
