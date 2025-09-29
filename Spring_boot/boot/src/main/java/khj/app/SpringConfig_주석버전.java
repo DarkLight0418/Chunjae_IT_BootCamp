@@ -1,26 +1,9 @@
 package khj.app;
 
-import jakarta.persistence.EntityManager;
-import khj.app.board.mapper.BoardMapper;
-import khj.app.board.repository.SpringDataJpaMariaBoardRepository;
 // import khj.app.board.service.BoardService;
 // import khj.app.board.service.JPAMyBatisBoardService;
-import khj.app.board.service.PageBoardService;
-import khj.app.board.service.SpringDataJpaPageBoardService;
-import khj.app.boot.service.AddressService;
-import khj.app.boot.service.AddressService2;
-import khj.app.boot.service.JpaMariaAddressService;
-import khj.app.boot.service.SpringDataJpaMariaAddressService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.JdbcTemplate;
-import khj.app.boot.mapper.AddressMapper;
-import khj.app.boot.repository.AddressRepository2;
-import khj.app.boot.repository.JpaMariaAddressRepository;
-import khj.app.boot.repository.SpringDataJpaMariaAddressRepository;
 
- 
+
 //@Configuration // 💡 이 클래스가 스프링의 설정 클래스임을 명시
 class SpringConfig_주석버전 {
 /*
