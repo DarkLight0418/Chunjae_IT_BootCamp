@@ -32,7 +32,7 @@ public class Lecture {
 
     // enum 타입은 필드로 선언 + @Enumerated 지정
     @Enumerated(EnumType.STRING)
-    private Difficulty Difficulty;
+    private Difficulty difficulty;
 
     private Long videoCount;
     private int totalDuration;
@@ -43,7 +43,6 @@ public class Lecture {
     // lecture_category 매핑 (1:N)
     @OneToMany(mappedBy = "lecture", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LectureCategory> lectures;
-    
     // enum 정의
     public enum Difficulty {
         BEGINNER, SEMI, MIDDLE, HIGH, PROFESSIONAL

@@ -2,7 +2,6 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.apache.ibatis.annotations.One;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -16,17 +15,25 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long teacherId;
 
-    @OneToMany(mappedBy = "member")
+    @OneToOne
+    @JoinColumn(name = "member_id")
     private Long memberId;
 
-    @OneToMany(mappedBy = "lecture")
+    @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Lecture> lectures = new ArrayList<>();
 
-    private Long lectureId;
-
+    @Column(columnDefinition = "TEXT")
     private String description;
+
+    @Column(length = 100)
     private String subject;
+
+    @Column(name = "total_students", columnDefinition = "INT DEFAULT 0")
     private int totalStudents;
+
+    @Column(name = "total_review", columnDefinition = "INT DEFAULT 0")
     private int totalReview;
-    private BigDecimal averageRating;
+
+    @Column(name = "average_rating", precision = 3, scale = 2)
+    private long averageRating;
 }
