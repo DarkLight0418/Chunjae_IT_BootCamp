@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 public class LectureReview {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lecture_review_id")
-    private long lectureReviewId;
+    private Long lectureReviewId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lecture_id")
@@ -21,7 +21,7 @@ public class LectureReview {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    private long paymentId;
+    private Long paymentId;
 
     @Column(name = "content")
     private String content;
