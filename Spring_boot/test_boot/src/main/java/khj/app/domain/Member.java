@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,7 +17,7 @@ import java.time.LocalDateTime;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long memberId;
+    private Long memberId;
 
     @Column(length = 50, nullable = false)
     private String name;
@@ -57,4 +59,16 @@ public class Member {
     private enum SocialProvider {
         GOOGLE, NAVER, KAKAO
     }
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<LectureReview> lectureReviews = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<LectureQuestion> lectureQuestions = new ArrayList<>();
+
+    @OneToOne
+    private Teacher teacher;
+
+    @OneToMany(mappedBy = "member")
+    private List<Payment> payments = new ArrayList<>();
 }

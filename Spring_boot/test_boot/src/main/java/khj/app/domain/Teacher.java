@@ -35,5 +35,5 @@ public class Teacher {
     private int totalReview;
 
     @Column(name = "average_rating", precision = 3, scale = 2)
-    private long averageRating;
+    private Long averageRating;
 }
