@@ -3,7 +3,7 @@ package khj.app.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.math.BigDecimal;
+//import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +15,8 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long teacherId;
 
-    @OneToOne
-    @JoinColumn(name = "member_id")
-    private Long memberId;
+    @OneToOne(mappedBy = "teacher")
+    private Member member;
 
     @OneToMany(mappedBy = "teacher", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Lecture> lectures = new ArrayList<>();

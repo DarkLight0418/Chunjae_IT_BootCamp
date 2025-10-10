@@ -2,6 +2,7 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -14,9 +15,11 @@ public class PaymentRefund {
     private Long orderRefundId;
 
     @OneToOne
+    @JoinColumn(name = "payment_id")
     private Payment payment;
 
     @OneToOne
+    @JoinColumn(name = "payment_detail_id")
     private PaymentDetails paymentDetails;
 
     @Column(name = "refund_reason", columnDefinition = "TEXT")
@@ -29,5 +32,6 @@ public class PaymentRefund {
     private boolean isRefunded;
 
     @Column(name = "created_at")
+    @CreationTimestamp
     private LocalDateTime createdAt;
 }

@@ -1,5 +1,6 @@
 package khj.app.domain;
 
+
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -7,30 +8,27 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
-@Table(name = "lecture_review")
-@Data
 @Entity
-public class LectureReview {
+@Data
+@Table(name = "lecture_answer")
+public class LectureAnswer {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "lecture_review_id")
-    private Long lectureReviewId;
+    @Column(name = "lecture_answer_id")
+    private Long lectureAnswerId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "lecture_id")
-    private Lecture lecture;
+    @JoinColumn(name = "lecture_qna_id")
+    private LectureQuestion lectureQuestion;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @Column(name = "payment_id")
-    private Long paymentId;
+    @Column(name = "parent_id")
+    private Long parentId;
 
-    @Column(name = "content")
+    @Column(columnDefinition = "TEXT")
     private String content;
-
-    @Column(name = "rating", columnDefinition = "TINYINT(5)")
-    private int rating;
 
     @Column(name = "created_at")
     @CreationTimestamp

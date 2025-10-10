@@ -2,8 +2,12 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -14,12 +18,15 @@ public class LectureQuestion {
     private Long lectureQnaId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name = "lecture_id")
+    @JoinColumn(name = "lecture_id")
     private Lecture lecture;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name = "member_id")
+    @JoinColumn(name = "member_id")
     private Member member;
+
+    @OneToMany(mappedBy = "lectureQuestion", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<LectureAnswer> lectureAnswers = new ArrayList<>();
 
     @Column(length = 255)
     private String title;
@@ -37,8 +44,10 @@ public class LectureQuestion {
     private boolean isSolved;
 
     @Column(name = "created_at")
+    @CreationTimestamp
     private LocalDateTime createdAt;
 
     @Column(name = "updated_at")
+    @UpdateTimestamp
     private LocalDateTime updatedAt;
 }
