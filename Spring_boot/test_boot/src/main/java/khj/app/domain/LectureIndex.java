@@ -7,30 +7,23 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
-@Table(name = "lecture_review")
-@Data
 @Entity
-public class LectureReview {
+@Data
+@Table(name = "lecture_index")
+public class LectureIndex {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "lecture_review_id")
-    private Long lectureReviewId;
+    @Column(name = "lecture_index_id")
+    private Long lectureIndexId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lecture_id")
     private Lecture lecture;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
-    private Member member;
+    @Column(name = "index_title")
+    private String indexTitle;
 
-    @Column(name = "payment_id")
-    private Long paymentId;
-
-    @Column(name = "content")
-    private String content;
-
-    @Column(name = "rating", columnDefinition = "TINYINT(5)")
-    private int rating;
+    @Column(name = "index_number")
+    private Long indexNumber;
 
     @Column(name = "created_at")
     @CreationTimestamp

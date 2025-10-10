@@ -3,6 +3,8 @@ package khj.app.domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 public class Coupon {
@@ -18,4 +20,16 @@ public class Coupon {
 
     @Column(name = "discount_rate")
     private Long discountRate;
+
+    @Column(name = "valid_from")
+    private LocalDateTime validFrom;
+
+    @Column(name = "vaild_until")
+    private LocalDateTime validUntil;
+
+    @Column(name = "available_scope", length = 100)
+    private String availableScope;
+
+    @Column(name = "discount_limit")
+    private Long discountLimit;
 }

@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @Table(name = "member")
 public class Member {
-    @Id
+    @Id @Column(name = "member_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long memberId;
 
@@ -66,7 +66,11 @@ public class Member {
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LectureQuestion> lectureQuestions = new ArrayList<>();
 
+    @OneToMany(mappedBy = "member")
+    private List<MemberChatRoom> memberChatRooms = new ArrayList<>();
+
     @OneToOne
+    @JoinColumn(name = "teacher_id")
     private Teacher teacher;
 
     @OneToMany(mappedBy = "member")

@@ -12,8 +12,9 @@ public class PaymentDetails {
     private Long paymentDatailId;
 
     @OneToOne
+    @JoinColumn(name = "payment_id")
     private Payment payment;
 
     @Column(name = "payment_api_result", columnDefinition = "TEXT")
-    private Long paymentApiResult;
+    private String paymentApiResult;
 }

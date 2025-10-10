@@ -2,6 +2,7 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -21,7 +22,11 @@ public class Payment {
     @JoinColumn(name = "lecture_id", nullable = false)
     private Lecture lecture;
 
+    @OneToOne(mappedBy = "payment")
+    private PaymentDetails paymentDetails;
+
     @Column(name = "paid_at")
+    @CreationTimestamp
     private LocalDateTime paidAt;
 
     @Column(name = "original_price")
