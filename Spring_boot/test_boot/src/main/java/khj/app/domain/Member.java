@@ -53,7 +53,7 @@ public class Member {
     private SocialProvider socialProvider;
 
     // enum 타입 정의
-    private enum RoleType {
+    public enum RoleType {
         STUDENT, TEACHER, ADMIN
     }
     private enum SocialProvider {

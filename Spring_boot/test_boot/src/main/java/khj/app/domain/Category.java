@@ -2,6 +2,7 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.ibatis.annotations.One;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "category")
 @Data
+@NoArgsConstructor
 public class Category {
 
     @Id @Column(name = "category_id")

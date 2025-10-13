@@ -53,7 +53,7 @@ public class Lecture {
 
     // lecture_category 매핑 (1:N)
     @OneToMany(mappedBy = "lecture", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<LectureCategory> lectures = new ArrayList<>();
+    private List<LectureCategory> lectureCategories = new ArrayList<>();
 
     // lecture_index
     @OneToMany(mappedBy = "lecture", cascade = CascadeType.ALL, orphanRemoval = true)

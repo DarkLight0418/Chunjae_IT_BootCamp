@@ -2,6 +2,7 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "member_coupon")
+@NoArgsConstructor
 public class MemberCoupon {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_coupon_id")

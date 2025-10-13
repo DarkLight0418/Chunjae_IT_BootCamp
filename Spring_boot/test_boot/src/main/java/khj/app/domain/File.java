@@ -2,10 +2,12 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Table(name = "file")
+@NoArgsConstructor
 public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

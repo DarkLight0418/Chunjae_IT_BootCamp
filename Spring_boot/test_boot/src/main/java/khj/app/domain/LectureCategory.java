@@ -2,10 +2,12 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "lecture_category")
 @Data
+@NoArgsConstructor
 public class LectureCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

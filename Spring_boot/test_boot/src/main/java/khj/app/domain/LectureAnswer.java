@@ -3,6 +3,7 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @Data
 @Table(name = "lecture_answer")
+@NoArgsConstructor
 public class LectureAnswer {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lecture_answer_id")

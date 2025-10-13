@@ -1,7 +1,9 @@
 package khj.app.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 //import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -9,6 +11,8 @@ import java.util.List;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "teacher")
 public class Teacher {
     @Id @Column(name = "teacher_id")

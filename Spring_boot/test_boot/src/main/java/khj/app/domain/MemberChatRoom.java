@@ -2,10 +2,12 @@ package khj.app.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Table(name = "member_chat_room")
+@NoArgsConstructor
 public class MemberChatRoom {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_chat_room_id")
