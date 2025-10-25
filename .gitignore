@@ -4,3 +4,4 @@ modeling/workspace
 *.class
 Project/NewbieFitness/java_files
 WebServer/settings
+*.properties
