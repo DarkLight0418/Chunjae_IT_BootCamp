@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forEach()</title>
+</head>
+<body>
+  <script>
+    function f01(){
+      console.log('1. 기본')
+      //let arr = [1,2,3,4,5]
+      let arr = ['봄','여름','가을','겨울']
+      /*arr.forEach(function(currentValue, index, useArray){
+        console.log(`현재값: ${currentValue}, 인덱스: ${index}, 배열: ${useArray}`)
+      })*/
+      /*arr.forEach(function(currentValue, index){
+        console.log(`현재값: ${currentValue}, 인덱스: ${index}`)
+      }) */
+      /*const cf = function(currentValue, index){
+        console.log(`현재값: ${currentValue}, 인덱스: ${index}`)
+      }*/
+      /*
+      const cf = (currentValue, index) => console.log(`현재값: ${currentValue}, 인덱스: ${index}`)
+      arr.forEach(cf) */
+
+      //arr.forEach((v, i) => console.log(`현재값: ${v}, 인덱스: ${i}`))
+      arr.forEach((v, i) => {
+        console.log(`-현재값: ${v}`) 
+        console.log(`-인덱스: ${i}`)
+      })
+    }
+
+    //const f02 = () => alert('aaa')
+    const f02 = function(){
+      console.log('2. 정수형배열')
+      let arr = [1,2,3,4,5]
+      let sum = 0
+      //const s = (v) => sum+=v //형태1
+      //const s = function(v){ //형태2
+      //  sum+=v
+      //}
+      function s(v){ //형태3
+        sum+=v
+      }
+      arr.forEach(s)
+      console.log(`합: ${sum}`)
+    }
+  
+    function f03(){
+      console.log('3. 객체형배열')
+      const objArr = [
+        {idx:1, name:'홍길동'}, 
+        {idx:2, name:'이순신'},
+        {idx:3, name:'강감찬'},
+      ]
+      let html =''
+      objArr.forEach((item) => {
+        html += '<li>'+item.idx+'. '+item.name+'</li>'
+      })
+      document.getElementById('display').innerHTML = html
+    }
+  </script>
+
+  <div>
+    <input type="button" onclick="f01()" value="forEach1">
+    <input type="button" onclick="f02()" value="forEach2">
+    <input type="button" onclick="f03()" value="forEach3">
+  </div>
+  <ul id='display'></ul>
+</body>
+</html>
