@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS01 const 변수</title>
+</head>
+<body>
+  <script>
+    const f1 = function(){
+      let sum = 0
+      for(let i=0; i<5; i++){
+        sum += i
+      }
+      console.log('sum', sum) //가능
+      console.log('i', i) //불가
+    }
+    const f2 = function(){
+      const obj = {name: '홍길동', age: 20} //let, const 둘다 됨
+      obj.name = '이순신'
+      obj.age = '30'
+      console.log('obj', obj)
+    }
+  </script>
+
+  
+</body>
+</html>

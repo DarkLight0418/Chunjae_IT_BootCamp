@@ -10,3 +10,14 @@ console.log(`a ${a}`)
 let div = document.getElementById('divId')
 console.log(`div.nodeName ${div.nodeName}`)
 div.innerHTML = "<font color='red'>테스트</font>"
+
+function f(){
+  console.log('forEach() map() filter() reduce() some() every()')
+  let arr = [1,2,3,4,5]
+  arr.forEach
+  //arr.map
+  //arr.filter
+  //arr.reduce
+  //arr.some
+  //arr.every
+}

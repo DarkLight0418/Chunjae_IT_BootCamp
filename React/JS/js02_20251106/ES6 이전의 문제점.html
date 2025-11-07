@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 이전의 문제점</title>
+</head>
+<body>
+  <script>
+    function f0(){
+      globalVar = 1
+      var localVar = 2
+    }
+    function f1(){ //특징
+      f0()
+      console.log('globalVar', globalVar) //가능
+      console.log('localVar', localVar) //불가
+    }
+    function f2(){ //여기가 문제!
+      for(var i=0; i<5; i++){
+        console.log('안의 i', i)
+      }
+      console.log('밖의 i', i) //헉! 이게 찍히네
+    }
+  </script>
+  <div>
+		<button type="button" onclick="f1()">버튼1</button>
+		<button type="button" onclick="f2()">버튼2</button>
+	</div>
+</body>
+</html>

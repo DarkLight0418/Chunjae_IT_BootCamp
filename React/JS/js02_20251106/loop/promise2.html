@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>promise2 ( async / await )</title>
+</head>
+<body>
+  <script>
+    function getPm(){ //Promise제공함수
+      const pm = new Promise(resolve => {
+        setTimeout(() => {
+          resolve('3초 후에 작업 성공')
+        }, 3000)
+      })
+      return pm
+    }
+
+    //(1) 방식(then/catch/finally)
+    const f1 = () => { //Promise사용함수 정의의
+      getPm().then(result => {
+        console.log(result)
+      })
+    }
+    //f1() //함수호출 
+
+    //(2) 방식(async/await)
+    const f2 = async () => {
+      const result = await getPm()
+      console.log(result)
+    }
+    f2()
+  </script>
+</body>
+</html>

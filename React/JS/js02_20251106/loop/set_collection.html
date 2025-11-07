@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set</title>
+</head>
+<body>
+  <script>
+    (() => {
+        const nums = new Set()
+        nums.add(1)
+        nums.add(2)
+        nums.add(3)
+        nums.add(2)
+
+        console.log('Size:', nums.size)
+
+        nums.forEach((v)=>{
+          console.log('v:', v)
+        })
+    })();
+
+    console.clear(); //;반드시필요(by수빈)
+    /////////////////////////////////////////////////////////
+
+    const arr = ['봄', '여름', '가을', '겨울', '가을'];
+    (()=>{
+      const seasons = new Set(arr)
+      console.log('Size(1):', seasons.size)
+      seasons.delete('여름')
+      console.log('Size(2):', seasons.size)
+      console.log(`봄 존재: ${seasons.has('봄')}`)
+      seasons.clear()
+      console.log('Size(3):', seasons.size)
+    })();
+  </script>
+</body>
+</html>

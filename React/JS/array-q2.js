@@ -64,13 +64,39 @@ const students= [
 }
 //[Q6] 50점 이상 점수들의 문자열을 만드시오 ( 결과: '81,91,67,89' )
 {
-    
+    // 변수 O
+    const scores = students.map(student => student.score)
+    const scores2 = scores.filter(score = score>=50)
+    console.log(scores2.join())
+    console.clear()
+
+    // 변수 X
+    const result = students
+        .map(student => student.score)
+        .filter(score => score>=50)
+        .join()
+
+        console.log(result)
+        console.clear()
 }
 //[Q7] 점수들을 오름차순으로 정렬된 '문자열'을 만드시오 ( 결과: '46,67,81,89,91' )
 {
-    
+    const result = students
+        .map(student => student.score)
+        .sort((a, b) => a-b)
+        .join()
+
+    console.log(result)
+    console.clear()
 }
-//[Q8] 이름들을 내림차순 정렬한 '문자열'을 만드시오
+//[Q8] 이름들을 내림차순 정렬한 '문자열'을 만드시오 (주석은 중간에 | 표시)
 {
-    
+    const result = students
+        .map(student => student.name)
+        .sort()
+        .reverse()
+        .join()
+//      .join('|')
+    console.log(result)
+    console.clear()
 }

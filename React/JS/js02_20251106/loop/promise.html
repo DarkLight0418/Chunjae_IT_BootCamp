@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>promise1</title>
+</head>
+<body>
+  <script>
+    //new <T>((executor: (resolve: (value: T | PromiseLike<T>) => void, reject: (reason?: any) => void)) => void): Promise<T>;
+    const pm = new Promise((resolve,reject) => { //객체생성
+      let flag = true
+      if(flag){
+        resolve('작업 성공')
+      }else{
+        reject('작업 실패')
+      }
+    })
+
+    const f1 = () => { //객체사용  
+      pm
+        .then(result => {
+          console.log(result)
+        })
+        .catch(err => {
+          console.error(err)
+        })
+    }
+  </script>
+
+<div>
+  <button type="button" onclick="f1()">버튼1</button>
+</div>
+</body>
+</html>
