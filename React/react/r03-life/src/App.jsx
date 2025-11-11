@@ -1,7 +1,7 @@
 import TopNavi from './components/TopNavi';
 import LifeCycle from './components/LifeCycle';
 import LocalFetcher from './components/LocalFetcher';
-import Remote from './components/RermoteFetcher';
+import RemoteFetcher from './components/RermoteFetcher';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <TopNavi />
       <LifeCycle />
       <LocalFetcher />
+      <RemoteFetcher />
     </>
   );
 }
