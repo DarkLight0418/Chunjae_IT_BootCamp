@@ -1,0 +1,11 @@
+*{
+  margin: 10px;
+}
+a{
+  text-decoration:none;
+}
+.active{
+  background-color: yellow;
+  font-weight: bold;
+  color: red;
+}
