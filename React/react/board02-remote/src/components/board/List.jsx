@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function List() {
   const [boardData, setBoardData] = useState([])
@@ -32,6 +32,16 @@ function List() {
     )
   })
 
+  //검색 click 구현 
+  const navigate = useNavigate() //페이지 이동을 위한 Hook
+  const [field, setField] = useState('subject')
+  const [keyword, setKeyword] = useState('')
+  const handleSearch = e => {
+    e.preventDefault()
+    if (keyword.trim() === '') return
+    navigate(`/search?${field}=${encodeURIComponent(keyword)}`)
+  }
+
   return (<>
     <header>
       <h2>게시판-목록</h2>
@@ -40,15 +50,17 @@ function List() {
       <Link to='/write'>글쓰기</Link>
     </nav>
     <article>
-      <form>
-        <select>
+      <form onSubmit={handleSearch}>
+        <select value={field} onChange={e => setField(e.target.value)}>
           <option value="subject">제목</option>
           <option value="name">이름</option>
           <option value="content">내용</option>
         </select>
         <input
           style={{ width: '380px' }}
-          placeholder="검색어 입력" />
+          placeholder="검색어 입력"
+          value={keyword}
+          onChange={e => setKeyword(e.target.value)} />
         <button type="submit">검색</button>
       </form>
 
