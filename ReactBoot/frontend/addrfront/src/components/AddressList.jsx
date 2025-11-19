@@ -6,8 +6,9 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import { Snackbar, Stack } from "@mui/material"
 import AddressForm from "./AddressForm"
 import axios from "axios"
+import AddressEdit from "./AddressEdit"
 
-function AddressList() {
+function AddressList(props) {
   //const [addresses, setAddresses] = useState([{zip:'00000', addr:'금천구', rdate:'2025', udate:'2025'}])
   const [addresses, setAddresses] = useState([])
 
@@ -35,7 +36,7 @@ function AddressList() {
       headerName: '',
       sortable: false,
       filterable: false,
-      renderCell: row => <IconButton onClick={() => delHandler(row.id)}>
+      renderCell: row => <IconButton onClick={() => delAddress(row.id)}>
         <DeleteIcon color='error' />
       </IconButton>
     },
@@ -44,12 +45,14 @@ function AddressList() {
       headerName: '',
       sortable: false,
       filterable: false,
-      renderCell: row => <button>수정</button>
+      //renderCell: row => <AddressEdit onData={row} onFetchAddresses={fetchAddresses}/> //for방법1
+      renderCell: row => <AddressEdit onData={row} onEditAddress={editAddress} /> //for방법2
+
     }
   ]
 
   const [open, setOpen] = useState(false)
-  const delHandler = (url) => {
+  const delAddress = (url) => {
     if (window.confirm('정말 삭제할까요?')) {
       const jwt = sessionStorage.getItem('jwt')
 
@@ -88,9 +91,41 @@ function AddressList() {
   }*/
   const addAddress = (address) => { //방법2-2: 백엔드 호출'을 부모에서 정의한 경우(axios)
     const jwt = sessionStorage.getItem('jwt')
-    axios.post(REST_URL + 'api/readdresses', address, { headers: { 'Authorization': jwt } })
+
+    address.username = props.onUsername //객체속성추가: readdress테이블에 reuser_id를 넣기위해서 
+
+    //axios.post(REST_URL+'api/readdresses', address, {headers:{'Authorization':jwt}})
+    axios.post(REST_URL + 'addrs', address, { headers: { 'Authorization': jwt } }) //URL변경: readdress테이블에 reuser_id를 넣기위해서
       .then(() => fetchAddresses())
       .catch(err => console.error('입력실패 err:', err))
+  }
+
+  /*
+  const editAddress = (url, address) => { //방법2-1: 백엔드 호출'을 부모에서 정의한 경우(fetch) 
+    const jwt = sessionStorage.getItem('jwt')
+
+    fetch(url, {
+      method: 'PUT', 
+      headers: {'Content-Type': 'application/json', 'Authorization':jwt},
+      body: JSON.stringify(address) 
+    })
+    .then(resObj => {
+      //console.log('EDIT resObj:', resObj)
+      if(resObj.ok){
+        alert('수정성공^^')
+        fetchAddresses()
+      }else{
+        alert('수정실패^^')
+      }
+    })
+    .catch(err => console.error('수정실패 err:', err))
+  }*/
+  const editAddress = (url, address) => { //방법2-2: 백엔드 호출'을 부모에서 정의한 경우(axios) 
+    const jwt = sessionStorage.getItem('jwt')
+
+    axios.put(url, address, { headers: { 'Authorization': jwt } })
+      .then(() => fetchAddresses())
+      .catch(err => console.error('수정실패 err:', err))
   }
 
   return (<>

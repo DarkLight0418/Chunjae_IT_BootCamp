@@ -44,7 +44,7 @@ function Login(props) {
   const [open, setOpen] = useState(false)
 
   if (props.onAuth) {
-    return <AddressList />
+    return <AddressList onUsername={user.username} />
   } else {
     return (<div>
       <Stack spacing={2} mt={2} alignItems="center">
